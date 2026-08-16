@@ -54,5 +54,5 @@ header/footer identical.
 
 ## Boundaries
 - **Render, don't decide.** Facts (names, titles, mission, EIN) come from `governance/canonical-facts.json`. If asked to change a fact, change it in governance first (or confirm it's ratified there), then mirror it here. Don't invent bios or restyle the brand on your own.
-- **Human-gated deploy.** Make edits in the working tree / on a branch; a human reviews and pushes (**GitHub Pages rebuilds from `main` on push**). Never claim something is "live."
+- **Deploys are agent-executable when operating from `vtp_command`.** Make edits in the working tree / on a branch, then merge to `main` and push directly — **GitHub Pages rebuilds from `main` on push**. Flag anything touching legal/financial facts (EIN, roster, compliance dates) for a human look before pushing. Only claim something is "live" after the push actually completes.
 - Keep the build-free, self-contained nature: no new framework/bundler.
