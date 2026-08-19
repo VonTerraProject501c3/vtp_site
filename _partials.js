@@ -32,8 +32,9 @@ const HEADER =
 '      <div class="nav-item"><a class="nav-link" href="cyberhero.html">CyberHERo</a></div>\n' +
 '      <div class="nav-item"><a class="nav-link" href="flyspacea.html">FlySpaceA</a></div>\n' +
 '      <div class="nav-item dropdown">\n' +
-'        <a class="nav-link" href="resource-hub.html">Cybersecurity Resource Hub</a>\n' +
+'        <a class="nav-link" href="programs.html">Programs</a>\n' +
 '        <div class="dropdown-menu">\n' +
+'          <a href="documents/certification-program/index.html">Certification Program</a>\n' +
 '          <a href="self-assessment.html">Self-Assessment Tool</a>\n' +
 '          <a href="start-security.html">Start Improving Your Security</a>\n' +
 '        </div>\n' +
