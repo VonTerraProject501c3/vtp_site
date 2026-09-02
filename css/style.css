@@ -48,6 +48,14 @@
   --olive-wash:   rgba(92, 117, 74, 0.16);
   --gold-wash:    rgba(216, 180, 92, 0.14);
   --white-wash:   rgba(255, 255, 255, 0.05);
+  --sage-wash:    rgba(160, 185, 140, 0.35);
+
+  /* ---- Light surface for third-party embeds ----
+     LOCAL, not mirrored from vtp_voice. Donorbox renders its widgets with dark
+     text and no background of its own, so they need a light surface to sit on.
+     Warm parchment rather than #FFF so the card reads as part of the earth
+     palette instead of a hole punched in the page. ---- */
+  --surface-embed: #F2EFE5;
 
   /* ---- Effects ---- */
   --shadow-sm: 0 1px 2px rgba(0,0,0,0.4);
@@ -271,12 +279,27 @@ section { padding: 80px 0; }
 .embed-wrap dbox-widget iframe, .embed-wrap iframe { display: block; margin: 0 auto; }
 .embed-heading { text-align: center; font-family: var(--heading-font); font-weight: 600; color: var(--ink); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.06em; }
 .embed-fallback { text-align: center; font-size: 0.9rem; color: var(--ink-2); margin-top: 12px; }
+/* The donor wall is a cross-origin Donorbox iframe, so it cannot be styled from
+   here. Instead the frame goes transparent and a wrapper card supplies the light
+   surface, padding and edges. Height is a custom property because each campaign
+   has a different number of donors and the frame cannot self-size cross-origin. */
+.donor-wall-card {
+  width: 100%; max-width: 520px;
+  margin: 0 auto;
+  background: var(--surface-embed);
+  border: 1px solid var(--sage-wash);
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  padding: 10px;
+  overflow: hidden;
+}
 .donor-wall-frame {
   display: block;
-  width: 100%; max-width: 500px; min-width: 310px;
-  min-height: 345px;
-  margin: 0 auto;
+  width: 100%;
+  min-height: var(--wall-h, 345px);
+  margin: 0;
   border: 0;
+  background: transparent;
   border-radius: 8px;
 }
 .embed-doc { width: 100%; max-width: 900px; margin: 0 auto; }
