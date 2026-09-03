@@ -20,7 +20,7 @@ VTP is three repos, one system. **This site consumes; it is not the source of tr
   files (it changes the ID and breaks the embed).
 
 ## Structure
-- 14 primary pages + 7 team biography pages (21 `.html` files total)
+- 14 primary pages + 8 team biography pages (22 `.html` files total)
 - `css/style.css` — the single shared stylesheet
 - `js/main.js` — mobile hamburger nav, dropdown menus, FAQ accordion
 - `website_images/` — logo, team headshots (resized to 640px / ~60–110KB each for performance)
