@@ -223,25 +223,10 @@ def main() -> int:
                 err(page, f"invalid JSON-LD: {exc}")
 
     # --- shell drift ---
-    # _partials.js is a generator, not a runtime include. If it drifts from the pages it
-    # supposedly emits, regenerating silently reverts hand-edits. Compare the nav block.
-    partials = ROOT / "_partials.js"
-    if partials.exists():
-        gen = partials.read_text(encoding="utf-8", errors="replace")
-        for probe, label in [
-            ("skip-link", "skip link"),
-            ("Content-Security-Policy", "CSP meta"),
-            ("application/ld+json", "JSON-LD block"),
-            ("footer-h", "footer heading class"),
-            ("resource-hub.html", "Resource Hub nav link"),
-            ("aria-expanded", "dropdown aria-expanded"),
-        ]:
-            in_pages = any(probe in p.read_text(encoding="utf-8", errors="replace")
-                           for p in all_pages if p.name == "index.html")
-            if in_pages and probe not in gen:
-                warnings.append(
-                    f"_partials.js: pages carry {label} but the generator does not — "
-                    f"regenerating would drop it")
+    # Superseded by tools/sync_shell.mjs --check, which diffs the ACTUAL rendered
+    # shell against _partials.js instead of probing for a handful of strings. The
+    # probe version passed while the generator still carried the pre-restructure
+    # ribbon, which is exactly the drift it was meant to catch.
 
     # --- gitignored but tracked ---
     gi = ROOT / ".gitignore"

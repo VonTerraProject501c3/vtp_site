@@ -71,25 +71,37 @@ const HEADER =
 '    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>\n' +
 '    <nav class="site-nav">\n' +
 '      <div class="nav-item"><a class="nav-link" href="index.html">Home</a></div>\n' +
-'      <div class="nav-item"><a class="nav-link" href="cyberhero.html">CyberHERo</a></div>\n' +
-'      <div class="nav-item"><a class="nav-link" href="flyspacea.html">FlySpaceA</a></div>\n' +
 '      <div class="nav-item dropdown">\n' +
 '        <a class="nav-link" href="programs.html" aria-expanded="false" aria-haspopup="true">Programs</a>\n' +
 '        <div class="dropdown-menu">\n' +
 '          <a href="programs.html">All Programs</a>\n' +
-'<p class="menu-label">Programs</p>\n' +
-'<a href="documents/certification-program/index.html">Certification Program</a>\n' +
-'<a href="mentorship.html">Mentorship Program</a>\n' +
-'<a href="professional-development.html">Professional Development &amp; Engagement</a>\n' +
-'<a href="grant-initiative.html">Cybersecurity Grant Initiative</a>\n' +
-'<a href="resource-hub.html">Digital Footprint &amp; Communal Resilience</a>\n' +
-'<a href="cyberhero.html">CyberHERo</a>\n' +
-'<hr>\n' +
-'<p class="menu-label">Get Involved</p>\n' +
-'<a href="lines-of-effort.html">Lines of Effort (L1&ndash;L6)</a>\n' +
-'<hr>\n' +
-'<p class="menu-label">Partner Initiative</p>\n' +
-'<a href="flyspacea.html">FlySpaceA</a>\n' +
+'          <p class="menu-label">Programs</p>\n' +
+'          <a href="documents/certification-program/index.html">Certification Program</a>\n' +
+'          <a href="mentorship.html">Mentorship Program</a>\n' +
+'          <a href="professional-development.html">Professional Development &amp; Engagement</a>\n' +
+'          <a href="grant-initiative.html">Cybersecurity Grant Initiative</a>\n' +
+'          <a href="resource-hub.html">Digital Footprint &amp; Communal Resilience</a>\n' +
+'          <a href="cyberhero.html">CyberHERo</a>\n' +
+'          <hr>\n' +
+'          <p class="menu-label">Get Involved</p>\n' +
+'          <a href="lines-of-effort.html">Lines of Effort (L1&ndash;L6)</a>\n' +
+'          <hr>\n' +
+'          <p class="menu-label">Partner Initiative</p>\n' +
+'          <a href="flyspacea.html">FlySpaceA</a>\n' +
+'        </div>\n' +
+'      </div>\n' +
+'      <div class="nav-item dropdown">\n' +
+'        <a class="nav-link" href="resource-hub.html" aria-expanded="false" aria-haspopup="true">Tools</a>\n' +
+'        <div class="dropdown-menu">\n' +
+'          <a href="self-assessment.html">Self-Assessment Tool</a>\n' +
+'          <a href="start-security.html">Start Improving Your Security</a>\n' +
+'          <a href="resource-hub.html">Resource Hub</a>\n' +
+'        </div>\n' +
+'      </div>\n' +
+'      <div class="nav-item dropdown">\n' +
+'        <a class="nav-link" href="index.html" aria-expanded="false" aria-haspopup="true">Articles</a>\n' +
+'        <div class="dropdown-menu">\n' +
+'          <span class="menu-empty">Coming soon.</span>\n' +
 '        </div>\n' +
 '      </div>\n' +
 '      <div class="nav-item dropdown">\n' +

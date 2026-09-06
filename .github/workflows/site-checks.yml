@@ -24,8 +24,18 @@ jobs:
           python-version: "3.12"
 
       # No dependencies by design — the site has no build step and neither does this.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
       - name: Run site checks
         run: python3 tools/check_site.py
+
+      # Fails if any page's shared header/footer has drifted from _partials.js. The
+      # generator is only meaningful if something enforces it; without this it silently
+      # fell behind the pages it supposedly produces.
+      - name: Check shared shell is in sync
+        run: node tools/sync_shell.mjs --check
 
       # Fails the build. Each of these was a real defect found on this site at some point:
       #   malformed HTML, duplicate ids, missing alt text, broken internal links,
