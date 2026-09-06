@@ -498,15 +498,19 @@ section { padding: 80px 0; }
 /* ---- Team ---- */
 .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .team-card { text-align: center; }
+/* Frame is 2/3 to match the source headshots, which are all 640x960. At the previous 3/4
+   the browser cropped ~11% off the bottom of every portrait — shoulders and framing the
+   photographer composed for. Matching the frame to the source shows each photo whole with
+   no letterboxing and no distortion. Keep new headshots at 2:3 (e.g. 640x960). */
 .team-avatar {
-  width: 100%; aspect-ratio: 3 / 4; border-radius: 14px;
+  width: 100%; aspect-ratio: 2 / 3; border-radius: 14px;
   object-fit: cover; object-position: top center;
   display: block; margin: 0 auto 18px;
   border: 1px solid var(--line-subtle);
   box-shadow: var(--shadow-md);
 }
 .team-avatar-initials {
-  width: 100%; aspect-ratio: 3 / 4; border-radius: 14px;
+  width: 100%; aspect-ratio: 2 / 3; border-radius: 14px;
   display: flex; align-items: center; justify-content: center;
   margin: 0 auto 18px;
   background: var(--raised);
@@ -516,9 +520,9 @@ section { padding: 80px 0; }
 }
 .team-card .role { color: var(--gold); font-weight: 600; margin: 2px 0 12px; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.9rem; }
 .team-card .bio { font-size: 0.98rem; color: var(--ink-2); }
-.bio-band-avatar { width: 240px; max-width: 70vw; aspect-ratio: 3 / 4; border-radius: 14px; object-fit: cover; object-position: top center; display: block; margin: 0 auto 22px; border: 1px solid rgba(255,255,255,0.25); box-shadow: var(--shadow-md); }
+.bio-band-avatar { width: 240px; max-width: 70vw; aspect-ratio: 2 / 3; border-radius: 14px; object-fit: cover; object-position: top center; display: block; margin: 0 auto 22px; border: 1px solid rgba(255,255,255,0.25); box-shadow: var(--shadow-md); }
 .bio-band-initials {
-  width: 240px; max-width: 70vw; aspect-ratio: 3 / 4; border-radius: 14px;
+  width: 240px; max-width: 70vw; aspect-ratio: 2 / 3; border-radius: 14px;
   display: flex; align-items: center; justify-content: center; margin: 0 auto 22px;
   background: var(--white-wash); color: var(--ink);
   font-family: var(--heading-font); font-weight: 700; font-size: 3.6rem;
