@@ -1,144 +1,737 @@
 <!DOCTYPE html>
-<html lang="en" class="dark" data-accent="blue-led" data-density="airy" data-hero-stats="authority">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FlySpaceA Community Impact Report, Q2 2026 — The Von Terra Project</title>
+<meta name="description" content="FlySpaceA Community Impact Report, Q2 2026: 3,500+ Space-A flights surfaced, 271 flight locations, 99.99% alert delivery, and a growing community of military travelers. Verified figures only, data snapshot 12 June 2026.">
+<meta property="og:title" content="FlySpaceA — Community Impact Report · Q2 2026">
+<meta property="og:description" content="How FlySpaceA helps the military community fly the Space-A benefit they've earned — verified figures from the last 90 days.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://vonterraproject.org/flyspacea-impact-2026.html">
+<meta property="og:image" content="https://vonterraproject.org/website_images/VTP%20Logo.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" href="website_images/VTP Logo.png">
+<style>
+/* ============================================================
+   FlySpaceA Community Impact Report — page-scoped layout only.
+   Colour, type and radii come from the :root tokens in css/style.css
+   (mirrored from vtp_voice/tokens/colors.css). No hex is declared here.
+   ============================================================ */
 
-    <title>FlySpaceA — Community Impact Report · Q2 2026</title>
-    <meta name="description" content="FlySpaceA Community Impact Report, Q2 2026: 3,500+ Space-A flights surfaced, 271 flight locations, 99.99% alert delivery, and a growing community of military travelers.">
+/* ---- Classification strip + report meta ---- */
+.report-strip {
+  background: var(--field-deep);
+  border-bottom: 1px solid var(--line-subtle);
+  font-family: var(--heading-font);
+  font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--ink-2);
+}
+.report-strip .container { display: flex; flex-wrap: wrap; gap: 10px 26px; padding-top: 10px; padding-bottom: 10px; }
+.report-strip strong { color: var(--gold); font-weight: 700; }
+.report-sponsor { color: var(--ink-2); font-size: 0.95rem; margin: 18px 0 0; }
+.report-emblem { height: 56px; width: auto; display: block; margin: 0 auto 18px; }
 
-    <meta property="og:title" content="FlySpaceA — Community Impact Report · Q2 2026">
-    <meta property="og:description" content="How FlySpaceA helps the military community fly the Space-A benefit they've earned — verified figures from the last 90 days.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://vonterraproject.org/flyspacea-impact-2026">
-    <meta property="og:image" content="https://vonterraproject.org/images/logo.png">
+/* ---- Eyebrows / section headers ---- */
+.sec-no {
+  font-family: var(--heading-font);
+  font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gold); margin: 0 0 12px;
+}
+.sec-head { max-width: 860px; margin-bottom: 36px; }
+.sec-head p:not(.sec-no) { color: var(--ink-2); }
+.footnote {
+  margin-top: 22px;
+  font-size: 0.74rem; letter-spacing: 0.09em; line-height: 1.7;
+  text-transform: uppercase; color: var(--ink-3);
+}
 
-    <!-- Favicons -->
-    <link rel="icon" type="image/png" href="/images/logo.png">
-    <link rel="apple-touch-icon" href="/images/logo.png">
+/* ---- Stat band ---- */
+.stat-band { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 36px; }
+.stat-tile {
+  background: var(--card);
+  border: 1px solid var(--line-subtle);
+  border-top: 3px solid var(--olive);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow-md), var(--highlight-top);
+  text-align: left;
+}
+.stat-k {
+  font-family: var(--heading-font); font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 8px;
+}
+.stat-v {
+  font-family: var(--heading-font); font-weight: 800;
+  font-size: clamp(1.9rem, 4.4vw, 2.5rem); line-height: 1.1; color: var(--ink);
+}
+.stat-v .sep { color: var(--ink-3); margin: 0 6px; font-weight: 400; }
+.stat-c { font-size: 0.9rem; color: var(--ink-2); margin-top: 8px; line-height: 1.5; }
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Saira+Stencil+One&display=swap" rel="stylesheet">
+/* ---- Eligibility gap ---- */
+.gap-visual { margin: 8px 0 34px; }
+.gap-bar {
+  position: relative; height: 34px; border-radius: var(--radius-sm);
+  background: var(--raised); border: 1px solid var(--line-subtle); overflow: hidden;
+}
+.gap-sliver { position: absolute; inset: 0 auto 0 0; width: 1%; min-width: 4px; background: var(--gold); }
+.gap-labels {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; margin-top: 12px;
+  font-size: 0.86rem; color: var(--ink-2);
+}
+.gap-labels b { color: var(--ink); font-family: var(--heading-font); letter-spacing: 0.04em; }
+.gap-hl b { color: var(--gold); }
 
-    <link rel="preload" as="style" href="/build/assets/report-community-impact-dpSc_Xqw.css" /><link rel="modulepreload" as="script" href="/build/assets/report-community-impact-CXzjHGhQ.js" /><link rel="stylesheet" href="/build/assets/report-community-impact-dpSc_Xqw.css" /><script type="module" src="/build/assets/report-community-impact-CXzjHGhQ.js"></script></head>
+/* ---- Horizontal bar rows (segments, corridors, regions) ---- */
+.bar-rows { display: grid; gap: 12px; }
+.bar-row { display: grid; grid-template-columns: minmax(0, 15rem) 1fr auto; align-items: center; gap: 8px 16px; }
+.bar-label { font-size: 0.92rem; color: var(--ink); min-width: 0; }
+.bar-label .bar-sub { display: block; font-size: 0.78rem; color: var(--ink-2); letter-spacing: 0.04em; }
+.bar-track { position: relative; height: 14px; border-radius: 7px; background: var(--white-wash); min-width: 40px; }
+.bar-fill { position: absolute; inset: 0 auto 0 0; height: 100%; border-radius: 7px; background: var(--sage); }
+.bar-val {
+  font-family: var(--heading-font); font-weight: 700; font-size: 0.95rem;
+  color: var(--ink); font-variant-numeric: tabular-nums; text-align: right; min-width: 4.5rem;
+}
+.bar-rank {
+  font-family: var(--heading-font); font-weight: 700; font-size: 0.8rem;
+  color: var(--ink-3); font-variant-numeric: tabular-nums;
+}
+.lane-row { grid-template-columns: 2rem minmax(0, 16rem) 1fr auto; }
+.lane-code { font-family: var(--heading-font); font-weight: 700; letter-spacing: 0.06em; color: var(--ink); font-size: 0.92rem; }
+.lane-names { display: block; font-size: 0.78rem; color: var(--ink-2); }
+.region-tag {
+  display: inline-block; margin-left: 8px; padding: 1px 7px; border-radius: 3px;
+  font-family: var(--heading-font); font-size: 0.62rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--sage); background: var(--olive-wash); border: 1px solid var(--line-subtle);
+  vertical-align: 2px;
+}
+@media (max-width: 700px) {
+  .bar-row { grid-template-columns: 1fr auto; }
+  .lane-row { grid-template-columns: 2rem 1fr auto; }
+  .bar-track { grid-column: 1 / -1; }
+  .lane-row .bar-track { grid-column: 2 / -1; }
+}
+
+/* ---- Network map ---- */
+.map-frame {
+  position: relative; margin-top: 8px;
+  background: var(--card); border: 1px solid var(--line-subtle);
+  border-radius: var(--radius); padding: 14px;
+  box-shadow: var(--shadow-md), var(--highlight-top);
+}
+.map-frame svg { display: block; width: 100%; height: auto; }
+.fsa-land path { fill: var(--raised); stroke: none; }
+.fsa-water path { fill: var(--card); stroke: none; }
+.fsa-isles circle { fill: var(--raised); }
+.fsa-dest circle { fill: var(--sage); opacity: 0.45; }
+.fsa-lanes path { fill: none; stroke: var(--sage); stroke-opacity: 0.55; stroke-linecap: round; }
+.fsa-apt .apt-ring { fill: none; stroke: var(--gold); stroke-opacity: 0.5; stroke-width: 1.2; }
+.fsa-apt .apt-dot { fill: var(--gold); }
+.apt-label {
+  font-family: var(--heading-font); font-size: 12px; font-weight: 500;
+  fill: var(--ink-2); letter-spacing: 0.06em;
+}
+.apt-label .code { fill: var(--ink); font-weight: 700; }
+.map-corner {
+  display: block; margin-top: 10px;
+  font-family: var(--heading-font); font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-3);
+}
+.terminal-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 0; padding: 0; list-style: none; }
+.terminal-chips li {
+  font-size: 0.82rem; color: var(--ink-2);
+  border: 1px solid var(--line-subtle); border-radius: 999px;
+  padding: 5px 12px; background: var(--white-wash);
+}
+.terminal-chips b { font-family: var(--heading-font); letter-spacing: 0.08em; color: var(--ink); font-size: 0.78rem; }
+.map-hint {
+  display: none;
+  font-family: var(--heading-font); font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-3);
+  margin: 10px 0 0;
+}
+/* Below the label breakpoint the map is scrolled rather than shrunk — a 1200-unit
+   viewBox squeezed into 340px renders the corridors sub-pixel and unreadable. */
+@media (max-width: 768px) {
+  .apt-label { display: none; }
+  .map-frame { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .map-frame svg { min-width: 640px; }
+  .map-hint { display: block; }
+}
+
+/* ---- Delivery meter ---- */
+.trust-grid { display: grid; grid-template-columns: minmax(0, 320px) 1fr; gap: 32px; align-items: center; }
+.meter-card {
+  background: var(--card); border: 1px solid var(--line-subtle);
+  border-top: 3px solid var(--olive);
+  border-radius: var(--radius); padding: 26px; text-align: center;
+  box-shadow: var(--shadow-md), var(--highlight-top);
+}
+.meter-v { font-family: var(--heading-font); font-weight: 800; font-size: clamp(2.6rem, 8vw, 3.4rem); line-height: 1; color: var(--ink); }
+.meter-k { font-family: var(--heading-font); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-top: 10px; }
+.meter-track { height: 12px; border-radius: 6px; background: var(--white-wash); margin-top: 18px; overflow: hidden; }
+.meter-fill { height: 100%; width: 99.99%; background: var(--sage); border-radius: 6px; }
+.meter-c { font-size: 0.86rem; color: var(--ink-2); margin: 12px 0 0; }
+.trust-rows { display: grid; gap: 0; margin-bottom: 20px; }
+.trust-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 18px; padding: 14px 2px; border-bottom: 1px solid var(--line-subtle); }
+.trust-row:first-child { border-top: 1px solid var(--line-subtle); }
+.t-label { color: var(--ink-2); font-size: 0.95rem; }
+.t-val { font-family: var(--heading-font); font-weight: 700; color: var(--ink); font-variant-numeric: tabular-nums; }
+.t-val.good { color: var(--sage); }
+
+/* ---- Pills ---- */
+.badge-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.pill {
+  display: inline-block; padding: 7px 14px; border-radius: 999px;
+  border: 1px solid var(--line-subtle); background: var(--white-wash);
+  font-size: 0.85rem; color: var(--ink-2);
+}
+.pill b { color: var(--ink); font-family: var(--heading-font); letter-spacing: 0.06em; font-size: 0.8rem; }
+
+/* ---- Growth small multiples ---- */
+.sm-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.sm-card {
+  background: var(--card); border: 1px solid var(--line-subtle);
+  border-radius: var(--radius); padding: 18px 16px 14px;
+  box-shadow: var(--shadow-md), var(--highlight-top);
+}
+.sm-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 12px; margin-bottom: 4px; }
+.sm-k { font-family: var(--heading-font); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-2); }
+.sm-v { font-family: var(--heading-font); font-weight: 800; font-size: 1.5rem; color: var(--ink); line-height: 1; }
+.sm-asof { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); }
+.sm-note { font-size: 0.8rem; color: var(--ink-2); margin: 8px 0 0; }
+.spark { display: block; width: 100%; height: auto; overflow: visible; }
+.spark .grid { stroke: var(--line-subtle); stroke-width: 1; }
+.spark .axis { stroke: var(--line); stroke-width: 1; }
+.spark .gridlab, .spark .axlab {
+  font-family: var(--heading-font); font-size: 10px; font-weight: 600;
+  letter-spacing: 0.1em; fill: var(--ink-3);
+}
+.spark .line { fill: none; stroke: currentColor; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.spark .tip { fill: currentColor; stroke: var(--card); stroke-width: 2; }
+.spark .anno { fill: none; stroke: var(--gold); stroke-width: 2; }
+.sm-ig { color: var(--gold); }
+.sm-tr { color: var(--sage); }
+.sm-fb { color: var(--ink-2); }
+.side-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 24px; }
+.side-stat { border-left: 2px solid var(--olive); padding-left: 14px; }
+.s-v { font-family: var(--heading-font); font-weight: 800; font-size: 1.55rem; color: var(--ink); line-height: 1.1; }
+.s-k { font-size: 0.85rem; color: var(--ink-2); margin-top: 4px; }
+
+/* ---- Table view ---- */
+.table-view { margin-top: 24px; }
+.table-view > summary {
+  cursor: pointer; font-family: var(--heading-font); font-weight: 600;
+  font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage);
+  padding: 8px 0;
+}
+.table-scroll { overflow-x: auto; }
+table.data-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin-top: 10px; }
+table.data-table th, table.data-table td { text-align: right; padding: 8px 12px; border-bottom: 1px solid var(--line-subtle); font-variant-numeric: tabular-nums; }
+table.data-table th:first-child, table.data-table td:first-child { text-align: left; }
+table.data-table thead th {
+  color: var(--ink-2); font-family: var(--heading-font); font-weight: 700;
+  font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+}
+table.data-table caption { caption-side: top; text-align: left; color: var(--ink-3); font-size: 0.8rem; padding-bottom: 6px; }
+
+/* ---- Pipeline ---- */
+.pipeline { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; margin-bottom: 34px; }
+.pipe-step {
+  background: var(--card); border: 1px solid var(--line-subtle); border-radius: var(--radius-sm);
+  padding: 14px 10px; text-align: center;
+}
+.pipe-no { display: block; font-family: var(--heading-font); font-weight: 700; font-size: 0.72rem; letter-spacing: 0.14em; color: var(--gold); }
+.pipe-label { font-family: var(--heading-font); font-weight: 600; font-size: 0.86rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink); margin-top: 6px; }
+.engine-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+
+/* ---- Respect / forward ---- */
+.r-k { font-family: var(--heading-font); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin: 0 0 8px; }
+.forward-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; counter-reset: none; }
+.forward-step {
+  display: grid; grid-template-columns: 3.2rem 1fr; gap: 18px;
+  background: var(--card); border: 1px solid var(--line-subtle); border-left: 3px solid var(--olive);
+  border-radius: var(--radius); padding: 24px 26px;
+}
+.fs-no { font-family: var(--heading-font); font-weight: 800; font-size: 1.5rem; color: var(--gold); line-height: 1.2; }
+.fs-body h3 { margin-bottom: 8px; }
+.fs-body p { color: var(--ink-2); }
+.fs-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+
+/* ---- Mission / partner ---- */
+.mission-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; align-items: start; }
+.mission-copy p { color: var(--ink-2); }
+.mission-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.partner-card {
+  background: var(--card); border: 1px solid var(--line-subtle); border-radius: var(--radius);
+  padding: 28px; text-align: center; box-shadow: var(--shadow-md), var(--highlight-top);
+}
+.p-k { font-family: var(--heading-font); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 16px; }
+.partner-logo { height: 84px; width: auto; display: block; margin: 0 auto 14px; }
+.p-name { font-family: var(--heading-font); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink); display: block; }
+.p-sub { font-size: 0.9rem; color: var(--ink-2); display: block; margin: 6px 0 12px; }
+
+/* ---- CTA + colophon ---- */
+.cta-block { text-align: center; }
+.cta-block .lede { max-width: 720px; margin: 0 auto 26px; color: var(--ink-2); font-size: 1.08rem; }
+.store-badges { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; align-items: center; margin-top: 22px; }
+.badge-apple { height: 46px; width: auto; }
+.badge-play { height: 46px; width: auto; }
+.disclaimer {
+  max-width: 760px; margin: 30px auto 0;
+  font-size: 0.82rem; line-height: 1.7; color: var(--ink-3);
+}
+.report-colophon {
+  border-top: 1px solid var(--line-subtle);
+  padding: 30px 0 40px;
+  display: grid; gap: 8px;
+  font-size: 0.7rem; letter-spacing: 0.1em; line-height: 1.7;
+  text-transform: uppercase; color: var(--ink-3);
+}
+.report-colophon a { color: var(--ink-2); }
+
+/* ---- Responsive ---- */
+@media (max-width: 960px) {
+  .stat-band { grid-template-columns: repeat(2, 1fr); }
+  .sm-grid { grid-template-columns: 1fr; }
+  .side-stats { grid-template-columns: repeat(2, 1fr); }
+  .engine-stats { grid-template-columns: repeat(2, 1fr); }
+  .pipeline { grid-template-columns: repeat(4, 1fr); }
+  .trust-grid { grid-template-columns: 1fr; }
+  .mission-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .stat-band { grid-template-columns: 1fr; }
+  .side-stats { grid-template-columns: 1fr; }
+  .engine-stats { grid-template-columns: 1fr; }
+  .pipeline { grid-template-columns: repeat(2, 1fr); }
+  .forward-step { grid-template-columns: 1fr; gap: 6px; }
+}
+</style>
+</head>
 <body>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html"><img src="website_images/VTP Logo.png" alt="The Von Terra Project logo"></a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="site-nav">
+      <div class="nav-item"><a class="nav-link" href="index.html">Home</a></div>
+      <div class="nav-item"><a class="nav-link" href="cyberhero.html">CyberHERo</a></div>
+      <div class="nav-item"><a class="nav-link" href="flyspacea.html">FlySpaceA</a></div>
+      <div class="nav-item dropdown">
+        <a class="nav-link" href="programs.html">Programs</a>
+        <div class="dropdown-menu">
+          <a href="documents/certification-program/index.html">Certification Program</a>
+          <a href="self-assessment.html">Self-Assessment Tool</a>
+          <a href="start-security.html">Start Improving Your Security</a>
+        </div>
+      </div>
+      <div class="nav-item dropdown">
+        <a class="nav-link" href="about.html">About Us</a>
+        <div class="dropdown-menu">
+          <a href="team.html">Team</a>
+          <a href="lines-of-effort.html">Lines Of Effort</a>
+          <a href="faq.html">FAQ</a>
+          <a href="documents.html">Documents</a>
+        </div>
+      </div>
+      <a class="btn btn-donate" href="donate.html">Donate</a>
+    </nav>
+  </div>
+</header>
+<main>
 
-<div class="class-strip">
-  <span><strong>COMMUNITY IMPACT REPORT</strong></span>
-  <span>VERIFIED FIGURES ONLY</span>
-  <span>DATA SNAPSHOT: 12 JUN 2026</span>
+<div class="report-strip">
+  <div class="container">
+    <span><strong>Community Impact Report</strong></span>
+    <span>VERIFIED FIGURES ONLY</span>
+    <span>Data snapshot: 12 JUN 2026</span>
+  </div>
 </div>
 
-<div class="container">
-  <header class="masthead">
-    <div class="masthead-brand">
-      <img src="/images/logo.png" alt="FlySpaceA emblem">
-      <span class="masthead-wordmark">FLYSPACEA</span>
-    </div>
-    <div class="masthead-tag">
-      <b>Community Impact Report</b><br><br>
-      Q2 2026 · Trailing 90 Days
-      <span class="masthead-sponsor">Sponsored by <a href="https://vonterraproject.org" target="_blank" rel="noopener">Von Terra Project</a></span>
-    </div>
-  </header>
+<div class="page-band">
+  <div class="container">
+    <img class="report-emblem" src="images/logo.png" alt="FlySpaceA emblem">
+    <h1>FlySpaceA Community Impact Report</h1>
+    <p class="sub">Q2 2026 · Trailing 90 Days</p>
+    <p class="report-sponsor">The Space-A Experts · Sponsored by <a href="index.html">The Von Terra Project</a></p>
+  </div>
 </div>
 
 <!-- ============================ HERO ============================ -->
-<section class="hero">
+<section>
   <div class="container">
-    <p class="kicker">The Space-A Experts <span class="tick">//</span> Community Impact Report</p>
-    <h1 class="reveal in">We Help the Military Community <em>Fly the Benefit They've Earned.</em></h1>
-    <p class="hero-sub reveal in">Space-A travel offers free seats on military aircraft to service members,
-      retirees, veterans, and their families. We watch official AMC terminal schedules around the clock and
-      tell you the moment a seat shows up. So the benefit actually gets used.</p>
-    <div class="stat-band" id="hero-stats"></div>
+    <div class="sec-head">
+      <h2>We Help the Military Community Fly the Benefit They&rsquo;ve Earned.</h2>
+      <p>Space-A travel offers free seats on military aircraft to service members, retirees, veterans,
+        and their families. We watch official AMC terminal schedules around the clock and tell you the
+        moment a seat shows up. So the benefit actually gets used.</p>
+    </div>
+    <div class="stat-band">
+      <div class="stat-tile">
+        <p class="stat-k">Flights surfaced</p>
+        <div class="stat-v">3,500+</div>
+        <div class="stat-c">Space-A flights surfaced for travelers in the last 90 days</div>
+      </div>
+      <div class="stat-tile">
+        <p class="stat-k">Global reach</p>
+        <div class="stat-v">271</div>
+        <div class="stat-c">flight locations connected across five command regions</div>
+      </div>
+      <div class="stat-tile">
+        <p class="stat-k">Alert reliability</p>
+        <div class="stat-v">99.99%</div>
+        <div class="stat-c">of 18,873 flight alerts delivered successfully</div>
+      </div>
+      <div class="stat-tile">
+        <p class="stat-k">Community</p>
+        <div class="stat-v">6,500+<span class="sep">·</span>17K+</div>
+        <div class="stat-c">registered travelers · social followers</div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ============================ COMMUNITY ============================ -->
-<section class="block tinted" id="community">
+<!-- ============================ 01 COMMUNITY ============================ -->
+<section class="section-soft" id="community">
   <div class="container">
-    <div class="sec-head reveal">
+    <div class="sec-head">
       <p class="sec-no">01 / The Community We Serve</p>
       <h2>11.5 Million Americans Have Earned This Benefit. Almost None Get to Use It.</h2>
       <p>Space-A has rewarded service for more than 75 years. But the information you need to use it has
         always been scattered, stale, and hard to trust. In a typical year, only about 1% of eligible
         travelers manage to fly. Closing that gap is why FlySpaceA exists.</p>
     </div>
-    <div class="gap-visual reveal">
-      <div class="gap-bar"><span class="gap-sliver"></span></div>
+    <div class="gap-visual">
+      <div class="gap-bar" role="img" aria-label="Of 11.5 million eligible travelers, about 1 percent fly in a typical year."><span class="gap-sliver"></span></div>
       <div class="gap-labels">
         <span><b>11.5M</b> &nbsp;eligible service members, retirees, veterans &amp; families</span>
         <span class="gap-hl"><b>~1%</b> &nbsp;fly in a typical year</span>
       </div>
     </div>
-    <div class="seg-rows">
-      <div class="seg-row reveal"><span class="seg-label">Retirees &amp; their families</span><div class="lane-track"><div class="lane-bar seg-bar" style="width: 100%;"></div></div><span class="seg-val">4.95M</span></div>
-      <div class="seg-row reveal"><span class="seg-label">Active component &amp; families</span><div class="lane-track"><div class="lane-bar seg-bar" style="width: 56.8%;"></div></div><span class="seg-val">2.81M</span></div>
-      <div class="seg-row reveal"><span class="seg-label">100% disabled veterans &amp; families</span><div class="lane-track"><div class="lane-bar seg-bar" style="width: 42.4%;"></div></div><span class="seg-val">2.10M</span></div>
-      <div class="seg-row reveal"><span class="seg-label">Guard &amp; Reserve families</span><div class="lane-track"><div class="lane-bar seg-bar" style="width: 32.9%;"></div></div><span class="seg-val">1.63M</span></div>
-      <div class="seg-row reveal"><span class="seg-label">Survivors &amp; others</span><div class="lane-track"><div class="lane-bar seg-bar" style="width: 18.6%;"></div></div><span class="seg-val">0.92M</span></div>
+    <div class="bar-rows">
+      <div class="bar-row">
+        <span class="bar-label">Retirees &amp; their families</span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="width:100%"></div></div>
+        <span class="bar-val">4.95M</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">Active component &amp; families</span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="width:56.8%"></div></div>
+        <span class="bar-val">2.81M</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">100% disabled veterans &amp; families</span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="width:42.4%"></div></div>
+        <span class="bar-val">2.10M</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">Guard &amp; Reserve families</span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="width:32.9%"></div></div>
+        <span class="bar-val">1.63M</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">Survivors &amp; others</span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="width:18.6%"></div></div>
+        <span class="bar-val">0.92M</span>
+      </div>
     </div>
-    <p class="footnote">ELIGIBILITY SEGMENTS INCLUDE SPONSORS AND DEPENDENTS · SOURCE: FLYSPACEA MARKET
-      RESEARCH, 2026 · TYPICAL-YEAR PARTICIPATION ≈100K–194K TRAVELERS</p>
+    <p class="footnote">Eligibility segments include sponsors and dependents · Source: FlySpaceA market
+      research, 2026 · Typical-year participation &asymp;100K&ndash;194K travelers</p>
   </div>
 </section>
 
-<!-- ============================ MAP ============================ -->
-<section class="block" id="network">
+<!-- ============================ 02 NETWORK ============================ -->
+<section id="network">
   <div class="container">
-    <div class="sec-head reveal">
+    <div class="sec-head">
       <p class="sec-no">02 / Wherever Space-A Flies</p>
       <h2>From the East Coast to the Indo-Pacific, We Help Travelers Find the Way.</h2>
       <p>Space-A moves across the globe every day. FlySpaceA maps where the flights actually go:
         <strong>55 departure points</strong> and <strong>271 flight locations</strong>, from the U.S. East
         Coast to Europe and the Indo-Pacific. That picture lives in your pocket, free.</p>
     </div>
-    <div class="map-frame reveal" id="map-reveal">
-      <div id="network-map"></div>
-      <span class="map-corner tl">FSA / GLOBAL COVERAGE · LAST 90 DAYS</span>
-      <span class="map-corner br">271 FLIGHT LOCATIONS · MAJOR TERMINALS SHOWN · LANE WEIGHT = VOLUME</span>
+    <div class="map-frame">
+      <svg viewBox="0 0 1200 540" role="img" aria-label="Stylized world map of Space-A corridors across NORTHCOM, EUCOM and INDOPACOM, with major terminals marked. Corridor volumes are listed in the table below.">
+        <g class="fsa-land">
+        <path d="M40.0 58.7 L46.7 74.3 L73.3 86.1 L93.3 78.3 L106.7 78.3 L130.0 78.3 L146.7 90.0 L163.3 101.7 L173.3 117.4 L183.3 125.2 L186.7 144.8 L193.3 164.3 L206.7 183.9 L220.0 199.6 L233.3 219.1 L246.7 230.9 L250.0 238.7 L260.0 246.5 L276.7 250.4 L286.7 250.4 L293.3 258.3 L306.7 262.2 L316.7 270.0 L323.3 277.8 L333.3 281.7 L343.3 285.7 L340.0 277.8 L326.7 270.0 L323.3 266.1 L313.3 250.4 L306.7 250.4 L310.0 230.9 L300.0 230.9 L296.7 240.7 L286.7 242.6 L276.7 227.0 L276.7 211.3 L286.7 199.6 L300.0 199.6 L320.0 195.7 L323.3 203.5 L330.0 215.2 L333.3 211.3 L330.0 191.7 L336.7 183.9 L346.7 176.1 L350.0 164.3 L353.3 156.5 L366.7 148.7 L366.7 140.9 L380.0 140.9 L386.7 133.0 L400.0 133.0 L413.3 129.1 L423.3 129.1 L413.3 117.4 L406.7 109.6 L400.0 97.8 L386.7 78.3 L383.3 70.4 L340.0 70.4 L350.0 47.0 L333.3 39.1 L313.3 39.1 L293.3 31.3 L260.0 27.4 L220.0 27.4 L186.7 31.3 L153.3 35.2 L120.0 39.1 L76.7 35.2 L50.0 43.0 L40.0 58.7 Z"/>
+        <path d="M406.7 62.6 L446.7 78.3 L466.7 62.6 L493.3 47.0 L533.3 39.1 L540.0 15.7 L500.0 -7.8 L433.3 -7.8 L393.3 7.8 L373.3 31.3 L406.7 62.6 Z"/>
+        <path d="M343.3 285.7 L360.0 270.0 L373.3 270.0 L390.0 273.9 L400.0 281.7 L416.7 289.6 L426.7 297.4 L433.3 313.0 L453.3 324.8 L473.3 332.6 L483.3 344.3 L476.7 360.0 L470.0 375.7 L466.7 395.2 L450.0 407.0 L440.0 418.7 L426.7 438.3 L410.0 450.0 L393.3 465.7 L383.3 477.4 L376.7 493.0 L370.0 508.7 L373.3 524.3 L360.0 524.3 L353.3 508.7 L356.7 485.2 L356.7 461.7 L363.3 438.3 L366.7 410.9 L366.7 383.5 L350.0 367.8 L336.7 340.4 L330.0 328.7 L333.3 313.0 L343.3 297.4 L343.3 285.7 Z"/>
+        <path d="M570.0 172.2 L570.0 156.5 L570.0 144.8 L593.3 140.9 L586.7 125.2 L600.0 121.3 L610.0 113.5 L623.3 105.7 L626.7 97.8 L626.7 90.0 L620.0 86.1 L616.7 78.3 L616.7 70.4 L633.3 62.6 L646.7 50.9 L660.0 43.0 L680.0 35.2 L693.3 35.2 L706.7 43.0 L733.3 50.9 L746.7 50.9 L766.7 47.0 L800.0 43.0 L826.7 39.1 L846.7 31.3 L873.3 27.4 L920.0 15.7 L950.0 11.7 L980.0 19.6 L1026.7 27.4 L1066.7 31.3 L1100.0 39.1 L1133.3 43.0 L1166.7 50.9 L1193.3 54.8 L1196.7 58.7 L1193.3 70.4 L1166.7 78.3 L1140.0 86.1 L1126.7 113.5 L1120.0 90.0 L1106.7 82.2 L1090.0 82.2 L1073.3 101.7 L1060.0 121.3 L1050.0 140.9 L1036.7 144.8 L1023.3 156.5 L1006.7 164.3 L1003.3 187.8 L993.3 211.3 L980.0 227.0 L960.0 242.6 L953.3 266.1 L950.0 277.8 L943.3 301.3 L933.3 289.6 L926.7 273.9 L913.3 246.5 L903.3 227.0 L893.3 227.0 L886.7 234.8 L876.7 246.5 L866.7 262.2 L856.7 281.7 L846.7 262.2 L840.0 238.7 L826.7 223.0 L820.0 215.2 L803.3 215.2 L790.0 211.3 L780.0 211.3 L766.7 203.5 L760.0 199.6 L770.0 215.2 L786.7 215.2 L796.7 227.0 L790.0 242.6 L773.3 250.4 L760.0 258.3 L746.7 266.1 L743.3 254.3 L736.7 242.6 L726.7 227.0 L716.7 203.5 L713.3 195.7 L720.0 172.2 L706.7 172.2 L700.0 168.3 L690.0 164.3 L686.7 156.5 L676.7 164.3 L670.0 164.3 L663.3 156.5 L653.3 152.6 L646.7 148.7 L643.3 140.9 L626.7 140.9 L620.0 144.8 L610.0 148.7 L600.0 156.5 L593.3 168.3 L583.3 172.2 L570.0 172.2 Z"/>
+        <path d="M1020.0 164.3 L1030.0 164.3 L1030.0 176.1 L1020.0 180.0 L1020.0 164.3 Z"/>
+        <path d="M580.0 176.1 L566.7 191.7 L560.0 203.5 L550.0 219.1 L543.3 230.9 L546.7 246.5 L543.3 258.3 L550.0 270.0 L560.0 281.7 L573.3 293.5 L586.7 293.5 L600.0 289.6 L613.3 289.6 L626.7 297.4 L630.0 309.1 L630.0 320.9 L640.0 336.5 L643.3 356.1 L640.0 375.7 L646.7 399.1 L653.3 422.6 L660.0 442.2 L666.7 450.0 L683.3 446.1 L693.3 438.3 L703.3 426.5 L710.0 414.8 L716.7 399.1 L720.0 383.5 L730.0 371.7 L733.3 356.1 L733.3 336.5 L740.0 317.0 L746.7 301.3 L756.7 285.7 L770.0 273.9 L770.0 266.1 L756.7 270.0 L743.3 270.0 L733.3 254.3 L726.7 238.7 L720.0 223.0 L713.3 203.5 L706.7 191.7 L700.0 191.7 L683.3 187.8 L663.3 191.7 L650.0 183.9 L636.7 180.0 L616.7 172.2 L600.0 172.2 L580.0 176.1 Z"/>
+        <path d="M746.7 410.9 L753.3 410.9 L766.7 375.7 L766.7 363.9 L760.0 363.9 L750.0 391.3 L746.7 410.9 Z"/>
+        <path d="M980.0 399.1 L976.7 414.8 L983.3 446.1 L993.3 450.0 L1013.3 442.2 L1033.3 438.3 L1040.0 438.3 L1053.3 450.0 L1060.0 450.0 L1066.7 461.7 L1080.0 465.7 L1090.0 461.7 L1100.0 457.8 L1106.7 442.2 L1110.0 422.6 L1106.7 410.9 L1096.7 395.2 L1086.7 387.4 L1076.7 367.8 L1073.3 356.1 L1063.3 379.6 L1053.3 360.0 L1043.3 356.1 L1030.0 367.8 L1020.0 367.8 L1006.7 383.5 L993.3 391.3 L980.0 399.1 Z"/>
+        <path d="M583.3 117.4 L590.0 105.7 L583.3 93.9 L590.0 86.1 L596.7 90.0 L600.0 105.7 L603.3 113.5 L583.3 117.4 Z"/>
+        <path d="M566.7 109.6 L566.7 101.7 L576.7 97.8 L580.0 105.7 L570.0 113.5 L566.7 109.6 Z"/>
+        <path d="M526.7 62.6 L520.0 58.7 L533.3 54.8 L550.0 54.8 L553.3 58.7 L540.0 66.5 L526.7 62.6 Z"/>
+        <path d="M1033.3 195.7 L1040.0 183.9 L1053.3 180.0 L1066.7 176.1 L1073.3 156.5 L1070.0 137.0 L1080.0 137.0 L1083.3 144.8 L1073.3 152.6 L1066.7 168.3 L1050.0 183.9 L1036.7 195.7 L1033.3 195.7 Z"/>
+        <path d="M1153.3 493.0 L1166.7 493.0 L1180.0 477.4 L1193.3 461.7 L1186.7 457.8 L1176.7 473.5 L1156.7 485.2 L1153.3 493.0 Z"/>
+        <path d="M963.3 320.9 L963.3 305.2 L976.7 293.5 L990.0 289.6 L996.7 305.2 L986.7 320.9 L973.3 324.8 L963.3 320.9 Z"/>
+        <path d="M916.7 293.5 L926.7 297.4 L943.3 320.9 L953.3 336.5 L946.7 336.5 L933.3 313.0 L916.7 301.3 L916.7 293.5 Z"/>
+        <path d="M950.0 336.5 L980.0 340.4 L980.0 348.3 L950.0 344.3 L950.0 336.5 Z"/>
+        <path d="M1036.7 317.0 L1053.3 320.9 L1070.0 324.8 L1086.7 336.5 L1100.0 348.3 L1090.0 352.2 L1073.3 348.3 L1056.7 340.4 L1040.0 328.7 L1033.3 320.9 L1036.7 317.0 Z"/>
+        <path d="M1000.0 242.6 L1006.7 242.6 L1013.3 262.2 L1020.0 277.8 L1016.7 289.6 L1006.7 281.7 L1003.3 262.2 L996.7 250.4 L1000.0 242.6 Z"/>
+        <path d="M996.7 324.8 L1000.0 320.9 L1010.0 313.0 L1006.7 328.7 L996.7 324.8 Z"/>
+        <path d="M320.0 227.0 L333.3 223.0 L350.0 234.8 L343.3 234.8 L326.7 227.0 L320.0 227.0 Z"/>
+        <path d="M353.3 242.6 L370.0 242.6 L373.3 238.7 L360.0 234.8 L353.3 238.7 L353.3 242.6 Z"/>
+        </g>
+        <g class="fsa-water">
+        <path d="M283.3 90.0 L300.0 90.0 L316.7 97.8 L326.7 105.7 L326.7 78.3 L310.0 62.6 L286.7 62.6 L283.3 78.3 L283.3 90.0 Z"/>
+        <path d="M766.7 129.1 L780.0 133.0 L780.0 152.6 L766.7 168.3 L760.0 156.5 L756.7 140.9 L766.7 129.1 Z"/>
+        <path d="M693.3 140.9 L713.3 137.0 L733.3 140.9 L733.3 148.7 L713.3 152.6 L693.3 148.7 L693.3 140.9 Z"/>
+        <path d="M646.7 101.7 L666.7 97.8 L686.7 82.2 L680.0 74.3 L670.0 66.5 L660.0 78.3 L653.3 93.9 L646.7 101.7 Z"/>
+        </g>
+        <g class="fsa-isles">
+        <circle cx="81.7" cy="236.3" r="2.6"/>
+        <circle cx="79.0" cy="231.7" r="2.6"/>
+        <circle cx="73.7" cy="229.3" r="2.6"/>
+        <circle cx="68.3" cy="226.6" r="2.6"/>
+        <circle cx="1083.0" cy="260.2" r="2.6"/>
+        <circle cx="1003.3" cy="220.3" r="2.6"/>
+        <circle cx="869.0" cy="282.1" r="2.6"/>
+        <circle cx="1026.0" cy="209.7" r="2.6"/>
+        <circle cx="395.0" cy="272.0" r="2.6"/>
+        <circle cx="377.0" cy="241.8" r="2.6"/>
+        </g>
+        <g class="fsa-dest">
+        <circle cx="343.8" cy="161.2" r="3.2"/>
+        <circle cx="344.4" cy="159.7" r="3.2"/>
+        <circle cx="327.7" cy="194.8" r="3.2"/>
+        <circle cx="324.9" cy="204.1" r="3.2"/>
+        <circle cx="311.5" cy="193.8" r="3.2"/>
+        <circle cx="312.1" cy="186.3" r="3.2"/>
+        <circle cx="292.8" cy="176.4" r="3.2"/>
+        <circle cx="300.5" cy="162.2" r="3.2"/>
+        <circle cx="319.8" cy="157.2" r="3.2"/>
+        <circle cx="271.4" cy="198.1" r="3.2"/>
+        <circle cx="275.2" cy="184.8" r="3.2"/>
+        <circle cx="251.0" cy="161.2" r="3.2"/>
+        <circle cx="226.8" cy="152.1" r="3.2"/>
+        <circle cx="209.1" cy="180.5" r="3.2"/>
+        <circle cx="209.3" cy="185.1" r="3.2"/>
+        <circle cx="191.7" cy="128.6" r="3.2"/>
+        <circle cx="207.8" cy="126.7" r="3.2"/>
+        <circle cx="109.7" cy="60.0" r="3.2"/>
+        <circle cx="280.3" cy="152.1" r="3.2"/>
+        <circle cx="303.1" cy="194.0" r="3.2"/>
+        <circle cx="358.2" cy="147.9" r="3.2"/>
+        <circle cx="371.0" cy="13.6" r="3.2"/>
+        <circle cx="380.0" cy="240.8" r="3.2"/>
+        <circle cx="275.4" cy="174.4" r="3.2"/>
+        <circle cx="336.8" cy="144.4" r="3.2"/>
+        <circle cx="642.0" cy="132.9" r="3.2"/>
+        <circle cx="649.7" cy="166.7" r="3.2"/>
+        <circle cx="578.8" cy="169.7" r="3.2"/>
+        <circle cx="601.6" cy="108.2" r="3.2"/>
+        <circle cx="630.7" cy="122.5" r="3.2"/>
+        <circle cx="647.6" cy="153.1" r="3.2"/>
+        <circle cx="680.4" cy="174.0" r="3.2"/>
+        <circle cx="509.7" cy="161.4" r="3.2"/>
+        <circle cx="524.6" cy="62.6" r="3.2"/>
+        <circle cx="658.8" cy="127.7" r="3.2"/>
+        <circle cx="659.5" cy="108.1" r="3.2"/>
+        <circle cx="1071.2" cy="153.8" r="3.2"/>
+        <circle cx="1040.8" cy="179.5" r="3.2"/>
+        <circle cx="1023.4" cy="167.9" r="3.2"/>
+        <circle cx="1022.1" cy="172.6" r="3.2"/>
+        <circle cx="946.4" cy="307.7" r="3.2"/>
+        <circle cx="1175.1" cy="483.2" r="3.2"/>
+        <circle cx="1155.5" cy="237.6" r="3.2"/>
+        <circle cx="1159.1" cy="278.9" r="3.2"/>
+        <circle cx="349.5" cy="235.1" r="3.2"/>
+        <circle cx="307.9" cy="256.8" r="3.2"/>
+        <circle cx="552.0" cy="344.2" r="3.2"/>
+        </g>
+        <g class="fsa-lanes">
+        <path d="M622.3 117.5 Q478.3 77.4 351.4 156.4" stroke-width="7.00"/>
+        <path d="M625.3 119.6 Q480.2 77.7 351.4 156.4" stroke-width="3.65"/>
+        <path d="M73.5 229.6 Q119.0 170.1 193.6 163.3" stroke-width="2.58"/>
+        <path d="M73.5 229.6 Q-28.4 202.9 -116.9 259.9" stroke-width="2.52"/>
+        <path d="M73.5 229.6 Q-28.4 202.9 -116.9 259.9" transform="translate(1200 0)" stroke-width="2.52"/>
+        <path d="M351.4 156.4 Q339.8 162.7 336.6 175.4" stroke-width="2.42"/>
+        <path d="M333.2 184.3 Q465.0 87.7 625.3 119.6" stroke-width="2.22"/>
+        <path d="M193.6 163.3 Q119.0 170.1 73.5 229.6" stroke-width="2.11"/>
+        <path d="M73.5 229.6 Q-46.0 165.3 -174.1 209.9" stroke-width="2.03"/>
+        <path d="M73.5 229.6 Q-46.0 165.3 -174.1 209.9" transform="translate(1200 0)" stroke-width="2.03"/>
+        <path d="M625.3 119.6 Q465.0 87.7 333.2 184.3" stroke-width="1.99"/>
+        <path d="M348.4 159.9 Q478.0 78.8 625.3 119.6" stroke-width="1.99"/>
+        <path d="M351.4 156.4 Q349.1 157.5 348.4 159.9" stroke-width="1.95"/>
+        <path d="M100.6 73.4 Q-39.4 71.3 -135.5 173.2" stroke-width="1.90"/>
+        <path d="M100.6 73.4 Q-39.4 71.3 -135.5 173.2" transform="translate(1200 0)" stroke-width="1.90"/>
+        </g>
+        <g class="fsa-apt">
+        <circle class="apt-ring" cx="351.4" cy="156.4" r="7"/><circle class="apt-dot" cx="351.4" cy="156.4" r="3"/>
+        <text class="apt-label" x="361.4" y="148.4"><tspan class="code">WRI </tspan>McGuire</text>
+        <circle class="apt-ring" cx="348.4" cy="159.9" r="7"/><circle class="apt-dot" cx="348.4" cy="159.9" r="3"/>
+        <text class="apt-label" x="358.4" y="171.9"><tspan class="code">DOV </tspan>Dover</text>
+        <circle class="apt-ring" cx="336.6" cy="175.4" r="7"/><circle class="apt-dot" cx="336.6" cy="175.4" r="3"/>
+        <text class="apt-label" x="324.6" y="189.4" text-anchor="end"><tspan class="code">POB </tspan>Pope</text>
+        <circle class="apt-ring" cx="333.2" cy="184.3" r="7"/><circle class="apt-dot" cx="333.2" cy="184.3" r="3"/>
+        <text class="apt-label" x="323.2" y="210.3" text-anchor="end"><tspan class="code">CHS </tspan>Charleston</text>
+        <circle class="apt-ring" cx="193.6" cy="163.3" r="7"/><circle class="apt-dot" cx="193.6" cy="163.3" r="3"/>
+        <text class="apt-label" x="183.6" y="155.3" text-anchor="end"><tspan class="code">SUU </tspan>Travis</text>
+        <circle class="apt-ring" cx="100.6" cy="73.4" r="7"/><circle class="apt-dot" cx="100.6" cy="73.4" r="3"/>
+        <text class="apt-label" x="110.6" y="65.4"><tspan class="code">EDF </tspan>Elmendorf</text>
+        <circle class="apt-ring" cx="73.5" cy="229.6" r="7"/><circle class="apt-dot" cx="73.5" cy="229.6" r="3"/>
+        <text class="apt-label" x="81.5" y="249.6" text-anchor="middle"><tspan class="code">HIK </tspan>Hickam</text>
+        <circle class="apt-ring" cx="1083.1" cy="259.9" r="7"/><circle class="apt-dot" cx="1083.1" cy="259.9" r="3"/>
+        <text class="apt-label" x="1093.1" y="263.9"><tspan class="code">UAM </tspan>Andersen</text>
+        <circle class="apt-ring" cx="1025.9" cy="209.9" r="7"/><circle class="apt-dot" cx="1025.9" cy="209.9" r="3"/>
+        <text class="apt-label" x="1015.9" y="213.9" text-anchor="end"><tspan class="code">DNA </tspan>Kadena</text>
+        <circle class="apt-ring" cx="1064.5" cy="173.2" r="7"/><circle class="apt-dot" cx="1064.5" cy="173.2" r="3"/>
+        <text class="apt-label" x="1074.5" y="167.2"><tspan class="code">OKO </tspan>Yokota</text>
+        <circle class="apt-ring" cx="622.3" cy="117.5" r="7"/><circle class="apt-dot" cx="622.3" cy="117.5" r="3"/>
+        <text class="apt-label" x="632.3" y="109.5"><tspan class="code">SPM </tspan>Spangdahlem</text>
+        <circle class="apt-ring" cx="625.3" cy="119.6" r="7"/><circle class="apt-dot" cx="625.3" cy="119.6" r="3"/>
+        <text class="apt-label" x="635.3" y="131.6"><tspan class="code">RMS </tspan>Ramstein</text>
+        </g>
+      </svg>
     </div>
-    <div class="region-legend" id="region-legend"></div>
-    <p class="region-note">DEPARTURES BY COMBATANT-COMMAND REGION, LAST 90 DAYS · DOTS MARK MAJOR TERMINALS AMONG THE 271 FLIGHT LOCATIONS IN OUR NETWORK · PLUS AFRICOM &amp; SOUTHCOM CONNECTIONS</p>
+    <p class="map-hint">Scroll the map sideways to follow a corridor</p>
+    <span class="map-corner">FSA / Global coverage · Last 90 days · 271 flight locations · Major terminals shown · Lane weight = volume</span>
+    <ul class="terminal-chips">
+      <li><b>WRI</b> McGuire</li>
+      <li><b>DOV</b> Dover</li>
+      <li><b>POB</b> Pope</li>
+      <li><b>CHS</b> Charleston</li>
+      <li><b>SUU</b> Travis</li>
+      <li><b>EDF</b> Elmendorf</li>
+      <li><b>HIK</b> Hickam</li>
+      <li><b>UAM</b> Andersen</li>
+      <li><b>DNA</b> Kadena</li>
+      <li><b>OKO</b> Yokota</li>
+      <li><b>SPM</b> Spangdahlem</li>
+      <li><b>RMS</b> Ramstein</li>
+    </ul>
+    <h3 style="margin-top:38px">Departures by Region</h3>
+    <div class="bar-rows">
+      <div class="bar-row">
+        <span class="bar-label">NORTHCOM<span class="bar-sub">North America</span></span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="width:100%"></div></div>
+        <span class="bar-val">1,537</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">EUCOM<span class="bar-sub">Europe</span></span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="width:81.98%"></div></div>
+        <span class="bar-val">1,260</span>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label">INDOPACOM<span class="bar-sub">Indo-Pacific</span></span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="width:36.5%"></div></div>
+        <span class="bar-val">561</span>
+      </div>
+    </div>
+    <p class="footnote">Departures by combatant-command region, last 90 days · Dots mark major terminals
+      among the 271 flight locations in our network · Plus AFRICOM &amp; SOUTHCOM connections</p>
   </div>
 </section>
 
-<!-- ============================ LANES ============================ -->
-<section class="block tinted" id="lanes">
+<!-- ============================ 03 LANES ============================ -->
+<section class="section-soft" id="lanes">
   <div class="container">
-    <div class="sec-head reveal">
+    <div class="sec-head">
       <p class="sec-no">03 / Top Corridors</p>
       <h2>Where Space-A Actually Flies.</h2>
       <p>Some routes run almost daily. Others appear once a season. Over the last 90 days,
         these were the most active corridors our travelers followed.</p>
     </div>
-    <div class="lanes-grid" id="lane-bars"></div>
+    <div class="bar-rows">
+      <div class="bar-row lane-row">
+        <span class="bar-rank">01</span>
+        <span class="bar-label"><span class="lane-code">SPM &rarr; WRI</span><span class="region-tag">EUCOM</span><span class="lane-names">Spangdahlem &rarr; McGuire</span></span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="width:100%"></div></div>
+        <span class="bar-val">320</span>
+      </div>
+      <div class="bar-row lane-row">
+        <span class="bar-rank">02</span>
+        <span class="bar-label"><span class="lane-code">RMS &rarr; WRI</span><span class="region-tag">EUCOM</span><span class="lane-names">Ramstein &rarr; McGuire</span></span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="width:42.1875%"></div></div>
+        <span class="bar-val">135</span>
+      </div>
+      <div class="bar-row lane-row">
+        <span class="bar-rank">03</span>
+        <span class="bar-label"><span class="lane-code">HIK &rarr; SUU</span><span class="region-tag">INDOPACOM</span><span class="lane-names">Hickam &rarr; Travis</span></span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="width:25%"></div></div>
+        <span class="bar-val">80</span>
+      </div>
+      <div class="bar-row lane-row">
+        <span class="bar-rank">04</span>
+        <span class="bar-label"><span class="lane-code">HIK &rarr; UAM</span><span class="region-tag">INDOPACOM</span><span class="lane-names">Hickam &rarr; Andersen</span></span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="width:24.0625%"></div></div>
+        <span class="bar-val">77</span>
+      </div>
+      <div class="bar-row lane-row">
+        <span class="bar-rank">05</span>
+        <span class="bar-label"><span class="lane-code">WRI &rarr; POB</span><span class="region-tag">NORTHCOM</span><span class="lane-names">McGuire &rarr; Pope</span></span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="width:22.5%"></div></div>
+        <span class="bar-val">72</span>
+      </div>
+      <div class="bar-row lane-row">
+        <span class="bar-rank">06</span>
+        <span class="bar-label"><span class="lane-code">CHS &rarr; RMS</span><span class="region-tag">EUCOM</span><span class="lane-names">Charleston &rarr; Ramstein</span></span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="width:19.375%"></div></div>
+        <span class="bar-val">62</span>
+      </div>
+      <div class="bar-row lane-row">
+        <span class="bar-rank">07</span>
+        <span class="bar-label"><span class="lane-code">SUU &rarr; HIK</span><span class="region-tag">INDOPACOM</span><span class="lane-names">Travis &rarr; Hickam</span></span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="width:17.8125%"></div></div>
+        <span class="bar-val">57</span>
+      </div>
+      <div class="bar-row lane-row">
+        <span class="bar-rank">08</span>
+        <span class="bar-label"><span class="lane-code">HIK &rarr; DNA</span><span class="region-tag">INDOPACOM</span><span class="lane-names">Hickam &rarr; Kadena</span></span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="width:16.5625%"></div></div>
+        <span class="bar-val">53</span>
+      </div>
+      <div class="bar-row lane-row">
+        <span class="bar-rank">09</span>
+        <span class="bar-label"><span class="lane-code">RMS &rarr; CHS</span><span class="region-tag">EUCOM</span><span class="lane-names">Ramstein &rarr; Charleston</span></span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="width:15.9375%"></div></div>
+        <span class="bar-val">51</span>
+      </div>
+      <div class="bar-row lane-row">
+        <span class="bar-rank">10</span>
+        <span class="bar-label"><span class="lane-code">DOV &rarr; RMS</span><span class="region-tag">EUCOM</span><span class="lane-names">Dover &rarr; Ramstein</span></span>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill" style="width:15.9375%"></div></div>
+        <span class="bar-val">51</span>
+      </div>
+    </div>
+    <p class="footnote">Top 10 corridors by flight count, last 90 days · Bar length is relative to the
+      busiest corridor</p>
   </div>
 </section>
 
-<!-- ============================ TRUST ============================ -->
-<section class="block" id="trust">
+<!-- ============================ 04 TRUST ============================ -->
+<section id="trust">
   <div class="container">
-    <div class="sec-head reveal">
+    <div class="sec-head">
       <p class="sec-no">04 / Alerts That Arrive</p>
       <h2>An Alert Is Only Worth Anything if It Arrives.</h2>
       <p>Our notification system has delivered <strong>18,873 flight alerts</strong> with a
         <strong>99.99% success rate</strong> (effectively zero bounces). And because the pipeline refreshes
-        terminal schedules every few hours, the flights you see are current, not yesterday's news.</p>
+        terminal schedules every few hours, the flights you see are current, not yesterday&rsquo;s news.</p>
     </div>
     <div class="trust-grid">
-      <div class="reveal" id="donut"></div>
-      <div class="reveal">
+      <div class="meter-card">
+        <div class="meter-v">99.99%</div>
+        <div class="meter-k">Delivered</div>
+        <div class="meter-track" aria-hidden="true"><div class="meter-fill"></div></div>
+        <p class="meter-c">18,871 of 18,873 flight alerts</p>
+      </div>
+      <div>
         <div class="trust-rows">
           <div class="trust-row">
             <span class="t-label">Flight alerts delivered successfully</span>
             <span class="t-val good">18,871 of 18,873</span>
           </div>
           <div class="trust-row">
-            <span class="t-label">Transient bounces — ever</span>
+            <span class="t-label">Transient bounces &mdash; ever</span>
             <span class="t-val">2</span>
           </div>
           <div class="trust-row">
@@ -156,54 +749,174 @@
   </div>
 </section>
 
-<!-- ============================ MOMENTUM ============================ -->
-<section class="block tinted" id="momentum">
+<!-- ============================ 05 MOMENTUM ============================ -->
+<section class="section-soft" id="momentum">
   <div class="container">
-    <div class="sec-head reveal">
+    <div class="sec-head">
       <p class="sec-no">05 / Momentum</p>
       <h2>Military Travelers Are Finding FlySpaceA.</h2>
       <p>In seven months, the audience has grown from a few hundred to a community of thousands
         across the app and social channels.</p>
     </div>
-    <div class="growth-grid">
-      <div class="growth-wrap reveal" id="growth-chart"></div>
-      <div class="side-stats reveal">
-        <div class="side-stat">
-          <div class="s-v">6,300+</div>
-          <div class="s-k">registered travelers (≈480 added in the trailing week)</div>
+    <div class="sm-grid">
+      <div class="sm-card sm-ig">
+        <div class="sm-head">
+          <span class="sm-k">Instagram followers</span>
+          <span class="sm-v">15,263</span>
         </div>
-        <div class="side-stat">
-          <div class="s-v">15,263</div>
-          <div class="s-k">Instagram followers, up from 152 at launch</div>
+        <span class="sm-asof">Nov 2025 &ndash; 22 May 2026 · from 152</span>
+        <svg class="spark" viewBox="0 0 340 148" role="img" aria-labelledby="sm-ig-t">
+        <title id="sm-ig-t">Instagram followers, November 2025 to 22 May 2026: 152 to 15,263.</title>
+        <defs><linearGradient id="sm-ig-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="currentColor" stop-opacity="0.26"/><stop offset="100%" stop-color="currentColor" stop-opacity="0"/></linearGradient></defs>
+        <line class="grid" x1="8" x2="332" y1="12.0" y2="12.0"/>
+        <text class="gridlab" x="9" y="8.0">16K</text>
+        <line class="grid" x1="8" x2="332" y1="69.0" y2="69.0"/>
+        <text class="gridlab" x="9" y="65.0">8K</text>
+        <line class="axis" x1="8" x2="332" y1="126" y2="126"/>
+        <text class="axlab" x="51.6" y="141" text-anchor="middle">DEC</text>
+        <text class="axlab" x="96.6" y="141" text-anchor="middle">JAN</text>
+        <text class="axlab" x="141.7" y="141" text-anchor="middle">FEB</text>
+        <text class="axlab" x="182.3" y="141" text-anchor="middle">MAR</text>
+        <text class="axlab" x="227.4" y="141" text-anchor="middle">APR</text>
+        <text class="axlab" x="271.0" y="141" text-anchor="middle">MAY</text>
+        <text class="axlab" x="316.0" y="141" text-anchor="middle">JUN</text>
+        <path class="area" d="M8.0 124.9 L50.1 123.7 L140.2 118.5 L180.9 86.9 L196.9 78.4 L217.2 63.6 L227.4 42.3 L240.5 32.4 L257.9 25.7 L292.8 19.1 L301.5 17.3 L301.5 126 L8.0 126 Z" fill="url(#sm-ig-g)"/>
+        <path class="line" d="M8.0 124.9 L50.1 123.7 L140.2 118.5 L180.9 86.9 L196.9 78.4 L217.2 63.6 L227.4 42.3 L240.5 32.4 L257.9 25.7 L292.8 19.1 L301.5 17.3"/>
+        <circle class="anno" cx="180.9" cy="86.9" r="3.4"/>
+        <circle class="anno" cx="225.9" cy="43.4" r="3.4"/>
+        <circle class="tip" cx="301.5" cy="17.3" r="4"/>
+        </svg>
+        <p class="sm-note">Marked points: viral inflection in February, and peak growth of
+          +6,100 followers in March.</p>
+      </div>
+      <div class="sm-card sm-tr">
+        <div class="sm-head">
+          <span class="sm-k">Registered travelers</span>
+          <span class="sm-v">6,307</span>
         </div>
-        <div class="side-stat">
-          <div class="s-v">1,828</div>
-          <div class="s-k">Facebook followers</div>
+        <span class="sm-asof">Nov 2025 &ndash; 09 Jun 2026 · from 170</span>
+        <svg class="spark" viewBox="0 0 340 148" role="img" aria-labelledby="sm-tr-t">
+        <title id="sm-tr-t">Registered travelers, November 2025 to 09 June 2026: 170 to 6,307.</title>
+        <defs><linearGradient id="sm-tr-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="currentColor" stop-opacity="0.26"/><stop offset="100%" stop-color="currentColor" stop-opacity="0"/></linearGradient></defs>
+        <line class="grid" x1="8" x2="332" y1="12.0" y2="12.0"/>
+        <text class="gridlab" x="9" y="8.0">7K</text>
+        <line class="grid" x1="8" x2="332" y1="69.0" y2="69.0"/>
+        <text class="gridlab" x="9" y="65.0">3.5K</text>
+        <line class="axis" x1="8" x2="332" y1="126" y2="126"/>
+        <text class="axlab" x="51.6" y="141" text-anchor="middle">DEC</text>
+        <text class="axlab" x="96.6" y="141" text-anchor="middle">JAN</text>
+        <text class="axlab" x="141.7" y="141" text-anchor="middle">FEB</text>
+        <text class="axlab" x="182.3" y="141" text-anchor="middle">MAR</text>
+        <text class="axlab" x="227.4" y="141" text-anchor="middle">APR</text>
+        <text class="axlab" x="271.0" y="141" text-anchor="middle">MAY</text>
+        <text class="axlab" x="316.0" y="141" text-anchor="middle">JUN</text>
+        <path class="area" d="M26.9 123.2 L137.3 117.3 L196.9 108.9 L217.2 100.9 L228.8 90.0 L241.9 73.3 L250.6 62.9 L255.0 60.4 L273.9 49.9 L279.7 55.3 L288.4 48.9 L301.5 40.0 L318.9 30.1 L327.6 23.3 L327.6 126 L26.9 126 Z" fill="url(#sm-tr-g)"/>
+        <path class="line" d="M26.9 123.2 L137.3 117.3 L196.9 108.9 L217.2 100.9 L228.8 90.0 L241.9 73.3 L250.6 62.9 L255.0 60.4 L273.9 49.9 L279.7 55.3 L288.4 48.9 L301.5 40.0 L318.9 30.1 L327.6 23.3"/>
+        <circle class="tip" cx="327.6" cy="23.3" r="4"/>
+        </svg>
+        <p class="sm-note">The May dip is routine removal of never-verified accounts &mdash;
+          database hygiene, not churn.</p>
+      </div>
+      <div class="sm-card sm-fb">
+        <div class="sm-head">
+          <span class="sm-k">Facebook followers</span>
+          <span class="sm-v">1,828</span>
         </div>
-        <div class="side-stat">
-          <div class="s-v">902</div>
-          <div class="s-k">active Android devices, near-zero uninstalls</div>
-        </div>
+        <span class="sm-asof">Nov 2025 &ndash; 22 May 2026 · from 143</span>
+        <svg class="spark" viewBox="0 0 340 148" role="img" aria-labelledby="sm-fb-t">
+        <title id="sm-fb-t">Facebook followers, November 2025 to 22 May 2026: 143 to 1,828.</title>
+        <defs><linearGradient id="sm-fb-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="currentColor" stop-opacity="0.26"/><stop offset="100%" stop-color="currentColor" stop-opacity="0"/></linearGradient></defs>
+        <line class="grid" x1="8" x2="332" y1="12.0" y2="12.0"/>
+        <text class="gridlab" x="9" y="8.0">2K</text>
+        <line class="grid" x1="8" x2="332" y1="69.0" y2="69.0"/>
+        <text class="gridlab" x="9" y="65.0">1K</text>
+        <line class="axis" x1="8" x2="332" y1="126" y2="126"/>
+        <text class="axlab" x="51.6" y="141" text-anchor="middle">DEC</text>
+        <text class="axlab" x="96.6" y="141" text-anchor="middle">JAN</text>
+        <text class="axlab" x="141.7" y="141" text-anchor="middle">FEB</text>
+        <text class="axlab" x="182.3" y="141" text-anchor="middle">MAR</text>
+        <text class="axlab" x="227.4" y="141" text-anchor="middle">APR</text>
+        <text class="axlab" x="271.0" y="141" text-anchor="middle">MAY</text>
+        <text class="axlab" x="316.0" y="141" text-anchor="middle">JUN</text>
+        <path class="area" d="M8.0 117.8 L140.2 64.7 L217.2 51.0 L240.5 42.3 L257.9 34.6 L288.4 28.0 L301.5 21.8 L301.5 126 L8.0 126 Z" fill="url(#sm-fb-g)"/>
+        <path class="line" d="M8.0 117.8 L140.2 64.7 L217.2 51.0 L240.5 42.3 L257.9 34.6 L288.4 28.0 L301.5 21.8"/>
+        <circle class="tip" cx="301.5" cy="21.8" r="4"/>
+        </svg>
+        <p class="sm-note">Steady month-over-month growth on a smaller base.</p>
       </div>
     </div>
-    <p class="footnote">INSTAGRAM FOLLOWING THROUGH LATE MAY 2026. SOCIAL LINES END AT THE LAST VERIFIED
-      DATA POINT (22 MAY). MAY DIP IN THE TRAVELERS LINE: ROUTINE REMOVAL OF NEVER-VERIFIED ACCOUNTS.
-      DATABASE HYGIENE, NOT CHURN.</p>
+    <p class="footnote">Each panel has its own vertical scale &mdash; compare trajectories, not heights</p>
+    <div class="side-stats">
+      <div class="side-stat">
+        <div class="s-v">6,300+</div>
+        <div class="s-k">registered travelers (&asymp;480 added in the trailing week)</div>
+      </div>
+      <div class="side-stat">
+        <div class="s-v">15,263</div>
+        <div class="s-k">Instagram followers, up from 152 at launch</div>
+      </div>
+      <div class="side-stat">
+        <div class="s-v">1,828</div>
+        <div class="s-k">Facebook followers</div>
+      </div>
+      <div class="side-stat">
+        <div class="s-v">902</div>
+        <div class="s-k">active Android devices, near-zero uninstalls</div>
+      </div>
+    </div>
+    <details class="table-view">
+      <summary>View the growth data as a table</summary>
+      <div class="table-scroll">
+        <table class="data-table">
+          <caption>Registered travelers, Instagram followers and Facebook followers by observation date. Blank cells mean no observation was recorded on that date.</caption>
+          <thead>
+            <tr><th scope="col">Date</th><th scope="col">Registered travelers</th><th scope="col">Instagram</th><th scope="col">Facebook</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">2025-11-01</th><td></td><td>152</td><td>143</td></tr>
+            <tr><th scope="row">2025-11-14</th><td>170</td><td></td><td></td></tr>
+            <tr><th scope="row">2025-11-30</th><td></td><td>320</td><td></td></tr>
+            <tr><th scope="row">2026-01-29</th><td>532</td><td></td><td></td></tr>
+            <tr><th scope="row">2026-01-31</th><td></td><td>1,054</td><td>1,075</td></tr>
+            <tr><th scope="row">2026-02-28</th><td></td><td>5,493</td><td></td></tr>
+            <tr><th scope="row">2026-03-11</th><td>1,050</td><td>6,685</td><td></td></tr>
+            <tr><th scope="row">2026-03-25</th><td>1,542</td><td>8,756</td><td>1,316</td></tr>
+            <tr><th scope="row">2026-04-01</th><td></td><td>11,747</td><td></td></tr>
+            <tr><th scope="row">2026-04-02</th><td>2,211</td><td></td><td></td></tr>
+            <tr><th scope="row">2026-04-10</th><td></td><td>13,139</td><td>1,468</td></tr>
+            <tr><th scope="row">2026-04-11</th><td>3,234</td><td></td><td></td></tr>
+            <tr><th scope="row">2026-04-17</th><td>3,874</td><td></td><td></td></tr>
+            <tr><th scope="row">2026-04-20</th><td>4,026</td><td></td><td></td></tr>
+            <tr><th scope="row">2026-04-22</th><td></td><td>14,071</td><td>1,604</td></tr>
+            <tr><th scope="row">2026-05-03</th><td>4,673</td><td></td><td></td></tr>
+            <tr><th scope="row">2026-05-07</th><td>4,339</td><td></td><td></td></tr>
+            <tr><th scope="row">2026-05-13</th><td>4,735</td><td></td><td>1,720</td></tr>
+            <tr><th scope="row">2026-05-16</th><td></td><td>15,009</td><td></td></tr>
+            <tr><th scope="row">2026-05-22</th><td>5,278</td><td>15,263</td><td>1,828</td></tr>
+            <tr><th scope="row">2026-06-03</th><td>5,889</td><td></td><td></td></tr>
+            <tr><th scope="row">2026-06-09</th><td>6,307</td><td></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+    <p class="footnote">Instagram following through late May 2026. Social lines end at the last verified
+      data point (22 May). May dip in the travelers line: routine removal of never-verified accounts.
+      Database hygiene, not churn.</p>
   </div>
 </section>
 
-<!-- ============================ ENGINE ============================ -->
-<section class="block" id="engine">
+<!-- ============================ 06 ENGINE ============================ -->
+<section id="engine">
   <div class="container">
-    <div class="sec-head reveal">
+    <div class="sec-head">
       <p class="sec-no">06 / The Engine Behind The Data</p>
       <h2>Real Engineering, in Service of Travelers.</h2>
       <p>Behind every flight you see is a seven-step, AI-assisted data pipeline. We receive official
         terminal schedules, extract the flights, enrich them with airport and route data, clean and
-        de-duplicate, load them, reconcile against what's already live, and archive the history.
+        de-duplicate, load them, reconcile against what&rsquo;s already live, and archive the history.
         It runs continuously, so the picture stays current without anyone refreshing a PDF.</p>
     </div>
-    <div class="pipeline reveal">
+    <div class="pipeline">
       <div class="pipe-step"><span class="pipe-no">01</span><div class="pipe-label">Receive</div></div>
       <div class="pipe-step"><span class="pipe-no">02</span><div class="pipe-label">Extract</div></div>
       <div class="pipe-step"><span class="pipe-no">03</span><div class="pipe-label">Enrich</div></div>
@@ -213,89 +926,89 @@
       <div class="pipe-step"><span class="pipe-no">07</span><div class="pipe-label">Archive</div></div>
     </div>
     <div class="engine-stats">
-      <div class="engine-stat reveal"><div class="s-v count" data-n="403" data-dec="0" data-suffix="">403</div><div class="s-k">pipeline runs in the tracked window</div></div>
-      <div class="engine-stat reveal"><div class="s-v count" data-n="271" data-dec="0" data-suffix="">271</div><div class="s-k">flight locations in our network</div></div>
-      <div class="engine-stat reveal"><div class="s-v count" data-n="184" data-dec="0" data-suffix="">184</div><div class="s-k">destinations reached in the last 90 days</div></div>
-      <div class="engine-stat reveal"><div class="s-v">40–55</div><div class="s-k">destinations surfaced every single week</div></div>
+      <div class="side-stat"><div class="s-v">403</div><div class="s-k">pipeline runs in the tracked window</div></div>
+      <div class="side-stat"><div class="s-v">271</div><div class="s-k">flight locations in our network</div></div>
+      <div class="side-stat"><div class="s-v">184</div><div class="s-k">destinations reached in the last 90 days</div></div>
+      <div class="side-stat"><div class="s-v">40&ndash;55</div><div class="s-k">destinations surfaced every single week</div></div>
     </div>
   </div>
 </section>
 
-<!-- ============================ RESPECT ============================ -->
-<section class="block tinted" id="respect">
+<!-- ============================ 07 RESPECT ============================ -->
+<section class="section-soft" id="respect">
   <div class="container">
-    <div class="sec-head reveal">
+    <div class="sec-head">
       <p class="sec-no">07 / Respect, By Design</p>
       <h2>Some Things We Will Never Show.</h2>
       <p>FlySpaceA is built by people who served. That shapes what the tool does, and what it refuses to do.</p>
     </div>
-    <div class="respect-grid">
-      <div class="respect-card reveal">
+    <div class="card-grid cols-3">
+      <div class="card">
         <p class="r-k">OPSEC</p>
         <h3>No CENTCOM Flights.</h3>
-        <p>Unlike others, we don't display CENTCOM flights. Out of respect for our service members, that
-          region stays off every map and feed we publish. <strong>If you see CENTCOM Space-A flights posted
-          anywhere, it's wrong.</strong></p>
+        <p class="muted">Unlike others, we don&rsquo;t display CENTCOM flights. Out of respect for our service
+          members, that region stays off every map and feed we publish. <strong>If you see CENTCOM Space-A
+          flights posted anywhere, it&rsquo;s wrong.</strong></p>
       </div>
-      <div class="respect-card reveal" style="transition-delay: 90ms;">
+      <div class="card">
         <p class="r-k">Privacy</p>
         <h3>The Minimum Data, Nothing More.</h3>
-        <p>We keep as little information as possible and treat data compliance as a standing commitment.
-          Deletion requests are honored, every time.</p>
+        <p class="muted">We keep as little information as possible and treat data compliance as a standing
+          commitment. Deletion requests are honored, every time.</p>
       </div>
-      <div class="respect-card reveal" style="transition-delay: 180ms;">
+      <div class="card">
         <p class="r-k">Discipline</p>
         <h3>No Tail Numbers. Ever.</h3>
-        <p>We never store or display tail numbers or aircraft identifiers. They're not in our database,
-          so they can't leak from it.</p>
+        <p class="muted">We never store or display tail numbers or aircraft identifiers. They&rsquo;re not in
+          our database, so they can&rsquo;t leak from it.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================ MISSION ============================ -->
-<section class="block" id="mission">
+<!-- ============================ 08 MISSION ============================ -->
+<section id="mission">
   <div class="container">
     <div class="mission-grid">
       <div class="mission-copy">
-        <div class="sec-head reveal" style="margin-bottom: 1.5rem;">
+        <div class="sec-head" style="margin-bottom:24px">
           <p class="sec-no">08 / Why We Build</p>
           <h2>Built for the People Who Serve.</h2>
         </div>
-        <p class="reveal">FlySpaceA is independent and <strong>disabled-veteran-owned</strong>. We built it
-          out of pocket, with <strong>modern AI tooling</strong>, for one community: the service members,
-          retirees, veterans, and families who fly Space-A.</p>
-        <p class="reveal">We work closely with the <strong>Von Terra Project</strong>, a veteran-serving
-          nonprofit, to put this capability in front of the people who earned it.</p>
-        <p class="reveal">Our dream is simple: <strong>this tool in the hands of Air Mobility Command</strong>,
-          and every service member who can use a free flight home.</p>
-        <div class="mission-chips reveal">
+        <p>FlySpaceA is independent and <strong>disabled-veteran-owned</strong>. We built it out of pocket,
+          with <strong>modern AI tooling</strong>, for one community: the service members, retirees,
+          veterans, and families who fly Space-A.</p>
+        <p>We work closely with the <strong>Von Terra Project</strong>, a veteran-serving nonprofit, to put
+          this capability in front of the people who earned it.</p>
+        <p>Our dream is simple: <strong>this tool in the hands of Air Mobility Command</strong>, and every
+          service member who can use a free flight home.</p>
+        <div class="mission-chips">
           <span class="pill"><b>Independent</b></span>
           <span class="pill"><b>AI-powered</b></span>
           <span class="pill"><b>Veteran-focused</b></span>
         </div>
       </div>
-      <div class="partner-card reveal">
+      <div class="partner-card">
         <span class="p-k">Nonprofit Partner · Sponsor</span>
-        <img src="/images/von-terra-project-logo.png" alt="Von Terra Project logo" class="partner-logo">
-        <span class="p-name">Von Terra Project</span>
+        <img src="website_images/VTP Logo.png" alt="The Von Terra Project logo" class="partner-logo">
+        <span class="p-name">The Von Terra Project</span>
         <span class="p-sub">Serving the veteran community, together.</span>
-        <a class="p-link" href="https://vonterraproject.org" target="_blank" rel="noopener">vonterraproject.org</a>
+        <a href="index.html">vonterraproject.org</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================ WAY FORWARD ============================ -->
-<section class="block tinted" id="forward">
+<!-- ============================ 09 WAY FORWARD ============================ -->
+<section class="section-soft" id="forward">
   <div class="container">
-    <div class="sec-head reveal">
+    <div class="sec-head">
       <p class="sec-no">09 / The Way Forward</p>
       <h2>What Comes Next.</h2>
       <p>We have a clear plan, and it keeps the community first at every step.</p>
     </div>
     <ol class="forward-list">
-      <li class="forward-step reveal">
+      <li class="forward-step">
         <span class="fs-no">01</span>
         <div class="fs-body">
           <h3>Keep the Core Free.</h3>
@@ -303,13 +1016,13 @@
             and the benefit belongs to the people who earned it.</p>
         </div>
       </li>
-      <li class="forward-step reveal" style="transition-delay: 90ms;">
+      <li class="forward-step">
         <span class="fs-no">02</span>
         <div class="fs-body">
           <h3>Launch CCaaS With Google Cloud.</h3>
-          <p>We're standing up a Contact Center as a Service built on Google Cloud: calls, texts, and chat
+          <p>We&rsquo;re standing up a Contact Center as a Service built on Google Cloud: calls, texts, and chat
             in one place, backed by grounded AI that answers from real Space-A knowledge, not guesses.
-            Travelers get accurate help the moment they need it, on whatever channel they're already using.</p>
+            Travelers get accurate help the moment they need it, on whatever channel they&rsquo;re already using.</p>
           <div class="fs-chips">
             <span class="pill"><b>Voice</b> calls</span>
             <span class="pill"><b>SMS</b> &amp; text</span>
@@ -319,36 +1032,35 @@
           </div>
         </div>
       </li>
-      <li class="forward-step reveal" style="transition-delay: 180ms;">
+      <li class="forward-step">
         <span class="fs-no">03</span>
         <div class="fs-body">
           <h3>Get This Into Air Mobility Command.</h3>
           <p>The biggest goal: deliver this product to Air Mobility Command directly, so the right people
-            have it. This started as a tool for the community. It should serve the people who run the system too.</p>
+            have it. This started as a tool for the community. It should serve the people who run the
+            system too.</p>
         </div>
       </li>
     </ol>
   </div>
 </section>
 
-<!-- ============================ CTA ============================ -->
-<section class="cta">
-  <div class="container">
-    <p class="kicker" style="text-align:center;">10 / Start Here</p>
-    <h2 class="reveal">Nobody Serves the Space-A Community Like FlySpaceA.</h2>
-    <p class="lede reveal">Thousands of flights surfaced. Hundreds of locations. Alerts that actually arrive.
-      It's free, and it's for the people who earned it. Whether you're flying home, flying out, or helping
+<!-- ============================ 10 CTA ============================ -->
+<section id="start">
+  <div class="container cta-block">
+    <p class="sec-no" style="text-align:center">10 / Start Here</p>
+    <h2>Nobody Serves the Space-A Community Like FlySpaceA.</h2>
+    <p class="lede">Thousands of flights surfaced. Hundreds of locations. Alerts that actually arrive.
+      It&rsquo;s free, and it&rsquo;s for the people who earned it. Whether you&rsquo;re flying home, flying out, or helping
       someone who is, start with FlySpaceA.</p>
-    <div class="reveal">
-      <a class="btn-primary" href="https://flyspacea.com">Track flights free</a>
-      <div class="store-badges">
-        <a href="https://apps.apple.com/app/id6761509292" target="_blank" rel="noopener">
-          <img src="/images/app-store-badge.svg" alt="Download on the App Store" class="badge-apple">
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.flyspacea.mobile" target="_blank" rel="noopener">
-          <img src="/images/google-play-badge.png" alt="Get it on Google Play" class="badge-play">
-        </a>
-      </div>
+    <a class="btn btn-primary" href="https://flyspacea.com" target="_blank" rel="noopener">Track flights free</a>
+    <div class="store-badges">
+      <a href="https://apps.apple.com/app/id6761509292" target="_blank" rel="noopener">
+        <img src="images/app-store-badge.svg" alt="Download on the App Store" class="badge-apple">
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.flyspacea.mobile" target="_blank" rel="noopener">
+        <img src="images/google-play-badge.png" alt="Get it on Google Play" class="badge-play">
+      </a>
     </div>
     <p class="disclaimer">FlySpaceA aggregates publicly available USAF AMC schedule data. It is not
       affiliated with, endorsed by, or sponsored by the U.S. Government or the Department of Defense.
@@ -357,14 +1069,46 @@
 </section>
 
 <div class="container">
-  <footer class="colophon">
-    <span>FLYSPACEA · COMMUNITY IMPACT REPORT · Q2 2026</span>
-    <span>DATA BASIS: PRODUCTION SNAPSHOT 12 JUN 2026 · SOCIAL/APP SNAPSHOT 09 JUN 2026 (FOLLOWERS VERIFIED 22 MAY 2026)</span>
-    <span>ELIGIBILITY ESTIMATES: FLYSPACEA MARKET RESEARCH, 2026 · ONLY VERIFIED FIGURES ARE SHOWN. NO TAIL NUMBERS ARE STORED OR DISPLAYED.</span>
-    <span>© 2026 MEDIOCRIST LLC · NOT AN OFFICIAL U.S. GOVERNMENT SYSTEM</span>
-    <span>CONTRIBUTOR &amp; SPONSOR: VON TERRA PROJECT, A 501(C)(3) NONPROFIT · <a href="https://vonterraproject.org" target="_blank" rel="noopener">VONTERRAPROJECT.ORG</a></span>
-  </footer>
+  <div class="report-colophon">
+    <span>FlySpaceA · Community Impact Report · Q2 2026</span>
+    <span>Data basis: production snapshot 12 JUN 2026 · Social/app snapshot 09 JUN 2026 (followers verified 22 MAY 2026)</span>
+    <span>Eligibility estimates: FlySpaceA market research, 2026 · Only verified figures are shown. No tail numbers are stored or displayed.</span>
+    <span>&copy; 2026 MEDIOCRIST LLC · NOT AN OFFICIAL U.S. GOVERNMENT SYSTEM</span>
+    <span>Contributor &amp; sponsor: The Von Terra Project, a 501(c)(3) nonprofit · <a href="index.html">vonterraproject.org</a></span>
+  </div>
 </div>
 
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-cols">
+      <div>
+        <img class="footer-logo" src="website_images/VTP Logo.png" alt="The Von Terra Project logo">
+        <p class="fine">The Von Terra Project is a registered 501(c)(3) nonprofit organization.</p>
+        <p class="fine">EIN: 33-2041628</p>
+      </div>
+      <div>
+        <h4>Contact Us</h4>
+        <div class="icon-line"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>17533 Redland Rd. #5582, Derwood, MD 20855</span></div>
+        <div class="icon-line"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><span>(202) 870-9825</span></div>
+        <div class="icon-line"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span><a href="mailto:contact@vonterraproject.org">contact@vonterraproject.org</a></div>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social-row" style="justify-content:flex-start">
+          <a href="https://www.linkedin.com/company/vonterraproject/" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></span></a>
+          <a href="mailto:contact@vonterraproject.org" aria-label="Email"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span></a>
+          <a href="https://discord.gg/4Yh52nTNns" target="_blank" rel="noopener">Discord</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© 2025 The Von Terra Project. All Rights Reserved.</span><span class="sep">|</span><a href="terms.html">Terms &amp; Conditions</a><span class="sep">|</span><a href="contact.html">Contact Us</a><span class="sep">|</span><a href="donate.html">Donate</a><span class="sep">|</span><a href="index.html">Home</a>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
 </body>
 </html>
