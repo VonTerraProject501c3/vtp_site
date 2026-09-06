@@ -93,9 +93,9 @@ const HEADER =
 '      <div class="nav-item dropdown">\n' +
 '        <a class="nav-link" href="resource-hub.html" aria-expanded="false" aria-haspopup="true">Tools</a>\n' +
 '        <div class="dropdown-menu">\n' +
-'          <a href="self-assessment.html">Self-Assessment Tool<span class="soon">&mdash;&mdash;COMING SOON&mdash;&mdash;</span></a>\n' +
-'          <a href="start-security.html">Start Improving Your Security<span class="soon">&mdash;&mdash;COMING SOON&mdash;&mdash;</span></a>\n' +
-'          <a href="resource-hub.html">Resource Hub<span class="soon">&mdash;&mdash;COMING SOON&mdash;&mdash;</span></a>\n' +
+'          <a href="self-assessment.html">Self-Assessment Tool<span class="soon">COMING SOON</span></a>\n' +
+'          <a href="start-security.html">Start Improving Your Security<span class="soon">COMING SOON</span></a>\n' +
+'          <a href="resource-hub.html">Resource Hub<span class="soon">COMING SOON</span></a>\n' +
 '        </div>\n' +
 '      </div>\n' +
 '      <div class="nav-item dropdown">\n' +
@@ -172,7 +172,7 @@ function page(title, body) {
 '<meta property="og:image" content="https://vonterraproject.org/website_images/VTP%20Logo.png">\n' +
 '<meta name="twitter:card" content="summary">\n' +
     '<meta name="viewport" content="width=device-width, initial-scale=1">\n' +
-    '<title>' + title + ' — The Von Terra Project</title>\n' +
+    '<title>' + title + ' · The Von Terra Project</title>\n' +
     '<link rel="stylesheet" href="css/style.css">\n' +
 '<link rel=\"icon\" href=\"/favicon.ico\" sizes=\"any\">\n' +
 '<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/website_images/favicon-32.png\">\n' +

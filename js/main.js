@@ -1,4 +1,4 @@
-/* The Von Terra Project — nav + accordion behavior */
+/* The Von Terra Project: nav + accordion behavior */
 (function () {
   "use strict";
 
@@ -32,7 +32,7 @@
     if (!trigger) return;
 
     // On mobile the first tap opens the submenu rather than navigating. The hub page stays
-    // reachable because it is also the first link inside the submenu — without that it was
+    // reachable because it is also the first link inside the submenu. Without that it was
     // unreachable on touch entirely.
     trigger.addEventListener("click", function (e) {
       if (isMobile()) {
@@ -61,7 +61,7 @@
     });
   });
 
-  // Close open dropdowns when clicking outside. Applies on touch as well as desktop —
+  // Close open dropdowns when clicking outside. Applies on touch as well as desktop,
   // previously this bailed out on mobile, so a tapped-open menu stayed open indefinitely.
   document.addEventListener("click", function (e) {
     if (!e.target.closest(".dropdown")) closeAll(null);

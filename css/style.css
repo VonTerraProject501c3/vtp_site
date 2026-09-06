@@ -1,5 +1,5 @@
 /* ============================================================
-   The Von Terra Project — Website stylesheet
+   The Von Terra Project. Website stylesheet
    Re-skinned to the VTP brand / design system.
    Dark-first earth palette · olive #5C754A · sage #A0B98C ·
    gold #D8B45C · Lexend · wide-tracked UPPERCASE headings.
@@ -7,7 +7,7 @@
    ============================================================ */
 
 /* ---- Webfont: Lexend (self-hosted, brand alternative to Neue Montreal) ---- */
-/* Lexend Regular 400 — the ONLY weight we actually ship. The six @font-face rules that
+/* Lexend Regular 400: the ONLY weight we actually ship. The six @font-face rules that
    used to live here pointed at six byte-identical copies of this same file (verified by
    md5), so a browser could download ~238KB to render one weight, and every "bold" on the
    site was synthesised by the browser anyway. Declaring it once makes that explicit and
@@ -18,7 +18,7 @@
 :root {
   /* ---- Brand palette ----
      PROVENANCE: these hex values are MIRRORED from vtp_voice/tokens/colors.css
-     (the canonical design-system source of truth). Do NOT freelance hex here — edit
+     (the canonical design-system source of truth). Do NOT freelance hex here. Edit
      upstream in vtp_voice, then re-sync and run `node scripts/drift-check.mjs` in vtp_voice.
        --field #2E2E2E → vt-gray-800 (--surface-page)   --card #2A2A2A → vt-gray-850 (--surface-card)
        --ink #FFFFFF → vt-white      --ink-2 #A6A6A6 → vt-gray-300 (--text-secondary)
@@ -31,15 +31,15 @@
   --card:         #2A2A2A;   /* card surface */
   --ink:          #FFFFFF;   /* primary text */
   --ink-2:        #A6A6A6;   /* secondary text */
-  --ink-3:        #6F6F6F;   /* NON-TEXT ONLY — 2.70:1 on --field, fails WCAG 1.4.3.
+  --ink-3:        #6F6F6F;   /* NON-TEXT ONLY. 2.70:1 on --field, fails WCAG 1.4.3.
                                 A third AA-passing ink step does not exist on #2E2E2E: the AA floor
                                 #959595 sits 1.23:1 from --ink-2, i.e. the same gray. Use --ink-2
                                 for any tertiary copy. */
 
-  --olive:        #5C754A;   /* primary brand — fill/decoration only, 2.65:1 on --field */
+  --olive:        #5C754A;   /* primary brand, fill/decoration only, 2.65:1 on --field */
   --olive-hi:     #6F8A5A;
   --olive-lo:     #4F6741;
-  --olive-line:   #88A172;   /* mirrors vtp_voice --vt-olive-300 — 4.78:1 on --field.
+  --olive-line:   #88A172;   /* mirrors vtp_voice --vt-olive-300, 4.78:1 on --field.
                                 Use where an olive line IDENTIFIES a control (WCAG 1.4.11). */
   --sage:         #A0B98C;   /* graphics / links */
   --sage-hi:      #B6CBA4;
@@ -49,7 +49,7 @@
 
   --line-subtle:  #3C3C3C;
   --line:         #4A4A4A;
-  --line-strong:  #777777;   /* mirrors vt-gray-500 — 3.03:1 on --field (was 2.70:1) */
+  --line-strong:  #777777;   /* mirrors vt-gray-500, 3.03:1 on --field (was 2.70:1) */
 
   --olive-wash:   rgba(92, 117, 74, 0.16);
   --gold-wash:    rgba(216, 180, 92, 0.14);
@@ -97,7 +97,7 @@
 
 * { box-sizing: border-box; }
 
-/* Skip link — visually hidden until focused, then pinned top-left. WCAG 2.4.1: every page
+/* Skip link. Visually hidden until focused, then pinned top-left. WCAG 2.4.1: every page
    puts 12+ header and nav links before <main>, so a keyboard user would otherwise tab through
    the whole navigation on every page before reaching content. */
 .skip-link {
@@ -120,7 +120,7 @@ html { scroll-behavior: smooth; }
   }
   /* Kill the lift/translate hover affordances; colour still carries the state. */
   .btn:hover, .btn:active, .card:hover { transform: none; }
-  /* Keep the accordion chevron's END state — a state indicator, not decoration. */
+  /* Keep the accordion chevron's END state: a state indicator, not decoration. */
   .accordion-item.open .accordion-q .chev { transform: rotate(180deg); }
 }
 body {
@@ -146,7 +146,7 @@ h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 700; letter-spacing: 0.
 h3 { font-size: 1.15rem; font-weight: 600; letter-spacing: 0.08em; }
 h4 { font-size: 1rem; font-weight: 600; letter-spacing: 0.12em; }
 /* Subsection headings inside bio/terms/report bodies. Semantically these are h2 (they sit
-   directly under the page h1 — an h3 there skips a level, WCAG 1.3.1), but they read as
+   directly under the page h1 (an h3 there skips a level, WCAG 1.3.1), but they read as
    small subsection labels, so they keep the h3 scale rather than jumping to the h2 scale. */
 h2.section-sub { font-size: 1.15rem; font-weight: 600; letter-spacing: 0.08em; }
 /* Footer column headings are h2 for the same reason (they sit under the page h1 inside the
@@ -161,13 +161,13 @@ a { color: var(--sage); text-decoration: underline; text-underline-offset: 0.15e
     text-decoration-thickness: max(1px, 0.06em); transition: color 0.15s var(--ease); }
 a:hover { color: var(--gold-hi); }
 
-/* Nav, buttons and link bars are not links within a block of text — no underline. */
+/* Nav, buttons and link bars are not links within a block of text: no underline. */
 .btn, .brand, .site-nav a.nav-link, .dropdown-menu a, .social-row a,
 .footer-bottom a, .doc-card a, .team-card a { text-decoration: none; }
 .site-nav a.nav-link:hover, .dropdown-menu a:hover, .social-row a:hover,
 .footer-bottom a:hover { text-decoration: underline; }
 
-/* Real outline (survives Windows High Contrast), offset so it lands on the parent surface —
+/* Real outline (survives Windows High Contrast), offset so it lands on the parent surface,
    a focused .btn-donate never draws gold-on-gold. */
 :focus-visible {
   outline: var(--focus-ring-width) solid var(--focus-ring-color);
@@ -291,7 +291,7 @@ section { padding: 80px 0; }
   box-shadow: var(--shadow-lg);
   padding: 8px 0;
 }
-/* :focus-within is what makes these keyboard-operable — with hover alone a keyboard user can
+/* :focus-within is what makes these keyboard-operable. With hover alone a keyboard user can
    focus the trigger but the submenu never appears (WCAG 2.1.1). */
 .dropdown.open .dropdown-menu,
 .dropdown:hover .dropdown-menu,
@@ -305,7 +305,7 @@ section { padding: 80px 0; }
 }
 
 /* Grouping inside a dropdown: a small uppercase label, and a muted note for menus that
-   have nothing in them yet. The label is a <p>, not a heading — it labels a menu group,
+   have nothing in them yet. The label is a <p>, not a heading: it labels a menu group,
    it is not part of the document outline. */
 .dropdown-menu .menu-label {
   display: block;
@@ -499,7 +499,7 @@ section { padding: 80px 0; }
 .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .team-card { text-align: center; }
 /* Frame is 2/3 to match the source headshots, which are all 640x960. At the previous 3/4
-   the browser cropped ~11% off the bottom of every portrait — shoulders and framing the
+   the browser cropped ~11% off the bottom of every portrait: shoulders and framing the
    photographer composed for. Matching the frame to the source shows each photo whole with
    no letterboxing and no distortion. Keep new headshots at 2:3 (e.g. 640x960). */
 .team-avatar {
