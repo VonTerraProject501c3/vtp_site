@@ -141,6 +141,10 @@ function page(title, body) {
     '<meta charset="utf-8">\n' +
 '<meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'self\' https://donorbox.org \'unsafe-inline\'; style-src \'self\' \'unsafe-inline\'; img-src \'self\' data: https:; font-src \'self\'; frame-src https://donorbox.org https://drive.google.com https://docs.google.com; connect-src \'self\' https://donorbox.org; form-action \'self\' https://donorbox.org; base-uri \'self\'; object-src \'none\'; frame-ancestors \'self\'">\n' +
 '<meta name="referrer" content="strict-origin-when-cross-origin">\n' +
+'<meta property="og:type" content="website">\n' +
+'<meta property="og:site_name" content="The Von Terra Project">\n' +
+'<meta property="og:image" content="https://vonterraproject.org/website_images/VTP%20Logo.png">\n' +
+'<meta name="twitter:card" content="summary">\n' +
     '<meta name="viewport" content="width=device-width, initial-scale=1">\n' +
     '<title>' + title + ' — The Von Terra Project</title>\n' +
     '<link rel="stylesheet" href="css/style.css">\n' +
