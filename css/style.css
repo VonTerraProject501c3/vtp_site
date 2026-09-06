@@ -295,6 +295,35 @@ section { padding: 80px 0; }
   font-weight: 500;
   font-size: 0.95rem;
 }
+
+/* Grouping inside a dropdown: a small uppercase label, and a muted note for menus that
+   have nothing in them yet. The label is a <p>, not a heading — it labels a menu group,
+   it is not part of the document outline. */
+.dropdown-menu .menu-label {
+  display: block;
+  margin: 10px 0 2px;
+  padding: 0 18px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  opacity: 0.75;
+}
+.dropdown-menu .menu-label + a { margin-top: 0; }
+.dropdown-menu hr {
+  border: 0;
+  border-top: 1px solid var(--line-subtle);
+  margin: 8px 0;
+}
+.dropdown-menu .menu-empty {
+  display: block;
+  padding: 10px 18px;
+  color: var(--ink-2);
+  font-size: 0.9rem;
+  font-style: italic;
+  opacity: 0.8;
+}
 .dropdown-menu a:hover { background: var(--olive-wash); color: var(--ink); text-decoration: none; }
 
 /* ---- Page header band ---- */
