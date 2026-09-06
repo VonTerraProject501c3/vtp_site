@@ -77,10 +77,19 @@ const HEADER =
 '        <a class="nav-link" href="programs.html" aria-expanded="false" aria-haspopup="true">Programs</a>\n' +
 '        <div class="dropdown-menu">\n' +
 '          <a href="programs.html">All Programs</a>\n' +
-'          <a href="resource-hub.html">Cybersecurity Resource Hub</a>\n' +
-'          <a href="documents/certification-program/index.html">Certification Program</a>\n' +
-'          <a href="self-assessment.html">Self-Assessment Tool</a>\n' +
-'          <a href="start-security.html">Start Improving Your Security</a>\n' +
+'<p class="menu-label">Programs</p>\n' +
+'<a href="documents/certification-program/index.html">Certification Program</a>\n' +
+'<a href="programs.html#mentorship">Mentorship Program</a>\n' +
+'<a href="programs.html#professional-development">Professional Development &amp; Engagement</a>\n' +
+'<a href="programs.html#grant-initiative">Cybersecurity Grant Initiative</a>\n' +
+'<a href="resource-hub.html">Digital Footprint &amp; Communal Resilience</a>\n' +
+'<a href="cyberhero.html">CyberHERo</a>\n' +
+'<hr>\n' +
+'<p class="menu-label">Get Involved</p>\n' +
+'<a href="lines-of-effort.html">Lines of Effort (L1&ndash;L6)</a>\n' +
+'<hr>\n' +
+'<p class="menu-label">Partner Initiative</p>\n' +
+'<a href="flyspacea.html">FlySpaceA</a>\n' +
 '        </div>\n' +
 '      </div>\n' +
 '      <div class="nav-item dropdown">\n' +
