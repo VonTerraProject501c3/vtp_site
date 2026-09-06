@@ -5,6 +5,7 @@ const ICONS = {
   mail: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>',
   linkedin: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>',
   doc: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>',
+  pin: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>',
   chev: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>',
   discord: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/><path d="M7.5 7.2c1.4-.7 2.9-1.2 4.5-1.2s3.1.5 4.5 1.2"/><path d="M7.5 16.8c1.4.7 2.9 1.2 4.5 1.2s3.1-.5 4.5-1.2"/><path d="M15.5 17.5 17 20c2-1 3.5-2 4.5-3.5-.5-4.5-1.8-8.2-3.8-11.2-1.1-.4-2.2-.7-3.2-.8l-.8 1.7"/><path d="m8.5 17.5L7 20c-2-1-3.5-2-4.5-3.5C3 12 4.3 8.3 6.3 5.3c1.1-.4 2.2-.7 3.2-.8l.8 1.7"/></svg>'
 };
@@ -64,6 +65,7 @@ const FOOTER =
 '      </div>\n' +
 '      <div>\n' +
 '        <h4>Contact Us</h4>\n' +
+'        <div class="icon-line">' + ico('pin') + '<span>17533 Redland Rd. #5582, Derwood, MD 20855</span></div>\n' +
 '        <div class="icon-line">' + ico('phone') + '<span>(202) 870-9825</span></div>\n' +
 '        <div class="icon-line">' + ico('mail') + '<a href="mailto:contact@vonterraproject.org">contact@vonterraproject.org</a></div>\n' +
 '      </div>\n' +
