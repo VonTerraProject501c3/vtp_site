@@ -36,7 +36,19 @@ const PARENT = {
 const childToParent = {};
 for (const [parent, kids] of Object.entries(PARENT)) for (const k of kids) childToParent[k] = parent;
 
+// Root pages, PLUS any nested page that actually carries the shared shell. The batch run
+// on 2026-09-06 found documents/certification-program/index.html drifting ("Lines Of Effort"
+// long after every root page said "Lines of Effort") because this walk stopped at the root.
+// The other six pages under documents/ are bare redirect stubs with no header at all, so
+// they are picked up here and then skipped by the shell test below.
 const pages = readdirSync(ROOT).filter((f) => f.endsWith(".html"));
+for (const dir of readdirSync(join(ROOT, "documents"), { withFileTypes: true })) {
+  if (!dir.isDirectory()) continue;
+  const rel = join("documents", dir.name, "index.html");
+  try {
+    if (readFileSync(join(ROOT, rel), "utf8").includes('class="site-header"')) pages.push(rel);
+  } catch (_) { /* no index.html in that directory */ }
+}
 for (const f of pages) {
   if (f.startsWith("team-")) childToParent[f] ??= "about.html";
 }
@@ -65,7 +77,12 @@ for (const file of pages) {
   const original = readFileSync(path, "utf8");
 
   let header = HEADER, footer = FOOTER;
-  if (file === "404.html") { header = rootRelative(header); footer = rootRelative(footer); }
+  // 404.html is served at arbitrary depth; nested pages ARE at depth. Both need paths that do
+  // not depend on where the page sits, so both get root-relative hrefs. Writing the root
+  // shell's bare relative paths into a nested page would silently break every nav link.
+  if (file === "404.html" || file.includes("/")) {
+    header = rootRelative(header); footer = rootRelative(footer);
+  }
   header = applyCurrent(header, file);
 
   // HEADER carries the skip link, which lives BEFORE <header> in the page. Replace from the
