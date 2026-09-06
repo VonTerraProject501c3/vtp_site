@@ -228,13 +228,23 @@ def main() -> int:
         warn(ROOT / "sitemap.xml", "no sitemap.xml")
     else:
         listed = set(re.findall(r"<loc>\s*([^<]+?)\s*</loc>", sm.read_text(encoding="utf-8")))
-        listed_paths = {urlparse(u).path.lstrip("/") or "index.html" for u in listed}
+        def _norm(u):
+            q = urlparse(u).path.lstrip("/")
+            if q == "" or q.endswith("/"):
+                q += "index.html"
+            return q
+        listed_paths = {_norm(u) for u in listed}
         actual = {str(p.relative_to(ROOT)) for p in all_pages} - {"404.html"}
         for missing in sorted(listed_paths - actual):
             cand = ROOT / missing
             if not cand.exists() and not (cand / "index.html").exists():
                 errors.append(f"sitemap.xml: lists a page that does not exist: {missing}")
+        # A page that declares robots=noindex SHOULD be absent from the sitemap — listing it
+        # would contradict the page's own directive. Only flag indexable pages.
         for absent in sorted(actual - listed_paths):
+            body = (ROOT / absent).read_text(encoding="utf-8", errors="replace")
+            if re.search(r'<meta[^>]+name=["\']robots["\'][^>]+noindex', body, re.I):
+                continue
             warnings.append(f"sitemap.xml: {absent} is not listed")
 
     # --- report ---
