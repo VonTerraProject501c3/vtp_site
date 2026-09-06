@@ -23,6 +23,48 @@ function band(h1, subHtml) {
   return '<div class="page-band"><div class="container"><h1>' + h1 + '</h1>' + (subHtml || '') + '</div></div>';
 }
 
+const ORG_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "@id": "https://vonterraproject.org/#organization",
+  "name": "The Von Terra Project",
+  "legalName": "The Von Terra Project, Inc.",
+  "alternateName": "VTP",
+  "url": "https://vonterraproject.org/",
+  "logo": "https://vonterraproject.org/website_images/VTP%20Logo.png",
+  "image": "https://vonterraproject.org/website_images/VTP%20Logo.png",
+  "description": "The Von Terra Project strives to bridge the gap between people, policy, and technology to connect communities, build cybersecurity resilience, strengthen preparedness, optimize response, and fortify our collective defenses against emerging challenges.",
+  "email": "contact@vonterraproject.org",
+  "telephone": "(202) 870-9825",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "17533 Redland Rd. #5582",
+    "addressLocality": "Derwood",
+    "addressRegion": "MD",
+    "postalCode": "20855",
+    "addressCountry": "US"
+  },
+  "taxID": "33-2041628",
+  "identifier": [
+    {
+      "@type": "PropertyValue",
+      "propertyID": "EIN",
+      "value": "33-2041628"
+    },
+    {
+      "@type": "PropertyValue",
+      "propertyID": "MD SDAT Department ID",
+      "value": "D25517715"
+    }
+  ],
+  "foundingDate": "2024-11-02",
+  "nonprofitStatus": "Nonprofit501c3",
+  "sameAs": [
+    "https://www.linkedin.com/company/vonterraproject/",
+    "https://discord.gg/4Yh52nTNns"
+  ]
+};
+
 const HEADER =
 '<a class="skip-link" href="#main">Skip to main content</a>\n' +
 '<header class="site-header">\n' +
@@ -101,6 +143,7 @@ function page(title, body) {
     '<title>' + title + ' — The Von Terra Project</title>\n' +
     '<link rel="stylesheet" href="css/style.css">\n' +
     '<link rel="icon" type="image/png" href="website_images/VTP Logo.png">\n' +
+'<script type="application/ld+json">\n' + JSON.stringify(ORG_JSONLD, null, 2) + '\n</script>\n' +
     '</head>\n<body>\n' + HEADER + '<main>\n' + body + '\n</main>\n' + FOOTER +
     '<script src="js/main.js"></script>\n</body>\n</html>\n';
 }
