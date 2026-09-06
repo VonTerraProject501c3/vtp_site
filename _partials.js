@@ -7,7 +7,6 @@ const ICONS = {
   doc: '<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>',
   pin: '<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>',
   chev: '<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>',
-  discord: '<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/><path d="M7.5 7.2c1.4-.7 2.9-1.2 4.5-1.2s3.1.5 4.5 1.2"/><path d="M7.5 16.8c1.4.7 2.9 1.2 4.5 1.2s3.1-.5 4.5-1.2"/><path d="M15.5 17.5 17 20c2-1 3.5-2 4.5-3.5-.5-4.5-1.8-8.2-3.8-11.2-1.1-.4-2.2-.7-3.2-.8l-.8 1.7"/><path d="m8.5 17.5L7 20c-2-1-3.5-2-4.5-3.5C3 12 4.3 8.3 6.3 5.3c1.1-.4 2.2-.7 3.2-.8l.8 1.7"/></svg>'
 };
 
 function ico(name) { return '<span class="ico">' + ICONS[name] + '</span>'; }
@@ -61,7 +60,6 @@ const ORG_JSONLD = {
   "nonprofitStatus": "Nonprofit501c3",
   "sameAs": [
     "https://www.linkedin.com/company/vonterraproject/",
-    "https://discord.gg/4Yh52nTNns"
   ]
 };
 
@@ -121,7 +119,6 @@ const FOOTER =
 '          <a href="https://www.linkedin.com/company/vonterraproject/" target="_blank" rel="noopener" aria-label="LinkedIn">' + ico('linkedin') + '</a>\n' +
 '          <a href="mailto:contact@vonterraproject.org" aria-label="Email">' + ico('mail') + '</a>\n' +
 '          <a href="https://github.com/VonTerraProject501c3" target="_blank" rel="noopener" aria-label="GitHub"><span class="ico"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span></a>\n' +
-'          <a href="https://discord.gg/4Yh52nTNns" target="_blank" rel="noopener">Discord</a>\n' +
 '        </div>\n' +
 '      </div>\n' +
 '    </div>\n' +
