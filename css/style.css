@@ -346,9 +346,12 @@ section { padding: 80px 0; }
   min-height: 78vh;
   display: flex; align-items: center; justify-content: center; text-align: center;
   color: var(--ink);
+  /* The hero art is the earth gradient itself. The former VTPWallpaper.png layer
+     was removed: the file was never in this repo (a console 404 on every homepage
+     load) and the Drive original is a blue/navy field, which the brand no longer
+     uses. The scrim stays so headline contrast is unchanged. */
   background:
     linear-gradient(rgba(28, 28, 28, 0.55), rgba(28, 28, 28, 0.80)),
-    url("../website_images/VTPWallpaper.png") center / cover no-repeat,
     var(--grad-earth);
   background-color: var(--field);
 }
@@ -356,9 +359,9 @@ section { padding: 80px 0; }
 .hero .sub { font-size: 1.3rem; font-weight: 400; color: rgba(255, 255, 255, 0.88); margin-bottom: 28px; }
 .hero-donate {
   min-height: 60vh;
+  /* DonorBoxWallpaper.png removed for the same reason as the homepage hero above. */
   background:
     linear-gradient(rgba(28, 28, 28, 0.55), rgba(28, 28, 28, 0.80)),
-    url("../website_images/DonorBoxWallpaper.png") center / cover no-repeat,
     var(--grad-earth);
   background-color: var(--field);
 }
