@@ -7,12 +7,13 @@
    ============================================================ */
 
 /* ---- Webfont: Lexend (self-hosted, brand alternative to Neue Montreal) ---- */
-@font-face { font-family: "Lexend"; src: url("../assets/fonts/Lexend-300.woff2") format("woff2"); font-weight: 300; font-style: normal; font-display: swap; }
-@font-face { font-family: "Lexend"; src: url("../assets/fonts/Lexend-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: "Lexend"; src: url("../assets/fonts/Lexend-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
-@font-face { font-family: "Lexend"; src: url("../assets/fonts/Lexend-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
-@font-face { font-family: "Lexend"; src: url("../assets/fonts/Lexend-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
-@font-face { font-family: "Lexend"; src: url("../assets/fonts/Lexend-800.woff2") format("woff2"); font-weight: 800; font-style: normal; font-display: swap; }
+/* Lexend Regular 400 — the ONLY weight we actually ship. The six @font-face rules that
+   used to live here pointed at six byte-identical copies of this same file (verified by
+   md5), so a browser could download ~238KB to render one weight, and every "bold" on the
+   site was synthesised by the browser anyway. Declaring it once makes that explicit and
+   costs nothing visually. If real Lexend weights are added later, add one rule per file. */
+@font-face { font-family: "Lexend"; src: url("../assets/fonts/Lexend-400.woff2") format("woff2");
+             font-weight: 400; font-style: normal; font-display: swap; }
 
 :root {
   /* ---- Brand palette ----
