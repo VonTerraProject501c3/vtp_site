@@ -210,6 +210,58 @@ def main() -> int:
                 else:
                     err(page, f"broken link at line {line}: {href}")
 
+    # --- JSON-LD validity ---
+    # Structured data is consumed by machines without a human reading the page, so a
+    # syntactically broken block fails silently and invisibly.
+    import json as _json
+    for page in all_pages:
+        raw = page.read_text(encoding="utf-8", errors="replace")
+        for m in re.finditer(r'<script[^>]+application/ld\+json[^>]*>(.*?)</script>', raw, re.S):
+            try:
+                _json.loads(m.group(1))
+            except Exception as exc:
+                err(page, f"invalid JSON-LD: {exc}")
+
+    # --- shell drift ---
+    # _partials.js is a generator, not a runtime include. If it drifts from the pages it
+    # supposedly emits, regenerating silently reverts hand-edits. Compare the nav block.
+    partials = ROOT / "_partials.js"
+    if partials.exists():
+        gen = partials.read_text(encoding="utf-8", errors="replace")
+        for probe, label in [
+            ("skip-link", "skip link"),
+            ("Content-Security-Policy", "CSP meta"),
+            ("application/ld+json", "JSON-LD block"),
+            ("footer-h", "footer heading class"),
+            ("resource-hub.html", "Resource Hub nav link"),
+            ("aria-expanded", "dropdown aria-expanded"),
+        ]:
+            in_pages = any(probe in p.read_text(encoding="utf-8", errors="replace")
+                           for p in all_pages if p.name == "index.html")
+            if in_pages and probe not in gen:
+                warnings.append(
+                    f"_partials.js: pages carry {label} but the generator does not — "
+                    f"regenerating would drop it")
+
+    # --- gitignored but tracked ---
+    gi = ROOT / ".gitignore"
+    if gi.exists():
+        import subprocess
+        try:
+            tracked = subprocess.run(["git", "ls-files"], cwd=ROOT, capture_output=True,
+                                     text=True, timeout=20).stdout.split()
+            for pat in [l.strip().rstrip("/") for l in gi.read_text().splitlines()
+                        if l.strip() and not l.startswith("#")]:
+                if "*" in pat or "." == pat:
+                    continue
+                hits = [t for t in tracked if t == pat or t.startswith(pat + "/")]
+                if hits:
+                    warnings.append(
+                        f".gitignore: '{pat}' is ignored but {len(hits)} file(s) are still "
+                        f"tracked — edits to them will be committed while new files are not")
+        except Exception:
+            pass
+
     # --- duplicate titles ---
     for t, where in titles.items():
         if len(where) > 1:
