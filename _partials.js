@@ -76,15 +76,15 @@ const HEADER =
 '        <div class="dropdown-menu">\n' +
 '          <a href="programs.html">All Programs</a>\n' +
 '          <p class="menu-label">Programs</p>\n' +
-'          <a href="documents/certification-program/index.html">Certification Program</a>\n' +
-'          <a href="mentorship.html">Mentorship Program</a>\n' +
-'          <a href="professional-development.html">Professional Development &amp; Engagement</a>\n' +
-'          <a href="grant-initiative.html">Cybersecurity Grant Initiative</a>\n' +
-'          <a href="resource-hub.html">Digital Footprint &amp; Communal Resilience</a>\n' +
-'          <a href="cyberhero.html">CyberHERo</a>\n' +
+'          <a href="documents/certification-program/index.html"><span class="pnum">[P1]</span> Certification Program</a>\n' +
+'          <a href="mentorship.html"><span class="pnum">[P2]</span> Mentorship Program</a>\n' +
+'          <a href="professional-development.html"><span class="pnum">[P3]</span> Professional Development &amp; Engagement</a>\n' +
+'          <a href="grant-initiative.html"><span class="pnum">[P4]</span> Cybersecurity Grant Initiative</a>\n' +
+'          <a href="resource-hub.html"><span class="pnum">[P5]</span> Digital Footprint &amp; Communal Resilience</a>\n' +
+'          <a href="cyberhero.html"><span class="pnum">[P6]</span> CyberHERo</a>\n' +
 '          <hr>\n' +
-'          <p class="menu-label">Get Involved</p>\n' +
-'          <a href="lines-of-effort.html">Lines of Effort (L1&ndash;L6)</a>\n' +
+'          <p class="menu-label">Lines of Effort</p>\n' +
+'          <a href="programs.html#lines-of-effort">L1&ndash;L6 and how they map</a>\n' +
 '          <hr>\n' +
 '          <p class="menu-label">Partner Initiative</p>\n' +
 '          <a href="flyspacea.html">FlySpaceA</a>\n' +
@@ -93,9 +93,9 @@ const HEADER =
 '      <div class="nav-item dropdown">\n' +
 '        <a class="nav-link" href="resource-hub.html" aria-expanded="false" aria-haspopup="true">Tools</a>\n' +
 '        <div class="dropdown-menu">\n' +
-'          <a href="self-assessment.html">Self-Assessment Tool</a>\n' +
-'          <a href="start-security.html">Start Improving Your Security</a>\n' +
-'          <a href="resource-hub.html">Resource Hub</a>\n' +
+'          <a href="self-assessment.html">Self-Assessment Tool<span class="soon">&mdash;&mdash;COMING SOON&mdash;&mdash;</span></a>\n' +
+'          <a href="start-security.html">Start Improving Your Security<span class="soon">&mdash;&mdash;COMING SOON&mdash;&mdash;</span></a>\n' +
+'          <a href="resource-hub.html">Resource Hub<span class="soon">&mdash;&mdash;COMING SOON&mdash;&mdash;</span></a>\n' +
 '        </div>\n' +
 '      </div>\n' +
 '      <div class="nav-item dropdown">\n' +
@@ -105,11 +105,18 @@ const HEADER =
 '        </div>\n' +
 '      </div>\n' +
 '      <div class="nav-item dropdown">\n' +
+'        <a class="nav-link" href="get-involved.html" aria-expanded="false" aria-haspopup="true">Get Involved</a>\n' +
+'        <div class="dropdown-menu">\n' +
+'          <a href="positions.html">Positions</a>\n' +
+'          <a href="donate.html">Donate</a>\n' +
+'          <a href="sponsorship.html">Sponsorship</a>\n' +
+'        </div>\n' +
+'      </div>\n' +
+'      <div class="nav-item dropdown">\n' +
 '        <a class="nav-link" href="about.html" aria-expanded="false" aria-haspopup="true">About Us</a>\n' +
 '        <div class="dropdown-menu">\n' +
 '          <a href="about.html">About Overview</a>\n' +
 '          <a href="team.html">Team</a>\n' +
-'          <a href="lines-of-effort.html">Lines of Effort</a>\n' +
 '          <a href="faq.html">FAQ</a>\n' +
 '          <a href="documents.html">Documents</a>\n' +
 '        </div>\n' +
