@@ -1,0 +1,35 @@
+name: Site checks
+
+# main IS production — GitHub Pages rebuilds vonterraproject.org on every push to main,
+# and there is no staging environment. These checks run before that happens.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: HTML, links and accessibility basics
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # No dependencies by design — the site has no build step and neither does this.
+      - name: Run site checks
+        run: python3 tools/check_site.py
+
+      # Fails the build. Each of these was a real defect found on this site at some point:
+      #   malformed HTML, duplicate ids, missing alt text, broken internal links,
+      #   images that 404, target=_blank without rel=noopener, missing lang/charset/viewport,
+      #   and sitemap entries pointing at pages that do not exist.
+      # Warnings (missing meta descriptions, heading-level skips, orphan pages) are reported
+      # but do not fail — they are tracked as issues and burned down deliberately.

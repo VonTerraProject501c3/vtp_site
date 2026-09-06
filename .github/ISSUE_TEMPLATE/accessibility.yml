@@ -1,0 +1,62 @@
+name: Accessibility barrier
+description: Something on the site is difficult or impossible to use with assistive technology.
+labels: ["type:bug", "area:accessibility"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Accessibility reports get priority. The Von Terra Project serves veterans, service
+        members, and military families — a population with a materially higher rate of
+        disability than the general public. A barrier here excludes exactly the people the
+        organization exists to serve.
+
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      placeholder: donate.html
+    validations:
+      required: true
+
+  - type: textarea
+    id: barrier
+    attributes:
+      label: What blocked you
+      description: What were you trying to do, and what stopped you?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tech
+    attributes:
+      label: How were you using the site?
+      multiple: true
+      options:
+        - Screen reader (NVDA)
+        - Screen reader (JAWS)
+        - Screen reader (VoiceOver)
+        - Screen reader (TalkBack)
+        - Keyboard only
+        - Screen magnification
+        - Voice control
+        - Reduced motion enabled
+        - High contrast mode
+        - Other / prefer not to say
+
+  - type: input
+    id: wcag
+    attributes:
+      label: WCAG criterion (optional)
+      description: If you know which one, it helps — but please file regardless.
+      placeholder: e.g. 1.4.3 Contrast (Minimum)
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Impact
+      options:
+        - Blocker — I could not complete the task at all
+        - Serious — I completed it, but only with difficulty or a workaround
+        - Moderate — usable but confusing or slow
+    validations:
+      required: true

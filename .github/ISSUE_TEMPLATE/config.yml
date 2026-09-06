@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Report a security vulnerability
+    url: https://github.com/VonTerraProject501c3/vtp_site/security/advisories/new
+    about: Please report privately here rather than opening a public issue.
+  - name: General questions or partnership enquiries
+    url: https://vonterraproject.org/contact.html
+    about: Not a website bug? Reach the organization directly.
+  - name: Governance, compliance, or document requests
+    url: https://vonterraproject.org/documents.html
+    about: Bylaws, EIN, policies and published reports live here. Records requests go through the contact page.

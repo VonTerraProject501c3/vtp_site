@@ -1,0 +1,62 @@
+name: Bug report
+description: Something on vonterraproject.org is broken, wrong, or behaving unexpectedly.
+labels: ["type:bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. If this involves a **legal, financial, or compliance fact**
+        (EIN, board roster, 501(c)(3) status, filing dates, donation handling), please say so
+        below — those get a human review before any fix ships.
+
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: URL or filename where you saw it.
+      placeholder: https://vonterraproject.org/donate.html  (or donate.html)
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What's wrong
+      description: What did you see? Quote the exact text or describe the visual problem.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected instead
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to …
+        2. Click …
+        3. See …
+
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where did you see it?
+      multiple: true
+      options:
+        - Desktop browser
+        - Mobile browser
+        - Screen reader / assistive tech
+        - Keyboard-only navigation
+        - Not sure
+
+  - type: checkboxes
+    id: sensitive
+    attributes:
+      label: Sensitivity
+      options:
+        - label: This involves a legal, financial, or compliance fact and needs human review before a fix ships.
