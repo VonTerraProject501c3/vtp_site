@@ -139,6 +139,8 @@ const FOOTER =
 function page(title, body) {
   return '<!DOCTYPE html>\n<html lang="en">\n<head>\n' +
     '<meta charset="utf-8">\n' +
+'<meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'self\' https://donorbox.org \'unsafe-inline\'; style-src \'self\' \'unsafe-inline\'; img-src \'self\' data: https:; font-src \'self\'; frame-src https://donorbox.org https://drive.google.com https://docs.google.com; connect-src \'self\' https://donorbox.org; form-action \'self\' https://donorbox.org; base-uri \'self\'; object-src \'none\'; frame-ancestors \'self\'">\n' +
+'<meta name="referrer" content="strict-origin-when-cross-origin">\n' +
     '<meta name="viewport" content="width=device-width, initial-scale=1">\n' +
     '<title>' + title + ' — The Von Terra Project</title>\n' +
     '<link rel="stylesheet" href="css/style.css">\n' +

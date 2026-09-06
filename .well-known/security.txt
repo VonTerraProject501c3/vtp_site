@@ -1,0 +1,18 @@
+# Security contact for vonterraproject.org
+# The Von Terra Project, Inc. — a Maryland 501(c)(3)
+# https://www.rfc-editor.org/rfc/rfc9116
+
+Contact: mailto:contact@vonterraproject.org
+Contact: https://github.com/VonTerraProject501c3/vtp_site/security/advisories/new
+Expires: 2027-09-05T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://vonterraproject.org/.well-known/security.txt
+Policy: https://vonterraproject.org/terms.html
+
+# This site is a static site served by GitHub Pages. It has no backend, no database,
+# and no first-party analytics. Donations are processed by Donorbox, not by this site;
+# vulnerabilities in the Donorbox platform should go to Donorbox directly.
+#
+# Please report privately via the GitHub advisory link above rather than opening a
+# public issue. We are a small volunteer organization — expect an acknowledgement
+# within a few days rather than the same day.
