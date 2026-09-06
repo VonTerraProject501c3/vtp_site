@@ -79,9 +79,9 @@ const HEADER =
 '          <a href="programs.html">All Programs</a>\n' +
 '<p class="menu-label">Programs</p>\n' +
 '<a href="documents/certification-program/index.html">Certification Program</a>\n' +
-'<a href="programs.html#mentorship">Mentorship Program</a>\n' +
-'<a href="programs.html#professional-development">Professional Development &amp; Engagement</a>\n' +
-'<a href="programs.html#grant-initiative">Cybersecurity Grant Initiative</a>\n' +
+'<a href="mentorship.html">Mentorship Program</a>\n' +
+'<a href="professional-development.html">Professional Development &amp; Engagement</a>\n' +
+'<a href="grant-initiative.html">Cybersecurity Grant Initiative</a>\n' +
 '<a href="resource-hub.html">Digital Footprint &amp; Communal Resilience</a>\n' +
 '<a href="cyberhero.html">CyberHERo</a>\n' +
 '<hr>\n' +
