@@ -109,7 +109,7 @@ const HEADER =
 '        <div class="dropdown-menu">\n' +
 '          <a href="about.html">About Overview</a>\n' +
 '          <a href="team.html">Team</a>\n' +
-'          <a href="lines-of-effort.html">Lines Of Effort</a>\n' +
+'          <a href="lines-of-effort.html">Lines of Effort</a>\n' +
 '          <a href="faq.html">FAQ</a>\n' +
 '          <a href="documents.html">Documents</a>\n' +
 '        </div>\n' +
@@ -146,7 +146,7 @@ const FOOTER =
 '  </div>\n' +
 '  <div class="footer-bottom">\n' +
 '    <div class="container">\n' +
-'      <span>© 2025 The Von Terra Project. All Rights Reserved.</span><span class="sep">|</span>' +
+'      <span>© 2024–2026 The Von Terra Project, Inc. All Rights Reserved.</span><span class="sep">|</span>' +
 '<a href="terms.html">Terms &amp; Conditions</a><span class="sep">|</span>' +
 '<a href="contact.html">Contact Us</a><span class="sep">|</span>' +
 '<a href="donate.html">Donate</a><span class="sep">|</span>' +
