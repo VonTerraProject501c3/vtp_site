@@ -155,7 +155,10 @@ function page(title, body) {
     '<meta name="viewport" content="width=device-width, initial-scale=1">\n' +
     '<title>' + title + ' — The Von Terra Project</title>\n' +
     '<link rel="stylesheet" href="css/style.css">\n' +
-    '<link rel="icon" type="image/png" href="website_images/VTP Logo.png">\n' +
+'<link rel=\"icon\" href=\"/favicon.ico\" sizes=\"any\">\n' +
+'<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/website_images/favicon-32.png\">\n' +
+'<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/website_images/favicon-16.png\">\n' +
+'<link rel=\"apple-touch-icon\" href=\"/website_images/apple-touch-icon.png\">\n' +
 '<script type="application/ld+json">\n' + JSON.stringify(ORG_JSONLD, null, 2) + '\n</script>\n' +
     '</head>\n<body>\n' + HEADER + '<main>\n' + body + '\n</main>\n' + FOOTER +
     '<script src="js/main.js"></script>\n</body>\n</html>\n';
