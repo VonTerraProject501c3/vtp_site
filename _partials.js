@@ -155,6 +155,7 @@ const FOOTER =
 '    <div class="container">\n' +
 '      <span>© 2024–2026 The Von Terra Project, Inc. All Rights Reserved.</span><span class="sep">|</span>' +
 '<a href="terms.html">Terms &amp; Conditions</a><span class="sep">|</span>' +
+'<a href="privacy.html">Privacy Policy</a><span class="sep">|</span>' +
 '<a href="contact.html">Contact Us</a><span class="sep">|</span>' +
 '<a href="donate.html">Donate</a><span class="sep">|</span>' +
 '<a href="index.html">Home</a>\n' +
