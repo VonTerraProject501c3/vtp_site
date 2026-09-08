@@ -34,7 +34,7 @@ const ORG_JSONLD = {
   "image": "https://vonterraproject.org/website_images/VTP%20Logo.png",
   "description": "The Von Terra Project strives to bridge the gap between people, policy, and technology to connect communities, build cybersecurity resilience, strengthen preparedness, optimize response, and fortify our collective defenses against emerging challenges.",
   "email": "contact@vonterraproject.org",
-  "telephone": "(202) 870-9825",
+  "telephone": "(301) 531-4526",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "17533 Redland Rd. #5582",
@@ -138,7 +138,7 @@ const FOOTER =
 '      <div>\n' +
 '        <h2 class="footer-h">Contact Us</h2>\n' +
 '        <div class="icon-line">' + ico('pin') + '<span>17533 Redland Rd. #5582, Derwood, MD 20855</span></div>\n' +
-'        <div class="icon-line">' + ico('phone') + '<span>(202) 870-9825</span></div>\n' +
+'        <div class="icon-line">' + ico('phone') + '<span>(301) 531-4526</span></div>\n' +
 '        <div class="icon-line">' + ico('mail') + '<a href="mailto:contact@vonterraproject.org">contact@vonterraproject.org</a></div>\n' +
 '      </div>\n' +
 '      <div>\n' +
