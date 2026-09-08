@@ -80,7 +80,7 @@ const HEADER =
 '          <a href="mentorship.html"><span class="pnum">[P2]</span> Mentorship Program</a>\n' +
 '          <a href="professional-development.html"><span class="pnum">[P3]</span> Professional Development &amp; Engagement</a>\n' +
 '          <a href="grant-initiative.html"><span class="pnum">[P4]</span> Grant Initiative</a>\n' +
-'          <a href="resource-hub.html"><span class="pnum">[P5]</span> Digital Footprint &amp; Communal Resilience</a>\n' +
+'          <a href="digital-footprint.html"><span class="pnum">[P5]</span> Digital Footprint &amp; Communal Defense</a>\n' +
 '          <a href="cyberhero.html"><span class="pnum">[P6]</span> CyberHERo</a>\n' +
 '          <hr>\n' +
 '          <p class="menu-label">Lines of Effort</p>\n' +
