@@ -41,13 +41,27 @@ for (const [parent, kids] of Object.entries(PARENT)) for (const k of kids) child
 // long after every root page said "Lines of Effort") because this walk stopped at the root.
 // The other six pages under documents/ are bare redirect stubs with no header at all, so
 // they are picked up here and then skipped by the shell test below.
+// Widened 2026-09-08: this walk hardcoded documents/, so the two redirect landing pages added
+// at the root (become-a-mentor/, cert-program/) carried a full copy of the nav that nothing
+// maintained. That is the same failure the 2026-09-06 note above describes, one directory over.
+// Every top-level directory is now searched, both at <dir>/index.html and <dir>/<sub>/index.html.
+const SKIP_DIRS = new Set(["tools", "node_modules", "js", "css", "website_images"]);
 const pages = readdirSync(ROOT).filter((f) => f.endsWith(".html"));
-for (const dir of readdirSync(join(ROOT, "documents"), { withFileTypes: true })) {
-  if (!dir.isDirectory()) continue;
-  const rel = join("documents", dir.name, "index.html");
-  try {
-    if (readFileSync(join(ROOT, rel), "utf8").includes('class="site-header"')) pages.push(rel);
-  } catch (_) { /* no index.html in that directory */ }
+const carriesShell = (rel) => {
+  try { return readFileSync(join(ROOT, rel), "utf8").includes('class="site-header"'); }
+  catch (_) { return false; }            // no index.html in that directory
+};
+for (const dir of readdirSync(ROOT, { withFileTypes: true })) {
+  if (!dir.isDirectory() || dir.name.startsWith(".") || SKIP_DIRS.has(dir.name)) continue;
+  const direct = join(dir.name, "index.html");
+  if (carriesShell(direct)) pages.push(direct);
+  let subs = [];
+  try { subs = readdirSync(join(ROOT, dir.name), { withFileTypes: true }); } catch (_) { /* unreadable */ }
+  for (const sub of subs) {
+    if (!sub.isDirectory()) continue;
+    const rel = join(dir.name, sub.name, "index.html");
+    if (carriesShell(rel)) pages.push(rel);
+  }
 }
 for (const f of pages) {
   if (f.startsWith("team-")) childToParent[f] ??= "about.html";
