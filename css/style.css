@@ -653,6 +653,19 @@ section { padding: 80px 0; }
     padding: 8px 0 16px;
     box-shadow: var(--shadow-lg);
     border-bottom: 1px solid var(--line-subtle);
+    /* The panel is absolutely positioned, so its content cannot extend the
+       document height and the page has nothing to scroll. With Programs
+       expanded (9 items) the panel needs about 942px where an SE-class phone
+       has 595px below the header, so the last ~347px was simply unreachable.
+       Cap it to the space below the header and let the panel scroll itself.
+       100dvh first so mobile browser chrome is excluded; 100vh is the
+       fallback for engines without dynamic viewport units. */
+    max-height: calc(100vh - 72px);
+    max-height: calc(100dvh - 72px);
+    overflow-y: auto;
+    /* Keep a scroll gesture inside the menu from chaining to the page behind. */
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
   }
   .site-nav.open { display: flex; }
   .site-nav a.nav-link { padding: 14px 24px; border-bottom: 0; }
@@ -663,10 +676,23 @@ section { padding: 80px 0; }
     border: 0; border-radius: 0; box-shadow: none;
     padding: 0;
   }
+  /* On touch, `.open` is the single source of truth and JS owns it.
+     Both `:hover` and `:focus-within` must be actively neutralized here, not
+     merely omitted: they are declared unscoped up in the desktop block
+     (`.dropdown.open, .dropdown:hover, .dropdown:focus-within` -> display:block)
+     and that rule still applies at this width.
+
+     `:focus-within` is what broke collapsing. Tapping a trigger leaves the
+     anchor focused, so after JS removed `.open` the desktop rule kept matching
+     and held the submenu open. Same specificity, so the only way to lose it was
+     moving focus elsewhere, which is why closing the whole nav "reset" it.
+
+     Order is load-bearing: `.open` is declared last so it wins at equal
+     specificity. Keyboard users are unaffected -- Enter on a focused trigger
+     fires click, which toggles `.open` normally. */
+  .dropdown:hover .dropdown-menu,
+  .dropdown:focus-within .dropdown-menu { display: none; }
   .dropdown.open .dropdown-menu { display: block; }
-  .dropdown:hover .dropdown-menu { display: none; }
-  .dropdown.open:hover .dropdown-menu { display: block; }
-  .dropdown:focus-within .dropdown-menu { display: block; }
   .dropdown-menu a { color: var(--ink-2); padding: 12px 44px; }
   .dropdown-menu a:hover { background: var(--olive-wash); color: var(--ink); }
   .site-nav .btn-donate { margin: 12px 24px 0; text-align: center; }
