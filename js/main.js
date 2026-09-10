@@ -40,14 +40,26 @@
         var open = !dd.classList.contains("open");
         closeAll(dd);
         setOpen(dd, open);
+        // Drop focus when collapsing. Browsers differ on whether tapping an
+        // anchor focuses it, and on those that do, a lingering focus ring on a
+        // now-collapsed trigger reads as though the menu is still active.
+        if (!open && typeof trigger.blur === "function") trigger.blur();
       }
       // Desktop: let the click through to the hub page.
     });
 
-    // Keyboard: the CSS opens the menu on :focus-within, so this only needs to keep
-    // aria-expanded truthful and let Escape dismiss without leaving the trigger.
-    dd.addEventListener("focusin", function () { setOpen(dd, true); });
+    // Keyboard affordance for pointer-less desktop use: the CSS opens the menu on
+    // :focus-within, so this only keeps aria-expanded truthful and lets Escape dismiss.
+    //
+    // Both handlers are desktop-only on purpose. On touch, some browsers focus the
+    // anchor *after* the click, so a mobile focusin would re-add `open` immediately
+    // after the tap that removed it and the menu could never be collapsed. On mobile
+    // `open` is set by the tap handler above and nothing else may touch it.
+    dd.addEventListener("focusin", function () {
+      if (!isMobile()) setOpen(dd, true);
+    });
     dd.addEventListener("focusout", function () {
+      if (isMobile()) return;
       // Defer: focusout fires before focusin on the next element.
       window.setTimeout(function () {
         if (!dd.contains(document.activeElement)) setOpen(dd, false);
