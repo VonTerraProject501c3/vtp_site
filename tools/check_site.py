@@ -253,9 +253,18 @@ def main() -> int:
             warn(ROOT / "sitemap.xml", f'duplicate <title> "{t}" on: {", ".join(where)}')
 
     # --- orphans ---
+    # A noindex redirect stub is unlinked ON PURPOSE: it exists to catch inbound
+    # links from outside the site after a URL changes, so nothing here should
+    # point at it. Same reasoning as the sitemap exemption below. Flagging these
+    # trains people to ignore the orphan warning, which is worth keeping sharp.
     entry = {"index.html", "404.html"}
     for page in all_pages:
         if page.name in entry or page in linked_to:
+            continue
+        body = page.read_text(encoding="utf-8", errors="replace")
+        is_noindex = re.search(r'<meta[^>]+name=["\']robots["\'][^>]+noindex', body, re.I)
+        redirects = re.search(r'<meta[^>]+http-equiv=["\']refresh["\']', body, re.I)
+        if is_noindex and redirects:
             continue
         warn(page, "orphan — no other page links to it")
 
