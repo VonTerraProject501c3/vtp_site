@@ -107,6 +107,8 @@ const HEADER =
 '      <div class="nav-item dropdown">\n' +
 '        <a class="nav-link" href="get-involved.html" aria-expanded="false" aria-haspopup="true">Get Involved</a>\n' +
 '        <div class="dropdown-menu">\n' +
+'          <a href="get-involved.html">Get Involved Overview</a>\n' +
+'          <a href="mentorship.html">Become a Mentor</a>\n' +
 '          <a href="positions.html">Positions</a>\n' +
 '          <a href="donate.html">Donate</a>\n' +
 '          <a href="sponsorship.html">Sponsorship</a>\n' +
