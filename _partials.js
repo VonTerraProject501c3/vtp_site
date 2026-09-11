@@ -101,7 +101,7 @@ const HEADER =
 '      <div class="nav-item dropdown">\n' +
 '        <a class="nav-link" href="index.html" aria-expanded="false" aria-haspopup="true">Articles</a>\n' +
 '        <div class="dropdown-menu">\n' +
-'          <span class="menu-empty">Coming soon.</span>\n' +
+'          <a href="flyspacea-impact-2026.html">FlySpaceA Community Impact Report</a>\n' +
 '        </div>\n' +
 '      </div>\n' +
 '      <div class="nav-item dropdown">\n' +
