@@ -22,3 +22,7 @@ workspace/
 !.claude/
 !.claude/**
 .claude/settings.local.json
+
+# Python bytecode from tools/
+__pycache__/
+*.pyc

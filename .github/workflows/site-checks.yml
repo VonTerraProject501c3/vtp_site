@@ -37,6 +37,25 @@ jobs:
       - name: Check shared shell is in sync
         run: node tools/sync_shell.mjs --check
 
+      # The governance checks are only trustworthy if they still fire. A check that quietly
+      # stopped working reports every page clean, which is indistinguishable from "nothing was
+      # wrong" — so the suite proves itself against injected defects before it is believed.
+      - name: Self-test the governance checks
+        run: python3 tools/test_check_governance.py
+
+      # Things that are valid HTML and still wrong for a 501(c)(3): a fact the organization
+      # never said, a disclaimer someone tidied away, a home address, an exemption-status
+      # claim VTP cannot make, an unvetted Drive embed. Each check corresponds to a defect
+      # that actually shipped on vonterraproject.org — see the module docstring.
+      #
+      # NOTE ON SCOPE: this proves "the site matches tools/policy/*". It CANNOT prove the
+      # policy snapshots still match vtp_governance, because that repo is private and this
+      # runner has no token for it — deliberately. The other half is
+      # vtp_command/tools/check_snapshot_fresh.py, run from the superproject. Green here plus
+      # a stale snapshot is a false pass; run both.
+      - name: Governance, facts and PII checks
+        run: python3 tools/check_governance.py
+
       # Fails the build. Each of these was a real defect found on this site at some point:
       #   malformed HTML, duplicate ids, missing alt text, broken internal links,
       #   images that 404, target=_blank without rel=noopener, missing lang/charset/viewport,
