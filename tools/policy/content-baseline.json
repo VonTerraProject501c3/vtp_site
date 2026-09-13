@@ -1,0 +1,410 @@
+{
+  "_about": "Baseline for vtp_site/tools/check_governance.py. Regenerating this is a DELIBERATE act \u2014 it records that a human looked at a change to compliance language or a Drive embed and accepted it. Never regenerate to make CI green.",
+  "status_language": {
+    "404.html": [
+      {
+        "hash": "a5f37f5744282e8d",
+        "excerpt": "The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "VTP-Report-2025.html": [
+      {
+        "hash": "96c1f9c9580cf8ca",
+        "excerpt": "Open it on Google Drive &rarr; The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "about.html": [
+      {
+        "hash": "6ff5755aa9c77d9c",
+        "excerpt": "View The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "apply/index.html": [
+      {
+        "hash": "c392d0f677aaf354",
+        "excerpt": "&larr; All programs The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "become-a-mentor/index.html": [
+      {
+        "hash": "c392d0f677aaf354",
+        "excerpt": "&larr; All programs The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "cert-program/index.html": [
+      {
+        "hash": "c392d0f677aaf354",
+        "excerpt": "&larr; All programs The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "contact.html": [
+      {
+        "hash": "a0b0ed43eb2a78f6",
+        "excerpt": "#5582 Derwood, MD 20855 Telephone (301) 531-4526 Email contact@vonterraproject.org LinkedIn The Von Terra Project 501(c)(3) Send Us a Message Contact "
+      },
+      {
+        "hash": "a5f37f5744282e8d",
+        "excerpt": "The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "cyberhero.html": [
+      {
+        "hash": "4a34adf5dde0b26b",
+        "excerpt": "All donations are deemed tax-deductible absent any limitations on deductibility applicable to a particular taxpayer."
+      },
+      {
+        "hash": "8630b138d1a4a8cd",
+        "excerpt": "Tax-Exempt Status Disclaimer The Von Terra Project is a registered 501(c)(3) nonprofit organization (EIN: 33-2041628)."
+      },
+      {
+        "hash": "9df2d06298528201",
+        "excerpt": "Email: contact@vonterraproject.org | Website: vonterraproject.org The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      },
+      {
+        "hash": "a9010aa691f9f3cd",
+        "excerpt": "Documents and information submitted under the Maryland Solicitations Act are also available, for the cost of postage and copies, from the Maryland Sec"
+      },
+      {
+        "hash": "cf98b055660e84be",
+        "excerpt": "is incorporated in Maryland and is in good standing with the Maryland Department of Assessments and Taxation."
+      }
+    ],
+    "digital-footprint.html": [
+      {
+        "hash": "b14a3727b973b8c1",
+        "excerpt": "Open the Resource Hub Get involved The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "documents/ai-policy/index.html": [
+      {
+        "hash": "05249e8fb2988044",
+        "excerpt": "&larr; All documents The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "documents/bylaws/index.html": [
+      {
+        "hash": "05249e8fb2988044",
+        "excerpt": "&larr; All documents The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "documents/certification-program/index.html": [
+      {
+        "hash": "a5f37f5744282e8d",
+        "excerpt": "The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "documents/code-of-conduct/index.html": [
+      {
+        "hash": "05249e8fb2988044",
+        "excerpt": "&larr; All documents The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "documents/conflict-of-interest/index.html": [
+      {
+        "hash": "05249e8fb2988044",
+        "excerpt": "&larr; All documents The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "documents/ein/index.html": [
+      {
+        "hash": "05249e8fb2988044",
+        "excerpt": "&larr; All documents The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "documents/finance-policy/index.html": [
+      {
+        "hash": "05249e8fb2988044",
+        "excerpt": "&larr; All documents The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "documents/mentorship-program/index.html": [
+      {
+        "hash": "05249e8fb2988044",
+        "excerpt": "&larr; All documents The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "documents.html": [
+      {
+        "hash": "a5f37f5744282e8d",
+        "excerpt": "The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "donate.html": [
+      {
+        "hash": "4a34adf5dde0b26b",
+        "excerpt": "All donations are deemed tax-deductible absent any limitations on deductibility applicable to a particular taxpayer."
+      },
+      {
+        "hash": "8630b138d1a4a8cd",
+        "excerpt": "Tax-Exempt Status Disclaimer The Von Terra Project is a registered 501(c)(3) nonprofit organization (EIN: 33-2041628)."
+      },
+      {
+        "hash": "9df2d06298528201",
+        "excerpt": "Email: contact@vonterraproject.org | Website: vonterraproject.org The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      },
+      {
+        "hash": "a9010aa691f9f3cd",
+        "excerpt": "Documents and information submitted under the Maryland Solicitations Act are also available, for the cost of postage and copies, from the Maryland Sec"
+      },
+      {
+        "hash": "c9fc46602ed648b7",
+        "excerpt": "A 501(c)(3) nonprofit organization."
+      },
+      {
+        "hash": "cf98b055660e84be",
+        "excerpt": "is incorporated in Maryland and is in good standing with the Maryland Department of Assessments and Taxation."
+      }
+    ],
+    "faq.html": [
+      {
+        "hash": "0792e84119ab6c93",
+        "excerpt": "As a 501(c)(3) nonprofit, all donations to The Von Terra Project are deemed tax-deductible absent any limitations on deductibility applicable to a par"
+      },
+      {
+        "hash": "103cb26154b880bf",
+        "excerpt": "What does it mean to be a 501(c)(3) nonprofit?"
+      },
+      {
+        "hash": "1729063fbd99f41e",
+        "excerpt": "You can verify our 501(c)(3) status by checking the IRS Exempt Organizations database or requesting a copy of our determination letter."
+      },
+      {
+        "hash": "467aed93878edfbc",
+        "excerpt": "Operations & Programs Are my donations tax-deductible?"
+      },
+      {
+        "hash": "7675ba5e2f6946ac",
+        "excerpt": "Contact Us The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      },
+      {
+        "hash": "947487b50b7c5ec9",
+        "excerpt": "We operate for charitable purposes, and donations are deemed tax-deductible absent any limitations on deductibility applicable to a particular taxpaye"
+      },
+      {
+        "hash": "a4431975f0ac7625",
+        "excerpt": "A 501(c)(3) organization is a tax-exempt nonprofit recognized by the IRS."
+      },
+      {
+        "hash": "bd4189718678e124",
+        "excerpt": "The Von Terra Project is a 501(c)(3) nonprofit organization."
+      }
+    ],
+    "flyspacea-impact-2026.html": [
+      {
+        "hash": "b717c58fccf129f4",
+        "excerpt": "GOVERNMENT SYSTEM Advisory and outreach partner: The Von Terra Project, a 501(c)(3) nonprofit."
+      },
+      {
+        "hash": "bf999bc5c7f3dea3",
+        "excerpt": "vonterraproject.org The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "flyspacea.html": [
+      {
+        "hash": "43d7c8a4d6ce9fc6",
+        "excerpt": "Contact Us Visit FlySpaceA The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "get-involved.html": [
+      {
+        "hash": "d54bbc411977b6db",
+        "excerpt": "Sponsor us The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "grant-initiative.html": [
+      {
+        "hash": "a4a236ad12031b9b",
+        "excerpt": "Get involved Support this work The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "index.html": [
+      {
+        "hash": "bd2fb5445347cc68",
+        "excerpt": "#5582, Derwood, MD 20855 (301) 531-4526 contact@vonterraproject.org 501(c)(3) nonprofit organization \u00b7 EIN: 33-2041628 The Von Terra Project is a regi"
+      },
+      {
+        "hash": "f224a147cba99424",
+        "excerpt": "Home \u00b7 The Von Terra Project Skip to main content Home Programs All Programs Programs [P1] Certification Program [P2] Mentorship Program [P3] Professi"
+      }
+    ],
+    "lines-of-effort.html": [
+      {
+        "hash": "480ffa6f04fedd4c",
+        "excerpt": "Go to Lines of Effort The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "mentorship.html": [
+      {
+        "hash": "53ec4a103a7c0e9a",
+        "excerpt": "Become a Mentor Support this work The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "positions.html": [
+      {
+        "hash": "b6e20846808dcb00",
+        "excerpt": "Tell us how you want to help Sponsor the work The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "privacy.html": [
+      {
+        "hash": "a5f37f5744282e8d",
+        "excerpt": "The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      },
+      {
+        "hash": "fcd99ec7c416b7cf",
+        "excerpt": "is a registered 501(c)(3) nonprofit organization (EIN 33-2041628)."
+      }
+    ],
+    "professional-development.html": [
+      {
+        "hash": "a4a236ad12031b9b",
+        "excerpt": "Get involved Support this work The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "programs.html": [
+      {
+        "hash": "d912bca369fa5012",
+        "excerpt": "About the partnership The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "resource-hub.html": [
+      {
+        "hash": "4b1dfa05183bd761",
+        "excerpt": "Open The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "self-assessment.html": [
+      {
+        "hash": "a5f37f5744282e8d",
+        "excerpt": "The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "sponsorship.html": [
+      {
+        "hash": "7675ba5e2f6946ac",
+        "excerpt": "Contact us The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "start-security.html": [
+      {
+        "hash": "7e61d365360bb56f",
+        "excerpt": "Okta Google Authenticator Microsoft Authenticator Authy The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "team-aaddrick-williams.html": [
+      {
+        "hash": "eb573580c118d7fe",
+        "excerpt": "Memberships & Affiliations Military: Massachusetts Army National Guard Civilian: Project Management Institute; maintainer, Claude Desktop for Linux; a"
+      }
+    ],
+    "team-annie-ingram.html": [
+      {
+        "hash": "94eac04ec324ac0c",
+        "excerpt": "Education Master of Professional Studies in Emergency and Disaster Management &middot; Georgetown University, Washington, DC Bachelor of Arts in Emerg"
+      }
+    ],
+    "team-colton-williams.html": [
+      {
+        "hash": "513e9e5c305610d7",
+        "excerpt": "Memberships & Affiliations Military: Order of Thor [Cyber], Life member of VFW, American Legion, NGAUS, AUSA, MOAA, USAWOA Civilian: Extra Life \u2190 Back"
+      }
+    ],
+    "team-elisha-angeles-ashook.html": [
+      {
+        "hash": "ed4bdb4557a948e6",
+        "excerpt": "Passion & Mission Empowering individuals and organizations to build stronger cyber resilience strategies Bridging the gap between technical expertise "
+      }
+    ],
+    "team-elisha-angeles.html": [
+      {
+        "hash": "586ceff61bb8e422",
+        "excerpt": "&larr; Meet the team The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "team-eric-stewart.html": [
+      {
+        "hash": "d28bd77a3a64899c",
+        "excerpt": "Education Master of Business Administration (HR, Finance concentrations) &middot; Vanderbilt University Owen Graduate School of Management, Nashville,"
+      }
+    ],
+    "team-gregory-butkovich.html": [
+      {
+        "hash": "c31cbbb5647c829f",
+        "excerpt": "Army Warrant Officers Association, National Guard Association of the United States, GIAC Advisory Board Civilian: Capture the Flag (CTF) competitor, c"
+      }
+    ],
+    "team-nefertiti-stokes.html": [
+      {
+        "hash": "12c57b571d9e1ec0",
+        "excerpt": "Social Media & Contact LinkedIn: linkedin.com/in/nefertiti-stokes-cyber-professional \u2190 Back to Team The Von Terra Project is a registered 501(c)(3) no"
+      },
+      {
+        "hash": "70ebe25a50c5de03",
+        "excerpt": "Memberships & Affiliations Order of Thor [Cyber], Alpha Kappa Psi (Business fraternity), NGAUS, USAWOA, President of the board Femmcubator 501(c)(3) P"
+      }
+    ],
+    "team-saren-bennett.html": [
+      {
+        "hash": "51a91a00a85fd9da",
+        "excerpt": "Saren Bennett \u00b7 The Von Terra Project Skip to main content Home Programs All Programs Programs [P1] Certification Program [P2] Mentorship Program [P3]"
+      }
+    ],
+    "team.html": [
+      {
+        "hash": "dda8f5183f7c4074",
+        "excerpt": "Learn More Follow The Von Terra Project on LinkedIn The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ],
+    "terms.html": [
+      {
+        "hash": "0fefd40c0e19354c",
+        "excerpt": "Terms & Conditions \u00b7 The Von Terra Project Skip to main content Home Programs All Programs Programs [P1] Certification Program [P2] Mentorship Program"
+      },
+      {
+        "hash": "4a34adf5dde0b26b",
+        "excerpt": "All donations are deemed tax-deductible absent any limitations on deductibility applicable to a particular taxpayer."
+      },
+      {
+        "hash": "8630b138d1a4a8cd",
+        "excerpt": "Tax-Exempt Status Disclaimer The Von Terra Project is a registered 501(c)(3) nonprofit organization (EIN: 33-2041628)."
+      },
+      {
+        "hash": "a5f37f5744282e8d",
+        "excerpt": "The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      }
+    ]
+  },
+  "drive_embeds": {
+    "VTP-Report-2025.html": [
+      "1uZKl7SRvXfJ2ib-ZQeDJrd3aeWZ0hyp6"
+    ],
+    "documents/ai-policy/index.html": [
+      "10R-wmGoO7MoQfRL3gjaRT6WMPaZT7b_x"
+    ],
+    "documents/bylaws/index.html": [
+      "1Z0DFOpejBDYbVuLKpDUOP-BcV14oP8kV"
+    ],
+    "documents/certification-program/index.html": [
+      "1QRsnnReJ3BtmqoYsFWo2AdF9ZCogh9bE"
+    ],
+    "documents/code-of-conduct/index.html": [
+      "1XrjrkiHe15va7RgoFlmFszBXewa7GOwV"
+    ],
+    "documents/conflict-of-interest/index.html": [
+      "1Y3YHQNB6mDwyBWJ-LR4Q8xt5ZLh0dP4R"
+    ],
+    "documents/ein/index.html": [
+      "13IUv4eS0dYMA_D870uuuN2QxI6yHZdFg"
+    ],
+    "documents/finance-policy/index.html": [
+      "16e782vfggzD4OhiD9AyA2G_CvemYarqN"
+    ],
+    "documents/mentorship-program/index.html": [
+      "1wvDw46tMEB7_Uu1pPC4fsj8E_nZUlLd1"
+    ],
+    "documents.html": [
+      "1QRsnnReJ3BtmqoYsFWo2AdF9ZCogh9bE",
+      "1uZKl7SRvXfJ2ib-ZQeDJrd3aeWZ0hyp6"
+    ]
+  }
+}
