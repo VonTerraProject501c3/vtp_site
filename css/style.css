@@ -362,17 +362,6 @@ section { padding: 80px 0; }
   color: var(--gold);
   font-variant-numeric: tabular-nums;
 }
-/* "COMING SOON" under a tool. A second line inside the same link rather than a sibling
-   element, so the whole row stays one target and screen readers announce the caveat as part
-   of the link name instead of orphaning it. */
-.dropdown-menu .soon {
-  display: block;
-  margin-top: 2px;
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  color: var(--gold);
-  opacity: 0.85;
-}
 .dropdown-menu .menu-empty {
   display: block;
   padding: 10px 18px;
