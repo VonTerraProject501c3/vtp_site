@@ -91,14 +91,6 @@ const HEADER =
 '        </div>\n' +
 '      </div>\n' +
 '      <div class="nav-item dropdown">\n' +
-'        <a class="nav-link" href="resource-hub.html" aria-expanded="false" aria-haspopup="true">Tools</a>\n' +
-'        <div class="dropdown-menu">\n' +
-'          <a href="self-assessment.html">Self-Assessment Tool<span class="soon">COMING SOON</span></a>\n' +
-'          <a href="start-security.html">Start Improving Your Security<span class="soon">COMING SOON</span></a>\n' +
-'          <a href="resource-hub.html">Resource Hub<span class="soon">COMING SOON</span></a>\n' +
-'        </div>\n' +
-'      </div>\n' +
-'      <div class="nav-item dropdown">\n' +
 '        <a class="nav-link" href="index.html" aria-expanded="false" aria-haspopup="true">Articles</a>\n' +
 '        <div class="dropdown-menu">\n' +
 '          <a href="flyspacea-impact-2026.html">FlySpaceA Community Impact Report</a>\n' +

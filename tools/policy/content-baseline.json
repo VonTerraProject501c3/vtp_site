@@ -219,12 +219,12 @@
     ],
     "index.html": [
       {
-        "hash": "bd2fb5445347cc68",
-        "excerpt": "#5582, Derwood, MD 20855 (301) 531-4526 contact@vonterraproject.org 501(c)(3) nonprofit organization \u00b7 EIN: 33-2041628 The Von Terra Project is a regi"
+        "hash": "9c6f13416afc3426",
+        "excerpt": "Home \u00b7 The Von Terra Project Skip to main content Home Programs All Programs Programs [P1] Certification Program [P2] Mentorship Program [P3] Professi"
       },
       {
-        "hash": "f224a147cba99424",
-        "excerpt": "Home \u00b7 The Von Terra Project Skip to main content Home Programs All Programs Programs [P1] Certification Program [P2] Mentorship Program [P3] Professi"
+        "hash": "bd2fb5445347cc68",
+        "excerpt": "#5582, Derwood, MD 20855 (301) 531-4526 contact@vonterraproject.org 501(c)(3) nonprofit organization \u00b7 EIN: 33-2041628 The Von Terra Project is a regi"
       }
     ],
     "lines-of-effort.html": [
@@ -351,7 +351,7 @@
     ],
     "team-saren-bennett.html": [
       {
-        "hash": "51a91a00a85fd9da",
+        "hash": "1bbd59cf79dad100",
         "excerpt": "Saren Bennett \u00b7 The Von Terra Project Skip to main content Home Programs All Programs Programs [P1] Certification Program [P2] Mentorship Program [P3]"
       }
     ],
@@ -363,10 +363,6 @@
     ],
     "terms.html": [
       {
-        "hash": "0fefd40c0e19354c",
-        "excerpt": "Terms & Conditions \u00b7 The Von Terra Project Skip to main content Home Programs All Programs Programs [P1] Certification Program [P2] Mentorship Program"
-      },
-      {
         "hash": "4a34adf5dde0b26b",
         "excerpt": "All donations are deemed tax-deductible absent any limitations on deductibility applicable to a particular taxpayer."
       },
@@ -377,6 +373,10 @@
       {
         "hash": "a5f37f5744282e8d",
         "excerpt": "The Von Terra Project is a registered 501(c)(3) nonprofit organization."
+      },
+      {
+        "hash": "ace21b080c4ab7cb",
+        "excerpt": "Terms & Conditions \u00b7 The Von Terra Project Skip to main content Home Programs All Programs Programs [P1] Certification Program [P2] Mentorship Program"
       }
     ]
   },
