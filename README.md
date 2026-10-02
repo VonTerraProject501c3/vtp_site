@@ -42,8 +42,6 @@ activate them — no code changes needed:
 | Decorative illustrations (`2025-09-27…png`) | Optional feature imagery | Omitted per spec ("do not invent") |
 
 Other TBDs in content:
-- **Elisha Angeles** — no headshot provided → initials avatar ("EA"). Drop a photo in and
-  update `team.html` / `team-elisha-angeles.html` (or ask me to wire it).
 - **Saren Bennett** — no biography text provided (per spec, the bio page has no body).
 - `href="#"` anchors that remain are intentional per spec: all Start-Security vendor
   buttons and the Documents "View / Download" links (governing docs not yet supplied).
