@@ -76,15 +76,18 @@ const HEADER =
 '        <div class="dropdown-menu">\n' +
 '          <a href="programs.html">All Programs</a>\n' +
 '          <p class="menu-label">Programs</p>\n' +
-'          <a href="documents/certification-program/index.html"><span class="pnum">[P1]</span> Certification Program</a>\n' +
-'          <a href="mentorship.html"><span class="pnum">[P2]</span> Mentorship Program</a>\n' +
-'          <a href="professional-development.html"><span class="pnum">[P3]</span> Professional Development &amp; Engagement</a>\n' +
-'          <a href="grant-initiative.html"><span class="pnum">[P4]</span> Grant Initiative</a>\n' +
-'          <a href="digital-footprint.html"><span class="pnum">[P5]</span> Digital Footprint &amp; Communal Defense</a>\n' +
-'          <a href="cyberhero.html"><span class="pnum">[P6]</span> CyberHERo</a>\n' +
+'          <a href="professional-development.html"><span class="pnum">[CR]</span> Career</a>\n' +
+'          <a href="grant-initiative.html"><span class="pnum">[GI]</span> Grant Initiative</a>\n' +
+'          <a href="cyberhero.html"><span class="pnum">[CH]</span> CyberHERo</a>\n' +
+'          <a href="digital-footprint.html"><span class="pnum">[SC]</span> Security</a>\n' +
+'          <a href="programs.html#fellowship"><span class="pnum">[FE]</span> Fellowship</a>\n' +
+'          <hr>\n' +
+'          <p class="menu-label">Apply or volunteer</p>\n' +
+'          <a href="documents/certification-program/index.html">Certification</a>\n' +
+'          <a href="mentorship.html">Mentorship</a>\n' +
 '          <hr>\n' +
 '          <p class="menu-label">Lines of Effort</p>\n' +
-'          <a href="programs.html#lines-of-effort">L1&ndash;L6 and how they map</a>\n' +
+'          <a href="programs.html#lines-of-effort">L1&ndash;L6 and who owns them</a>\n' +
 '          <hr>\n' +
 '          <p class="menu-label">Partner Initiative</p>\n' +
 '          <a href="flyspacea.html">FlySpaceA</a>\n' +
