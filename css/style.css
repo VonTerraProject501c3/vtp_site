@@ -383,7 +383,7 @@ section { padding: 80px 0; }
   line-height: 1.4;
   color: var(--ink-2);
 }
-.dropdown-menu .menu-desc-pnum { padding-left: 3.1em; }   /* lines up under the name, after the [XX] code */
+.dropdown-menu .menu-desc-pnum { padding-left: 3.4em; }   /* lines up under the name, after the [XX] code */
 .dropdown-menu a:hover .menu-desc,
 .dropdown-menu a:focus-visible .menu-desc { color: var(--ink); }
 .dropdown-menu--programs {

@@ -84,7 +84,7 @@ const HEADER =
 '          <hr>\n' +
 '          <p class="menu-label">Apply or volunteer</p>\n' +
 '          <a href="documents/certification-program/index.html">Certification Program<span class="menu-desc">Apply for a free, needs-based path to certification, with a mentor.</span></a>\n' +
-'          <a href="mentorship.html">Mentorship Program<span class="menu-desc">Volunteer one to two hours a week for six months.</span></a>\n' +
+'          <a href="mentorship.html">Mentorship Program<span class="menu-desc">Volunteer roughly one to two hours a week for six months.</span></a>\n' +
 '          <hr>\n' +
 '          <p class="menu-label">Lines of Effort</p>\n' +
 '          <a href="programs.html#lines-of-effort">L1&ndash;L6 and who owns them</a>\n' +
