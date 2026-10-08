@@ -372,6 +372,30 @@ section { padding: 80px 0; }
 }
 .dropdown-menu a:hover { background: var(--olive-wash); color: var(--ink); text-decoration: none; }
 
+/* A short line under a menu item: what you will find before you click. It sits inside the link so
+   the whole two-line block is one target, and it is plain text so it reads the same with a
+   mouse, a keyboard or a finger. The Programs menu is wider to give the lines room. */
+.dropdown-menu .menu-desc {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--ink-2);
+}
+.dropdown-menu .menu-desc-pnum { padding-left: 3.1em; }   /* lines up under the name, after the [XX] code */
+.dropdown-menu a:hover .menu-desc,
+.dropdown-menu a:focus-visible .menu-desc { color: var(--ink); }
+.dropdown-menu--programs {
+  width: 400px; max-width: calc(100vw - 32px);
+  /* Taller than a laptop screen with the descriptions in, and absolutely positioned, so it
+     scrolls inside itself rather than running off the bottom of the window. */
+  max-height: calc(100vh - 80px);
+  overflow-y: auto; overscroll-behavior: contain;
+}
+.dropdown-menu--programs a { padding-top: 6px; padding-bottom: 6px; }
+.dropdown-menu--programs hr { margin: 6px 0; }
+
 /* ---- Page header band ---- */
 .page-band { background: var(--field-deep); color: var(--ink); padding: 60px 0; text-align: center; border-bottom: 1px solid var(--line-subtle); }
 .page-band h1 { color: var(--ink); margin: 0; }
@@ -395,6 +419,30 @@ section { padding: 80px 0; }
 }
 .hero h1 { color: var(--ink); margin-bottom: 8px; }
 .hero .sub { font-size: 1.3rem; font-weight: 400; color: rgba(255, 255, 255, 0.88); margin-bottom: 28px; }
+
+/* Home: where to start. Four doors in the visitor's own words, inside the hero so they are
+   above the fold. Each tile is one link; the whole card is the target. */
+.hero-home .container { padding-top: 40px; padding-bottom: 48px; }
+.quick-links { margin: 36px auto 0; text-align: left; }
+.quick-links .ql-label {
+  text-align: center; margin: 0 0 18px;
+  font-size: 0.8rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gold);
+}
+.quick-link {
+  display: flex; flex-direction: column; gap: 8px;
+  height: 100%; padding: 22px;
+  color: var(--ink); text-decoration: none;
+}
+.quick-link:hover { text-decoration: none; color: var(--ink); border-color: var(--gold); }
+.quick-link .ql-title {
+  font-family: var(--heading-font); font-weight: 700; font-size: 1.05rem;
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink);
+}
+.quick-link .ql-desc { flex: 1; font-size: 0.92rem; line-height: 1.45; color: var(--ink-2); }
+.quick-link .ql-go { font-size: 0.9rem; font-weight: 600; color: var(--gold); }
+.quick-link:hover .ql-go { color: var(--gold-hi); }
+.quick-links .ql-more { margin: 22px 0 0; text-align: center; font-size: 0.95rem; color: rgba(255, 255, 255, 0.88); }
 .hero-donate {
   min-height: 60vh;
   /* DonorBoxWallpaper.png removed for the same reason as the homepage hero above. */
@@ -684,5 +732,7 @@ section { padding: 80px 0; }
   .dropdown.open .dropdown-menu { display: block; }
   .dropdown-menu a { color: var(--ink-2); padding: 12px 44px; }
   .dropdown-menu a:hover { background: var(--olive-wash); color: var(--ink); }
+  .dropdown-menu--programs { width: auto; max-width: none; max-height: none; overflow: visible; }
+  .dropdown-menu--programs a { padding-top: 12px; padding-bottom: 12px; }
   .site-nav .btn-donate { margin: 12px 24px 0; text-align: center; }
 }
