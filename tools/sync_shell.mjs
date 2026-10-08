@@ -28,8 +28,7 @@ const { HEADER, FOOTER } = new Function(`${src}; return { HEADER, FOOTER };`)();
 // Which nav item should be lit for a page that is not itself a nav entry.
 const PARENT = {
   "programs.html": ["mentorship.html", "professional-development.html", "grant-initiative.html", "digital-footprint.html",
-                    "cyberhero.html", "flyspacea.html", "flyspacea-impact-2026.html",
-                    "resource-hub.html", "start-security.html"],
+                    "cyberhero.html", "flyspacea.html", "flyspacea-impact-2026.html"],
   "about.html": ["team.html", "faq.html", "documents.html", "lines-of-effort.html",
                  "terms.html", "contact.html", "VTP-Report-2025.html"],
 };

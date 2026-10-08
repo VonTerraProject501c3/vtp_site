@@ -38,13 +38,13 @@ activate them — no code changes needed:
 | `VTPWallpaper.png` | Home hero background | Navy gradient |
 | `DonorBoxWallpaper.png` | Donate hero background | Navy gradient |
 | `Telephone.png`, `Email.png`, `Linkedin.png` | Contact/footer icons | Inline SVG icons in matching style (to switch to the PNGs, replace the `.ico` spans) |
-| `Docs.png`, `Docs2.png` | Resource Hub / Documents decorative graphics | Omitted (HTML comments mark the spots); document cards use an inline SVG icon |
+| `Docs.png`, `Docs2.png` | Documents decorative graphics | Omitted (HTML comments mark the spots); document cards use an inline SVG icon |
 | Decorative illustrations (`2025-09-27…png`) | Optional feature imagery | Omitted per spec ("do not invent") |
 
 Other TBDs in content:
 - **Saren Bennett** — no biography text provided (per spec, the bio page has no body).
-- `href="#"` anchors that remain are intentional per spec: all Start-Security vendor
-  buttons and the Documents "View / Download" links (governing docs not yet supplied).
+- `href="#"` anchors that remain are intentional per spec: the Documents "View / Download"
+  links (governing docs not yet supplied).
 
 ### Live embeds (wired in)
 - **Donate** (`donate.html`) — live Donorbox form (`donate-to-vtp`) + donor wall; "Donate Now" links to the campaign.
@@ -54,7 +54,6 @@ Other TBDs in content:
   Drive report requires its sharing to be **"Anyone with the link"** to display publicly.
 
 ### Still awaiting a real embed (`[EMBED PLACEHOLDER]` boxes remain)
-- **Self-Assessment Survey** (`self-assessment.html`) — no embed/URL provided yet.
 - **Contact Form** (`contact.html`) — no embed/URL provided yet.
 
 ## Notes
