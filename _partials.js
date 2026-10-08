@@ -73,24 +73,24 @@ const HEADER =
 '      <div class="nav-item"><a class="nav-link" href="index.html">Home</a></div>\n' +
 '      <div class="nav-item dropdown">\n' +
 '        <a class="nav-link" href="programs.html" aria-expanded="false" aria-haspopup="true">Programs</a>\n' +
-'        <div class="dropdown-menu">\n' +
+'        <div class="dropdown-menu dropdown-menu--programs">\n' +
 '          <a href="programs.html">All Programs</a>\n' +
 '          <p class="menu-label">Programs</p>\n' +
-'          <a href="professional-development.html"><span class="pnum">[CR]</span> Career</a>\n' +
-'          <a href="grant-initiative.html"><span class="pnum">[GI]</span> Grant Initiative</a>\n' +
-'          <a href="cyberhero.html"><span class="pnum">[CH]</span> CyberHERo</a>\n' +
-'          <a href="digital-footprint.html"><span class="pnum">[SC]</span> Security</a>\n' +
-'          <a href="programs.html#fellowship"><span class="pnum">[FE]</span> Fellowship</a>\n' +
+'          <a href="professional-development.html"><span class="pnum">[CR]</span> Career<span class="menu-desc menu-desc-pnum">From first credential to employed practitioner.</span></a>\n' +
+'          <a href="grant-initiative.html"><span class="pnum">[GI]</span> Grant Initiative<span class="menu-desc menu-desc-pnum">Secures funding for our programs and for under-resourced nonprofits and small businesses.</span></a>\n' +
+'          <a href="cyberhero.html"><span class="pnum">[CH]</span> CyberHERo<span class="menu-desc menu-desc-pnum">Mentorship, networks, and leadership pathways for women in cybersecurity.</span></a>\n' +
+'          <a href="digital-footprint.html"><span class="pnum">[SC]</span> Security<span class="menu-desc menu-desc-pnum">Planning, tools, and exercises, from the household to the emergency operations center.</span></a>\n' +
+'          <a href="programs.html#fellowship"><span class="pnum">[FE]</span> Fellowship<span class="menu-desc menu-desc-pnum">Original research and plain-language policy analysis by senior practitioners. Not yet started.</span></a>\n' +
 '          <hr>\n' +
 '          <p class="menu-label">Apply or volunteer</p>\n' +
-'          <a href="documents/certification-program/index.html">Certification</a>\n' +
-'          <a href="mentorship.html">Mentorship</a>\n' +
+'          <a href="documents/certification-program/index.html">Certification Program<span class="menu-desc">Apply for a free, needs-based path to certification, with a mentor.</span></a>\n' +
+'          <a href="mentorship.html">Mentorship Program<span class="menu-desc">Volunteer roughly one to two hours a week for six months.</span></a>\n' +
 '          <hr>\n' +
 '          <p class="menu-label">Lines of Effort</p>\n' +
 '          <a href="programs.html#lines-of-effort">L1&ndash;L6 and who owns them</a>\n' +
 '          <hr>\n' +
 '          <p class="menu-label">Partner Initiative</p>\n' +
-'          <a href="flyspacea.html">FlySpaceA</a>\n' +
+'          <a href="flyspacea.html">FlySpaceA<span class="menu-desc">Space-A flight tracking for the military community. A partner, not a VTP program.</span></a>\n' +
 '        </div>\n' +
 '      </div>\n' +
 '      <div class="nav-item dropdown">\n' +
