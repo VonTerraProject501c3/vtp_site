@@ -96,6 +96,7 @@ const HEADER =
 '      <div class="nav-item dropdown">\n' +
 '        <a class="nav-link" href="index.html" aria-expanded="false" aria-haspopup="true">Articles</a>\n' +
 '        <div class="dropdown-menu">\n' +
+'          <a href="google-org-award-2026.html">2026 Google Veteran Impact Award</a>\n' +
 '          <a href="flyspacea-impact-2026.html">FlySpaceA Community Impact Report</a>\n' +
 '        </div>\n' +
 '      </div>\n' +
