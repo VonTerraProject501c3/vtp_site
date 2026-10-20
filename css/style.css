@@ -275,9 +275,6 @@ section { padding: 80px 0; }
 .site-nav a.nav-link:hover { text-decoration: none; color: var(--gold-hi); border-bottom-color: var(--gold); }
 .site-nav .btn-donate { margin-left: 8px; padding: 10px 22px; }
 
-/* dropdowns */
-.dropdown .nav-link::after { content: " \25BE"; font-size: 0.7em; }
-
 /* Current page: a gold underline on the nav item. aria-current is the semantic signal
    (screen readers announce it); this is the visual half. */
 .site-nav a.nav-link[aria-current="page"],
