@@ -9,12 +9,12 @@ vonterraproject.org). You make changes that are **structurally correct, on-brand
 faithful to the canonical facts** — which live upstream in **governance**, not here.
 
 ## The stack (know this)
-- **Static HTML, no build step**, hosted on **GitHub Pages** (served from the `main` branch root; custom domain `vonterraproject.org` via the `CNAME` file — **keep `CNAME` + `.nojekyll`, they are the live Pages config**). The domain is **registered + DNS-managed at Cloudflare** (Cloudflare DNS → GitHub Pages; Cloudflare is NOT the host). Each `.html` page is hand-edited and self-contained; no framework, bundler, or server.
+- **Static HTML, no build step**, hosted on **GitHub Pages** (served from the `main` branch root; custom domain `vonterraproject.org` via the `CNAME` file — **keep `CNAME` + `.nojekyll`, they are the live Pages config**). The domain is **registered + DNS-managed at Cloudflare** (Cloudflare DNS points at GitHub Pages; Cloudflare is NOT the host). Each `.html` page is hand-edited and self-contained; no framework, bundler, or server.
 - **One stylesheet:** `css/style.css` — its `:root` brand tokens are **mirrored from `vtp_voice/tokens/colors.css`** (provenance comments mark each). Do **not** freelance hex/type here; if the brand changes, it changes in `vtp_voice` first, then is re-synced.
 - **Shared header/footer** are **baked into every page** (not includes). `_partials.js` is the *generator* template for them (it carries the footer's EIN/contact/socials) — but pages don't reference it at runtime, so a footer change means editing **every page** (or regenerating from `_partials.js`).
-- **CI runs on every push and PR** (`.github/workflows/site-checks.yml` → `tools/check_site.py`, no dependencies). It **fails** on malformed HTML, duplicate IDs, missing `alt`, broken internal links, missing images, `target="_blank"` without `rel="noopener"`, missing `lang`/`charset`/`viewport`/DOCTYPE, invalid JSON-LD, and sitemap entries pointing at pages that do not exist. It **warns** on missing meta descriptions, heading-level skips, `href="#"`, orphan pages, generator drift, and gitignored-but-tracked files. Run it locally before pushing: `python3 tools/check_site.py`.
+- **CI runs on every push and PR** (`.github/workflows/site-checks.yml` runs `tools/check_site.py`, no dependencies). It **fails** on any arrow character in a page or stylesheet (the brand bans them), malformed HTML, duplicate IDs, missing `alt`, broken internal links, missing images, `target="_blank"` without `rel="noopener"`, missing `lang`/`charset`/`viewport`/DOCTYPE, invalid JSON-LD, and sitemap entries pointing at pages that do not exist. It **warns** on missing meta descriptions, heading-level skips, `href="#"`, orphan pages, generator drift, and gitignored-but-tracked files. Run it locally before pushing: `python3 tools/check_site.py`.
 - **`main` is the integration branch, not production.** Since **2026-09-12**, a push to `main` builds a deployment but **does not publish it**: the `github-pages` environment holds every deployment until a member of the **`release-approvers`** team approves it at `github.com/VonTerraProject501c3/vtp_site/deployments`. The gate is **server-enforced by GitHub** — never try to approve, force, or bypass a pending deployment, and never modify the environment or branch-protection settings. There is still no staging environment: what waits for approval *is* what goes live. **Merged-but-unpublished is a correct end state** — say so plainly rather than claiming a change is live.
-- **Brand rules** (from `vtp_voice`): dark earth field `#2E2E2E`, olive `#5C754A`, sage `#A0B98C`, gold `#D8B45C`; **Lexend**; **wide-tracked UPPERCASE** headings/eyebrows; **no emoji** (line icons / SVGs only); olive→gold rule divider; ISO dates.
+- **Brand rules** (from `vtp_voice`): dark earth field `#2E2E2E`, olive `#5C754A`, sage `#A0B98C`, gold `#D8B45C`; **Lexend**; **wide-tracked UPPERCASE** headings/eyebrows; **no emoji** (line icons / SVGs only); **no arrows**, ever: no `→`, `←`, `»`, `›`, `▾` or their entities in copy, link text, buttons or CSS `content` (a link says where it goes; "Read the announcement" with no arrow; founder, 2026-10-19; CI fails on them); olive-to-gold rule divider; ISO dates.
 
 ## Where the facts live (fact surfaces)
 | Fact | Lives in |
@@ -22,8 +22,8 @@ faithful to the canonical facts** — which live upstream in **governance**, not
 | Mission / values text | `index.html`, `about.html`, `donate.html` (prose) |
 | EIN `33-2041628` | footer of most pages + `_partials.js`; `about.html`, `donate.html`, `index.html` |
 | Contact email / phone | footers + `about.html`, `donate.html`, `index.html` |
-| Mailing address | footers + `contact.html`, `cyberhero.html`; canonical in `vtp_governance` `canonical-facts.json` → `contact.mailingAddress` |
-| Programs (the six) | `programs.html`, the Programs dropdown, and one page per program. **Canonical in the org charter** → `canonical-facts.json` → `programs.list`. Do not add or rename a program here first. |
+| Mailing address | footers + `contact.html`, `cyberhero.html`; canonical in `vtp_governance` `canonical-facts.json`, `contact.mailingAddress` |
+| Programs (the six) | `programs.html`, the Programs dropdown, and one page per program. **Canonical in the org charter**, then `canonical-facts.json`, `programs.list`. Do not add or rename a program here first. |
 | LinkedIn / GitHub | footers + `_partials.js` |
 | Team roster | `team.html` — cards grouped **Board of Directors** then staff |
 | Per-person bio | `team-<slug>.html` |
@@ -41,7 +41,7 @@ faithful to the canonical facts** — which live upstream in **governance**, not
   <a href="team-<slug>.html">Learn More</a>
 </div>
 ```
-No headshot yet → replace the `<img>` with `<div class="team-avatar-initials">XY</div>`.
+No headshot yet: replace the `<img>` with `<div class="team-avatar-initials">XY</div>`.
 
 ## Bio page pattern (`team-<slug>.html`)
 `<div class="page-band">` with avatar + `<h1><Name></h1>` + `<p class="sub-teal"><Title></p>`,
