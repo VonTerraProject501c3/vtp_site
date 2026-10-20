@@ -194,6 +194,9 @@ section { padding: 80px 0; }
    full-colour mark is not ours to recolour. */
 .supporter-logo { display: inline-block; width: 300px; max-width: 100%; height: auto; border-radius: var(--radius); }
 .supporter-note { color: var(--ink-2); font-size: 0.95rem; margin-top: 14px; }
+/* Home: supporters inside the hero, under the name, so they are on the first screen at every width. */
+.hero-supporters { margin: 0 0 8px; }
+.hero-supporters .supporter-logo { width: 190px; border-radius: var(--radius-sm); }
 
 /* The brand divider: thin olive→gold rule */
 .vt-rule, .center > h1::after, .center > h2::after, .page-band h1::after {
