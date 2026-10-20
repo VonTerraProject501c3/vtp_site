@@ -748,3 +748,63 @@ section { padding: 80px 0; }
   .dropdown-menu--programs a { padding-top: 12px; padding-bottom: 12px; }
   .site-nav .btn-donate { margin: 12px 24px 0; text-align: center; }
 }
+
+/* ============================================================
+   Articles. Every page in the Articles menu uses these, so they look the same
+   without page-scoped CSS. The parts and why each exists: ARTICLES.md.
+   ============================================================ */
+.article-label {
+  font-family: var(--heading-font); font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin: 0 0 14px;
+}
+.article-band h1 { text-wrap: balance; }
+.article-band .sub-lede { max-width: 640px; margin-left: auto; margin-right: auto; }
+.byline {
+  display: inline-flex; align-items: center; gap: 14px; margin-top: 28px;
+  text-align: left; line-height: 1.35;
+}
+.byline img {
+  width: 56px; height: 56px; border-radius: 50%; object-fit: cover; object-position: top center;
+  border: 1px solid var(--line); flex: none;
+}
+.byline p { margin: 0; }
+.byline-name a { color: var(--ink); font-weight: 600; text-decoration: none; }
+.byline-name a:hover { color: var(--gold-hi); text-decoration: underline; }
+.byline-role, .byline-date { color: var(--ink-2); font-size: 0.9rem; }
+.byline-date time { font-variant-numeric: tabular-nums; }
+.article-body { padding-top: 56px; padding-bottom: 56px; }
+.article-body .lead { font-size: 1.2rem; line-height: 1.6; color: var(--ink); }
+.article-body h2 { margin-top: 48px; }
+.article-body li { margin-bottom: 8px; }
+.article-body li ul { margin-top: 8px; }
+.table-wrap {
+  overflow-x: auto; margin: 24px 0; border: 1px solid var(--line-subtle); border-radius: var(--radius-sm);
+}
+.table-wrap:focus-visible { outline: var(--focus-ring-width) solid var(--focus-ring-color); outline-offset: var(--focus-ring-offset); }
+.article-body table { width: 100%; min-width: 760px; border-collapse: collapse; font-size: 0.92rem; }
+.article-body th, .article-body td { padding: 10px 12px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line-subtle); }
+.article-body th {
+  font-family: var(--heading-font); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--gold); background: var(--field-deep);
+}
+.article-body tr:last-child td { border-bottom: 0; }
+.article-note { color: var(--ink-2); font-size: 0.92rem; }
+.article-methods, .article-feedback, .article-author, .sources {
+  margin-top: 48px; padding: 28px 0 0; border-top: 1px solid var(--line-subtle);
+}
+.article-methods h2, .article-author h2, .article-feedback h2, .sources h2 {
+  margin-top: 0; font-size: 1rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold);
+}
+.article-author-card { display: flex; gap: 18px; align-items: flex-start; }
+.article-author-card img {
+  width: 88px; height: 110px; border-radius: var(--radius-sm); object-fit: cover; object-position: top center;
+  border: 1px solid var(--line); flex: none;
+}
+.article-author-card p { margin: 0 0 6px; }
+.article-author-card .byline-role { margin-bottom: 10px; }
+.sources ol { padding-left: 1.6em; font-size: 0.9rem; color: var(--ink-2); }
+.sources li { margin-bottom: 10px; padding-left: 0.3em; overflow-wrap: anywhere; }
+.sources li::marker { color: var(--gold); font-variant-numeric: tabular-nums; }
+@media (max-width: 560px) {
+  .article-author-card { flex-direction: column; }
+}
