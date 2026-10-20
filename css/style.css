@@ -190,6 +190,11 @@ section { padding: 80px 0; }
 .narrower { max-width: 760px; margin-left: auto; margin-right: auto; }
 .muted { color: var(--ink-2); }
 
+/* Funder logos. Shown as supplied, on their own white panel: the site is dark and a funder's
+   full-colour mark is not ours to recolour. */
+.supporter-logo { display: inline-block; width: 300px; max-width: 100%; height: auto; border-radius: var(--radius); }
+.supporter-note { color: var(--ink-2); font-size: 0.95rem; margin-top: 14px; }
+
 /* The brand divider: thin olive→gold rule */
 .vt-rule, .center > h1::after, .center > h2::after, .page-band h1::after {
   content: "";
