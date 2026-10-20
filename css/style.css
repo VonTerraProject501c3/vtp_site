@@ -124,8 +124,8 @@ html { scroll-behavior: smooth; }
   }
   /* Kill the lift/translate hover affordances; colour still carries the state. */
   .btn:hover, .btn:active, .card:hover { transform: none; }
-  /* Keep the accordion chevron's END state: a state indicator, not decoration. */
-  .accordion-item.open .accordion-q .chev { transform: rotate(180deg); }
+  /* Keep the accordion indicator's END state (plus turned to a cross): a state indicator, not decoration. */
+  .accordion-item.open .accordion-q .chev { transform: rotate(45deg); }
 }
 body {
   margin: 0;
@@ -624,7 +624,8 @@ section { padding: 80px 0; }
 }
 .accordion-q .chev { flex: none; transition: transform 0.2s var(--ease); color: var(--gold); display: inline-flex; }
 .accordion-q .chev svg { width: 18px; height: 18px; }
-.accordion-item.open .accordion-q .chev { transform: rotate(180deg); }
+/* A plus that turns to a cross when open. Not a chevron: the brand bans arrows. */
+.accordion-item.open .accordion-q .chev { transform: rotate(45deg); }
 .accordion-a { display: none; padding: 0 4px 18px; color: var(--ink-2); }
 .accordion-item.open .accordion-a { display: block; }
 
