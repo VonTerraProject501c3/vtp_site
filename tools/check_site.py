@@ -158,9 +158,6 @@ SITE = "https://vonterraproject.org/"
 ARTICLE_LD_TYPES = {"Article", "NewsArticle", "Report", "AnalysisNewsArticle", "BlogPosting"}
 ARTICLE_LABELS = {"News", "Guide", "Report", "Analysis", "Opinion"}
 ARTICLE_LD_KEYS = ("headline", "description", "datePublished", "dateModified", "author", "publisher")
-# Published before ARTICLES.md and with no named author. Warned about on every run until someone
-# names the authors and the page is brought up to standard; then remove it from this set.
-ARTICLES_BEFORE_STANDARD = {"google-org-award-2026.html", "flyspacea-impact-2026.html"}
 ISO_DATE = re.compile(r"\d{4}-\d{2}-\d{2}$")
 
 
@@ -224,9 +221,6 @@ def check_articles(all_pages: list[Path]) -> None:
             err(page, 'in the Articles menu but not marked <meta property="og:type" content="article">, '
                       "so the article standard (ARTICLES.md) is not being checked on it")
         if not is_article:
-            continue
-        if name in ARTICLES_BEFORE_STANDARD:
-            warn(page, "article published before ARTICLES.md: no named author, byline or sources yet")
             continue
 
         def need(ok, msg):

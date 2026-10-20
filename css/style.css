@@ -808,3 +808,17 @@ section { padding: 80px 0; }
 @media (max-width: 560px) {
   .article-author-card { flex-direction: column; }
 }
+.article-body blockquote {
+  margin: 28px 0; padding: 4px 0 4px 20px;
+  border-left: 2px solid var(--gold);
+  font-style: italic; color: var(--gold-hi);
+}
+.article-body blockquote p { margin: 0 0 8px; }
+.article-body blockquote cite {
+  display: block; font-style: normal;
+  font-size: 0.85rem; letter-spacing: 0.04em; color: var(--ink-2);
+}
+.article-body blockquote cite::before { content: "\00B7\00A0"; }
+/* Closing parts placed after a page's own sections (the FlySpaceA report) start flush. */
+.article-close { padding-top: 0; }
+.article-close > .container > :first-child { margin-top: 0; }
