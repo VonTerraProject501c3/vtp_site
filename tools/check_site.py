@@ -25,6 +25,23 @@ VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input",
         "link", "meta", "param", "source", "track", "wbr"}
 SKIP_DIRS = {".git", ".github", "build", "node_modules", "tools"}
 
+# Brand rule (vtp_voice guidelines/voice-and-tone.md, Punctuation): no arrows in copy, ever.
+# A link says where it goes; "Read the announcement ->" is decoration. Founder, 2026-10-19.
+# Covers the arrow block, the arrow dingbats, guillemets and angle quotes used as arrows, the
+# small triangles used as carets, and their HTML entities and CSS escapes.
+ARROW_CHARS = "\u2190-\u21ff\u27f0-\u27ff\u2794-\u27bf\u2b00-\u2b2f\u00ab\u00bb\u2039\u203a\u25b2-\u25c5"
+ARROWS = re.compile(
+    "[" + ARROW_CHARS + "]"
+    r"|&(?:[lrudh]arr|[lrudh]Arr|[lr]aquo|[lr]saquo|[lr]arrw|[lr]arrhk|xrarr|xlarr|blacktriangle(?:down|left|right)?|triangle(?:down|left|right)?);"
+    r"|&#(?:x(?:21[9a-f][0-9a-f]|27[9a-f][0-9a-f]|2b[0-2][0-9a-f]|203[9a]|a[b]|bb|25b[2-9a-f]|25c[0-5])|8592|8593|8594|8595|8596|8249|8250|171|187);",
+    re.I)
+CSS_ARROWS = re.compile(r"[" + ARROW_CHARS + r"]|\\(?:0{0,2}21[9a-f][0-9a-f]|0{0,2}27[9a-f][0-9a-f]|0{0,2}25b[2-9a-f]|0{0,2}25c[0-5]|0{0,2}203[9a]|0{0,4}a[b]|0{0,4}bb)\b", re.I)
+
+
+def blank(text: str, pattern: str) -> str:
+    """Blank out matches of `pattern` (comments) but keep their newlines, so line numbers hold."""
+    return re.sub(pattern, lambda m: re.sub(r"[^\n]", " ", m.group(0)), text, flags=re.S)
+
 errors: list[str] = []
 warnings: list[str] = []
 
@@ -152,6 +169,11 @@ def main() -> int:
             if count > 1:
                 err(page, f'duplicate id="{elem_id}" ({count}x) — invalid, breaks anchors and a11y')
 
+        # --- arrows (brand rule) ---
+        for m in ARROWS.finditer(blank(raw, r"<!--.*?-->")):
+            line = raw.count("\n", 0, m.start()) + 1
+            err(page, f"arrow {m.group(0)!r} at line {line}: the brand bans arrows in copy (vtp_voice voice-and-tone, Punctuation)")
+
         if not raw.lstrip().lower().startswith("<!doctype html>"):
             err(page, "missing <!DOCTYPE html>")
         if not doc.has_lang:
@@ -179,7 +201,7 @@ def main() -> int:
         prev = 0
         for lvl, line in doc.headings:
             if prev and lvl > prev + 1:
-                warn(page, f"heading jumps h{prev} → h{lvl} at line {line} — skipped level")
+                warn(page, f"heading jumps h{prev} to h{lvl} at line {line} — skipped level")
             prev = lvl
 
         # --- images ---
@@ -251,6 +273,15 @@ def main() -> int:
     for t, where in titles.items():
         if len(where) > 1:
             warn(ROOT / "sitemap.xml", f'duplicate <title> "{t}" on: {", ".join(where)}')
+
+    # --- arrows in stylesheets: a CSS `content:` arrow is still an arrow on the page ---
+    for css in sorted(ROOT.rglob("*.css")):
+        if any(part in SKIP_DIRS for part in css.relative_to(ROOT).parts):
+            continue
+        text = css.read_text(encoding="utf-8", errors="replace")
+        for m in CSS_ARROWS.finditer(blank(text, r"/\*.*?\*/")):
+            line = text.count("\n", 0, m.start()) + 1
+            err(css, f"arrow {m.group(0)!r} at line {line}: the brand bans arrows (vtp_voice voice-and-tone, Punctuation)")
 
     # --- orphans ---
     # A noindex redirect stub is unlinked ON PURPOSE: it exists to catch inbound

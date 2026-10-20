@@ -456,7 +456,7 @@ def update_baseline(docs: dict[Path, str]) -> int:
     print(f"baseline recorded: {n_s} status sentence(s) across "
           f"{len(payload['status_language'])} page(s); {n_e} Drive embed(s) across "
           f"{len(payload['drive_embeds'])} page(s)")
-    print(f"  → {rel(BASELINE)}")
+    print(f"  written to {rel(BASELINE)}")
     return 0
 
 

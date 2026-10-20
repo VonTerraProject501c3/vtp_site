@@ -9,7 +9,7 @@ Everything goes through `vtp_command` — the control plane. That is where propo
 triaged, and turned into work. Filing here instead means your issue lands outside the list the
 maintainers actually work from.
 
-**[Read the full contributing guide →](https://github.com/VonTerraProject501c3/vtp_command/blob/main/CONTRIBUTING.md)**
+**[Read the full contributing guide](https://github.com/VonTerraProject501c3/vtp_command/blob/main/CONTRIBUTING.md)**
 
 ## The short version
 

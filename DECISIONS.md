@@ -2,7 +2,7 @@
 
 **This repository does not keep its own decisions log. There is one, and it is central:**
 
-### → [`vtp_command/DECISIONS-LOG.md`](https://github.com/VonTerraProject501c3/vtp_command/blob/main/DECISIONS-LOG.md)
+### [`vtp_command/DECISIONS-LOG.md`](https://github.com/VonTerraProject501c3/vtp_command/blob/main/DECISIONS-LOG.md)
 
 That is where to find what VTP decided about the public website — and everything else — along with when,
 by whom, and why.
