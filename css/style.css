@@ -20,9 +20,9 @@
      PROVENANCE: these hex values are MIRRORED from vtp_voice/tokens/colors.css
      (the canonical design-system source of truth). Do NOT freelance hex here. Edit
      upstream in vtp_voice, then re-sync and run `node scripts/drift-check.mjs` in vtp_voice.
-       --field #2E2E2E → vt-gray-800 (--surface-page)   --card #2A2A2A → vt-gray-850 (--surface-card)
-       --ink #FFFFFF → vt-white      --ink-2 #A6A6A6 → vt-gray-300 (--text-secondary)
-       --olive #5C754A → vt-olive-500   --sage #A0B98C → vt-sage-500   --gold #D8B45C → vt-gold-500
+       --field #2E2E2E is vt-gray-800 (--surface-page)   --card #2A2A2A is vt-gray-850 (--surface-card)
+       --ink #FFFFFF is vt-white      --ink-2 #A6A6A6 is vt-gray-300 (--text-secondary)
+       --olive #5C754A is vt-olive-500   --sage #A0B98C is vt-sage-500   --gold #D8B45C is vt-gold-500
      Mission/values/legal facts: vtp_voice/brand/facts.json. ---- */
   --field:        #2E2E2E;   /* page background (brand) */
   --field-deep:   #232323;   /* footer / deepest sections */
@@ -190,7 +190,7 @@ section { padding: 80px 0; }
 .narrower { max-width: 760px; margin-left: auto; margin-right: auto; }
 .muted { color: var(--ink-2); }
 
-/* The brand divider: thin olive→gold rule */
+/* The brand divider: thin olive-to-gold rule */
 .vt-rule, .center > h1::after, .center > h2::after, .page-band h1::after {
   content: "";
   display: block;

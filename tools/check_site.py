@@ -201,7 +201,7 @@ def main() -> int:
         prev = 0
         for lvl, line in doc.headings:
             if prev and lvl > prev + 1:
-                warn(page, f"heading jumps h{prev} → h{lvl} at line {line} — skipped level")
+                warn(page, f"heading jumps h{prev} to h{lvl} at line {line} — skipped level")
             prev = lvl
 
         # --- images ---
