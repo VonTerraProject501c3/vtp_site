@@ -1,7 +1,12 @@
-# Articles: what every article page carries
+# Articles: what every VTP article carries
 
-Every page in the **Articles** menu meets this standard. `tools/check_site.py` fails the build
-when an article page is missing a part of it, so a new article cannot ship in a different shape.
+**VTP's standard for every article, wherever it is published.** Adopted by Colton Williams,
+Founder & Executive Director, on 2026-10-20. Anyone writing an article for VTP, person or agent,
+starts here: on the website, in a shared document or PDF, or on another site.
+
+On the website, every page in the **Articles** menu meets it, and `tools/check_site.py` fails
+the build when an article page is missing a part, so a new article cannot ship in a different
+shape.
 
 The standard is not invented here. It takes its parts from two public standards and from
 `vtp_voice`:
@@ -38,6 +43,15 @@ Two Trust Indicators are editorial practice rather than parts of a page (Locally
 Diverse Voices), and the third (Best Practices: who funds us and how we work) lives on
 `about.html` and `documents.html`.
 
+## Outside the website
+
+A Google Doc, a PDF, a Claude Doc or a post on another site carries parts 1 to 11 in the same
+order: label, headline, standfirst, byline with the headshot, name, role and date, lead, body with
+APA citations, how we checked this, about the author, corrections, sources. Parts 12 and 13
+(structured data and the menu listing) apply only on the website. Nothing checks these copies
+automatically, so check them against the table by hand before they go out. When the piece is also
+on the website, link to the website version so corrections reach every reader.
+
 ## The author
 
 - The author is a person on `team.html`. Their **name** and **role** come from the team page,
@@ -65,7 +79,8 @@ this" that says what changed. Do not quietly rewrite.
 
 ## Pages published before this standard
 
-`google-org-award-2026.html` and `flyspacea-impact-2026.html` predate this
-standard and have no named author. `check_site.py` lists them as warnings, not errors, until
-someone names their authors and the pages are brought up to standard. Then remove them from
-`ARTICLES_BEFORE_STANDARD` in `tools/check_site.py`.
+`google-org-award-2026.html` (News) and `flyspacea-impact-2026.html` (Report) were published
+before the standard, and both were written by Colton Williams. They were brought up to it on
+2026-10-20. Published dates come from the deployment history: the Google.org page went live on
+2026-10-20, and the FlySpaceA report on 2026-06-14, updated on 2026-09-11. The report keeps its own
+design and adds the closing parts after its last section (`.article-close`).
